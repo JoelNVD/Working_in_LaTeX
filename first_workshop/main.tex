@@ -1,0 +1,257 @@
+%=====================================================================================
+% Preámbulo
+% ------------------------------------------------------------------------------------
+\documentclass{article} 
+
+% PARTE 1 ----------------------------------------------
+    % Apartado de texto ejemplo
+        \usepackage{lipsum}
+        
+    % Apartado márgenes
+        \usepackage[left=2.5cm, right=2.5cm]{geometry}
+        
+    % Apartado de textos
+        \usepackage[spanish]{babel}
+        \usepackage[utf8]{inputenc}
+        \usepackage[T1]{fontenc}
+        
+    % Apartado sangría
+        \usepackage{parskip}
+    
+    % Apartado configuración de enumeración
+        \usepackage{enumerate}
+    
+    % Apartado de colores
+        \usepackage{xcolor}
+            \definecolor{rojito}{rgb}{0.5, 0.0, 0.13}
+    
+    % Apartado de orientación del texto
+        \usepackage{ragged2e}
+% PARTE 1 ----------------------------------------------
+
+% PARTE 2 ----------------------------------------------
+    % Aparatado matemático
+        \usepackage{amsfonts}
+        \usepackage{amsmath}
+        \usepackage{amssymb}
+
+    % Aparatado de hypereferenicas
+        \usepackage{hyperref}
+% PARTE 2 ----------------------------------------------
+
+% PARTE 3 y 4 ------------------------------------------
+    % Apartado solo gráfico
+        \usepackage{graphicx}
+        
+    % Aparatado con título tablas e imágenes
+        \usepackage{caption}
+            \captionsetup[table]{name = Tabla}
+        \usepackage{subcaption}
+        \usepackage{float}
+
+% PARTE 3 y 4 ------------------------------------------
+
+% PARTE 5 ----------------------------------------------
+    % Apartado de Tikz
+        \usepackage{tikz}
+        
+% PARTE 5 ----------------------------------------------
+
+% PARTE 6 ----------------------------------------------
+    % Apartado de bibliografía
+        \usepackage{natbib}
+        
+% PARTE 6 ----------------------------------------------
+
+% Apartado de TOC, LOF, LOT
+
+        
+%=====================================================================================
+
+
+%=====================================================================================
+% Cuerpo
+%=====================================================================================
+\title{El título}
+\author{Mi nombre}
+\date{}
+
+\begin{document}
+
+    \maketitle
+    
+    \tableofcontents
+
+% PARTE 1 ----------------------------------------------
+\section{Modo Texto}
+    \lipsum{1}
+        \subsection{Formato de texto}
+            \textbf{Hola Mundo} \textit{Hola Mundo} \textbf{\textit{Hola Mundo}} \emph{Hola Mundo}
+        
+        \subsection{Escribiendo una lista}
+            \begin{itemize}
+                \item Hola mundo
+                \item Hola mundo
+                    \begin{itemize}
+                        \item Hola mundo
+                        \item Hola mundo
+                    \end{itemize}
+            \end{itemize}
+         
+        \subsection{Escribiendo una lista enumerada}   
+            \begin{enumerate}
+                \item [1.] hola mundo
+                \item [2.] hola mundo
+                    \begin{enumerate}
+                        \item [2.1.] Hola mundo
+                        \item [2.2.] Hola mundo
+                    \end{enumerate}
+            \end{enumerate}
+        
+        \subsection{Espacios y saltos entre las líneas}
+            La Rotonda Blog\\
+            La Rotonda\, Blog\\
+                \smallskip
+            La Rotonda \enskip Blog\\
+                \medskip
+            La Rotonda \quad  Blog\\
+                \bigskip
+            La Rotonda \qquad Blog\\
+                \vspace{5cm}
+            La Rotonda \hspace{5cm} Blog\\
+                
+            La Rotonda Blog \hfill vs \hfill La Rotonda Blog
+        
+        \subsection{Texto de colores}
+            \textcolor{red}{La Rotonda Blog}\\
+            \textcolor{green}{La Rotonda Blog}\\
+            \textcolor{blue}{La Rotonda Blog}\\
+            \textcolor{rojito}{La Rotonda Blog}\\
+            
+        \subsection{Tamaño de la letra}
+            {\tiny La Rotonda}\\
+            {\small La Rotonda}\\
+            La Rotonda \\
+            {\large La Rotonda}\\
+            {\Large La Rotonda}\\
+            {\LARGE La Rotonda}\\
+            {\huge La Rotonda}\\
+            {\Huge La Rotonda}
+        
+        \subsection{Orientación del texto}
+            This paper addresses the economic impact of the COVID-19 pandemic by providing timely and accurate information on the impact of the current pandemic on income and poverty to inform the targeting of resources to those most affected and assess the success of current efforts. We construct new measures of the income distribution and poverty with a lag of only a few weeks using high frequency data from the Basic Monthly Current Population Survey (CPS) \citep{Flores2005}
+            
+            \begin{center}
+                This paper addresses the economic impact of the COVID-19 pandemic by providing timely and accurate information on the impact of the current pandemic on income and poverty to inform the targeting of resources to those most affected and assess the success of current efforts. We construct new measures of the income distribution and poverty with a lag of only a few weeks using high frequency data from the Basic Monthly Current Population Survey (CPS) \citet{saldana2013arroz}
+            \end{center}
+            
+            \begin{flushleft}
+                This paper addresses the economic impact of the COVID-19 pandemic by providing timely and accurate information on the impact of the current pandemic on income and poverty to inform the targeting of resources to those most affected and assess the success of current efforts. We construct new measures of the income distribution and poverty with a lag of only a few weeks using high frequency data from the Basic Monthly Current Population Survey (CPS)
+            \end{flushleft}
+            
+            \begin{flushright}
+                This paper addresses the economic impact of the COVID-19 pandemic by providing timely and accurate information on the impact of the current pandemic on income and poverty to inform the targeting of resources to those most affected and assess the success of current efforts. We construct new measures of the income distribution and poverty with a lag of only a few weeks using high frequency data from the Basic Monthly Current Population Survey (CPS)
+            \end{flushright}
+% PARTE 1 ----------------------------------------------
+
+% PARTE 2 ----------------------------------------------
+\section{Modo matemático}
+    \subsection{Ecuación simple}
+        $x = 0$
+    
+    \subsection{Ecuaciones dentro del texto}
+        This paper addresses the economic impact of the COVID-19 pandemic by providing timely and accurate information on the impact of the current pandemic on income and poverty to inform the targeting of resources to those most affected and $x=1$, por lo tanto, el resultado es el siguiente:
+            \begin{center}
+                $x=1$
+            \end{center}
+        o podemos escribir simplmente
+            $$x=1$$
+    
+    \subsection{Sistema de ecuaciones}
+        \begin{gather*}
+            x=1132454544121212123132\\
+            x=1
+        \end{gather*}
+        
+        \begin{align}
+            x & = 145645435435435435454 \\
+            x & = 1  \label{eq1}
+        \end{align}
+        
+        \begin{eqnarray}
+            x & = & 145645435435435435454 \notag \\
+            x & = & 1 \label{eq2}
+        \end{eqnarray}
+        
+        \lipsum{2}
+        como vimos en las ecuaciones \ref{eq1} y (\ref{eq2}), el proceso es simple
+
+    \subsection{Matemática universitaria}
+        $$\int xdx, \frac{df}{dx}, \frac{\partial f}{\partial x}, \sum x, \prod x$$
+        
+        $$ \int_{a}^{b} xdx, \int \limits_{a}^{b} xdx, x^2, x^23, x^{23}, x_2, x_23, x_{23}$$
+        
+        $$\sqrt{x}, \sqrt[9]{x}, \ln{x}, \sum \limits_{i=1}^{N}, x_{23}^{23}, \longrightarrow $$
+        
+        $$\hat{\beta}^2, \bar{\beta}, \tilde{\beta}$$
+        
+        $$(\frac{1}{2}), \left(\frac{1}{2}\right)$$
+        
+        $$
+            \left[
+                \begin{array}{ccc}
+                    1 & \hdots & 3\\
+                    1 & \ddots & 3\\
+                    \vdots & \vdots & \vdots \\
+                    1 & 2 & 3
+                \end{array}
+            \right]_{n \times m}
+        $$
+% PARTE 2 ----------------------------------------------
+
+% PARTE 3 y 4 ------------------------------------------
+\section{Figuras}
+    \begin{figure}[H]
+        \centering
+        \caption{goku modo god}
+        \includegraphics[width=\linewidth]{goku.jpg}
+        \label{fig:fig1}
+    \end{figure}
+    \lipsum{2} y es así que como podemos ver en la imagen \ref{fig:fig1}
+
+\section{Tablas}
+    \begin{table}[H]
+        \centering
+        \caption{Esta es mi tabla}
+            \begin{tabular}{cc}
+                \hline
+                    Uno & dos \\
+                \hline
+                    1   & 2 \\
+                    1   & 2 \\
+                    1   & 2 \\
+                \hline
+            \end{tabular}
+        \label{tab:tab1}
+    \end{table}
+    \lipsum{2} y es así que como podemos ver en la tabla \ref{tab:tab1}
+% PARTE 3 y 4 ------------------------------------------
+
+% PARTE 5 ----------------------------------------------
+\section{Figuras con Tikz}
+    \begin{center}
+        \begin{tikzpicture}
+            \draw [<->] (0,4.5) node [above] {$P$} -- (0,0) -- (4.5, 0) node [right] {$Q$};
+                \draw[red] (0.5,4) -- (4,0.5);
+                \draw[blue] (0.5,0.5) -- (4,4);
+        \end{tikzpicture}
+    \end{center}
+% PARTE 5 ----------------------------------------------
+
+% PARTE 6 ----------------------------------------------
+\section{Bibliografía}
+    This paper addresses the economic impact of the COVID-19 pandemic by providing timely and accurate information on the impact of the current pandemic on income and poverty to inform the targeting of resources to those most affected and assess the success of current efforts. We construct new measures of the income distribution and poverty with a lag of only a few weeks using high frequency data from the Basic Monthly Current Population Survey (CPS)This paper addresses the economic impact of the COVID-19 pandemic by providing timely and accurate information on the impact of the current pandemic on income and poverty to inform the targeting of resources to those most affected and assess the success of current efforts. We construct new measures of the income distribution and poverty with a lag of only a few weeks using high frequency data from the Basic Monthly Current Population Survey (CPS)This paper addresses the economic impact of the COVID-19 pandemic by providing timely and accurate information on the impact of the current pandemic on income and poverty to inform the targeting of resources to those most affected and assess the success of current efforts. We construct new measures of the income distribution and poverty with a lag of only a few weeks using high frequency data from the Basic Monthly Current Population Survey (CPS) \citep{Flores2005}
+        \bibliography{biblio}
+        \bibliographystyle{apalike}
+% PARTE 6 ----------------------------------------------
+\end{document}
