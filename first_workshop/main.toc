@@ -1,0 +1,18 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Modo Texto}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Formato de texto}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Escribiendo una lista}{3}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Escribiendo una lista enumerada}{3}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Espacios y saltos entre las líneas}{3}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Texto de colores}{3}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Tamaño de la letra}{4}{subsection.1.6}%
+\contentsline {subsection}{\numberline {1.7}Orientación del texto}{4}{subsection.1.7}%
+\contentsline {section}{\numberline {2}Modo matemático}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Ecuación simple}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Ecuaciones dentro del texto}{5}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Sistema de ecuaciones}{5}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Matemática universitaria}{6}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Figuras}{7}{section.3}%
+\contentsline {section}{\numberline {4}Tablas}{9}{section.4}%
+\contentsline {section}{\numberline {5}Figuras con Tikz}{10}{section.5}%
+\contentsline {section}{\numberline {6}Bibliografía}{10}{section.6}%
