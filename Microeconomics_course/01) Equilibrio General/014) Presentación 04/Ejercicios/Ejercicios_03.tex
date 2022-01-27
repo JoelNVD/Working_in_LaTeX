@@ -1,0 +1,202 @@
+%====================================================================================
+% Preamble
+%------------------------------------------------------------------------------------
+\documentclass[10pt,a4paper]{article}
+
+% Apartado de texto
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+
+% Apartado matemático
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage[libertine]{newtxmath}
+
+% Apartadode no sangría
+\usepackage{parskip}
+
+% Aparatod posición del texto
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{fancyhdr}
+
+\usepackage{graphicx}
+\usepackage{xcolor}
+\definecolor{cardinal}{rgb}{0.77, 0.12, 0.23}
+
+% Apartado de columnas y filas: juntarlas o separarlas
+\usepackage{multicol, multirow}
+
+% Apartado differents label en listado
+\usepackage[shortlabels]{enumitem}
+
+% Apartado hyperres
+\usepackage[hidelinks]{hyperref}
+
+\usepackage{tcolorbox}
+\newtcolorbox{nota}[1]{
+	colback=cardinal!5!white,
+	colframe=cardinal!75!black,
+	fonttitle=\bfseries,
+	title=#1
+}
+
+% Apartado dibujos
+\usepackage{tikz, pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{positioning,calc,arrows}
+\usetikzlibrary{shapes.arrows}
+\usetikzlibrary{patterns}
+\usetikzlibrary{babel} % Para que recono > y <, en inglés no se pone, pero en spañol sí
+\usetikzlibrary{shadings,shadows}
+\usetikzlibrary{matrix}
+\usetikzlibrary{intersections}
+
+% Apartado cambio como por punto
+\decimalpoint
+
+% \highlight[<colour>]{<stuff>}
+\newcommand{\highlight}[2][yellow]{\mathchoice%
+	{\colorbox{#1}{$\displaystyle#2$}}%
+	{\colorbox{#1}{$\textstyle#2$}}%
+	{\colorbox{#1}{$\scriptstyle#2$}}%
+	{\colorbox{#1}{$\scriptscriptstyle#2$}}}%
+
+% Definir oprerador
+\DeclareMathOperator*{\M}{Max}
+
+%====================================================================================
+
+%====================================================================================
+% Body
+%====================================================================================
+% Title Page
+%-----------
+\textwidth=450pt \textheight=620pt \oddsidemargin=0in
+\topmargin=-10pt
+\pagestyle{fancy} \rhead{\scriptsize{\textbf{Código del Curso:} xxXXXXX} \\
+	\textbf{Fecha:} XX/XX/2021 \& 2021-I \hspace{0.04cm}}
+\lhead{\scriptsize{\textbf{Profesor:} José A. Valderrama}  \\
+	\textbf{Curso:} Teoría Microeconómica II}
+\newcommand{\re}[1]{\smallskip\textsf{\textbf{Respuesta}} \begin{sf}\\ #1 \end{sf} \bigskip}
+\newcommand{\ay}[1]{ \scriptsize{\textsl{Hint: #1}}\normalsize{}}
+\newcommand{\pr}[2]{\frac{\partial #1}{\partial #2}}
+
+%------------------------------------------------------------------------------------
+% Title
+%---------
+\begin{document}
+	\begin{center}
+		{\Large {\textbf{Práctica Dirigida N$^{\circ}$3}}}
+
+		\textsc{Funciones de bienestar}
+		
+	\end{center}
+% EJERCICIOS---------------------------------------------------------------------------------
+\begin{enumerate}
+	\item Obtenga la Frontera de Posibilidades de Utilidad (\emph{FPU})para una economía de intercambio puro formada por dos individuos con la siguientes preferencias y dotaciones iniciales:
+			$$U_A = x_{A}^{1/2}y_{A}^{1/2}\quad , \quad U_B = x_{B}^{1/2}y_{B}^{1/2}\quad , \quad W_A = (800, 175)\quad , \quad W_B = (400, 125)$$
+		  Para cada caso:
+		  	\begin{enumerate}[a)]
+		  		\item Obtener las ecuaciones del conjunto paretiano y de la \emph{FPU}
+		  		\item Realice el gráfico de la \emph{FPU}
+		  	\end{enumerate}
+			\textbf{\LARGE Solución}\\
+				\input{solucionario/sol_01}
+	\item Obtenga la \emph{FPU} para una economía de intercambio puro formada por dos individuos con las siguientes preferencias y dotaciones iniciales:
+			$$U_A = x_Ay_A \quad ; \quad U_B = x_By_B \quad ; \quad W_A = (1,1)\quad ; \quad W_B = (1,2)$$
+		  Para cada caso:
+		  	\begin{itemize}
+		  		\item Obtener las ecuaciones del conjunto paretiano y de la \emph{FPU}
+		  		\item Realice el gráfico de la \emph{FPU}
+		  	\end{itemize}
+	  		\textbf{\LARGE Solución}\\
+	  			\input{solucionario/sol_02}
+	\item Se tiene dos consumidores con idénticas preferencias, descritas por $u = \ln(XY)$. Supongamos, además, que las dotaciones iniicales de los bienes son $W_A = (3,2); W_B=(2,3)$
+			\begin{itemize}
+				\item Calcular la ecuación de la \emph{FPU} e indicar si el punto de la dotación inicial está por encima o por debajo de esa curva
+				\item Identificar en la \emph{FPU} los niveles de utilidad correspondientes a los extremos del núcleo de esta economía y calcular sus correspondientes asignaciones
+			\end{itemize}
+			\textbf{\LARGE Solución}\\
+				\input{solucionario/sol_03}
+	\item Supongamos la existencia de una economía de intercambio puro en la que dos consumidores (1, 2) intercambian dos bienes $(x,y)$. Las preferencias de ambos consumidores cons respecto a estos bienes vieien representadas por $U_1 = 2x_{1}^{3/4}y_{1}^{1/4}; U_2 = x_{2}^{3/4}y_{2}^{1/4}$. Supongamos, además, que las dataciones iniciales de los bienes son: $\overline{x}_1 = 20, \overline{y}_1 = 40, \overline{x}_2 = 80, \overline{y}_2 = 60$
+			\begin{itemize}
+				\item Calcular la ecuación de la \emph{FPU} e indicar si el punto de la dotación inicial está por encima o por debajo de esa curva
+				\item Identificar en la \emph{FPU} los niveles de utilidad correspondientes a los extremos del núcleo de esta economía y calcular sus correspondientes asignaciones
+			\end{itemize}
+			\textbf{\LARGE Solución}\\
+				\input{solucionario/sol_04}
+	\item Determinar cuanto de los bienes $x$ y $y$ debería producirse y cómo deberían distribuirse entre los consumidores $A$ y $B$, si se tiene la siguiente información:
+			\begin{itemize}
+				\item Curva de Transformación: $x^2 + y^2 = 500$
+				\item Función de utilidad: $u^A = x^Ay^A, u^B = x^By^B$
+				\item Función de Bienestar Social:$w=u_Au_B$
+			\end{itemize}
+	\item Sobre los Teoremas Fundamentales del Bienestar:
+			\begin{enumerate}[a)]
+				\item Enunciar y demostrar el \emph{Primer Teorema Fundamental de la Economía del Bienestar}.
+				\item Discutir rl siguiente enunciado \textit{``Es necesario tener un gobierno benevolente que se encargue de darnos una buena dotación de recursos''}
+			\end{enumerate}
+			\textbf{\LARGE Solución}\\
+				\input{solucionario/sol_06}
+	\item Sobre el \emph{Primer Teorema Fundamental del Bienestar}, considere una economía con dos agentes ($A, B$) y dos bienes ($x, y$). Los dos agentes tienen las siguientes funciones de utilidad:
+			$$U_A = x^2y \quad , \quad U_B =xy^2$$
+	La cantidad total del bien $x$ es igual a 3 y la cantidad total del bien $y$ es igual a 3.\\
+	¿Cuál de las siguientes locaciones pueden ser un equilibrio competitivo?
+		\begin{enumerate}[a)]
+			\item $A_A = (x=1; y=2), A_B = (x=2, y=1)$
+			\item $A_A = (x=1.5; y=1.5), A_B = (x=1.5, y=1.5)$
+			\item $A_A = (x=2; y=1), A_B = (x=1, y=2)$
+		\end{enumerate}
+		\textbf{\LARGE Solución}\\
+			\input{solucionario/sol_07}
+	\item Considere una comunidad compuesta por dos individuos (1, 2). $A$, $B$ y $C$ son tres puntos que pertenecen a la \emph{FPU} de la comunidad. Las utilidad individuales ($U^A. U^B$) se describen como sigue:
+				\begin{center}
+					\begin{tabular}{ccc}
+						\hline
+							Points & $U_1$ & $U_2$ \\
+						\hline
+							$A$ & 2 & 7 \\
+							$B$ & 5 & 5 \\
+							$C$ & 7 & 2 \\
+						\hline
+					\end{tabular}
+				\end{center}
+		Considerando $D$:
+				\begin{center}
+					\begin{tabular}{ccc}
+						\hline
+							Points & $U_1$ & $U_2$ \\
+						\hline
+							$D$ & 2 & 5 \\
+						\hline
+					\end{tabular}
+				\end{center}
+		\begin{enumerate}[a)]
+			\item ¿Pertenece $G$ a la \emph{FPU} de la comunidad?
+			\item ¿Puedes encontrar punto en la \emph{FPU} que es Pareto-superior a $C$? Justifica tu respuesta
+			\item ¿Cuál de los punto(s) $A$, $B$, $C$, $D$ miente(n) en la curva de indiferencia más alta de una Función de Bienestar Social (\emph{FBS}) utilitarista?
+		\end{enumerate}
+			\textbf{\LARGE Solución}\\
+				\input{solucionario/sol_08}
+	\item Considérese una sociedad compuesta por dos individuos -los individuos 1 y 2-  y cuya frontera de posibilidades de utilidad (\emph{FPU}) es la dada por la función $u^1+(u^2)^2 = 100$, donde $u^1$ denota la utilidad del agente 1 y $u^2$ la del agente 2. Además, ambos individuos creen que la asignación de recursos ideal en la que se obtiene maximizando una apropiada función de bienestar social (\emph{FBS}) utilitarista ponderada o Bergsoniana. En particular,
+		\begin{enumerate}[a)]
+			\item El individuo 1 cree que la mejor distribución social posible del bienestar es la dada por el vector de utilidad $\left( u^1, u^2\right) =(75, 5)$ y confronta esta solución con una \emph{FBS} constituida por la suma ponderada de la utilidades, viendo confirmado su aseveración. ¿Cuál es la \emph{FBS} según el criterio de este individuo 1?
+			\item El individuo 2 cree, por otro parte, que la mejor distribución social posible del bienestar es $\left( u^1, u^2\right) =(19, 9)$. ¿Cuál es la \emph{FBS} según el criterio del individuo 2?
+		\end{enumerate}
+			\textbf{\LARGE Solución}\\
+				\input{solucionario/sol_09}
+	\item Consideremos una economía compuesta por dos empresas - las empresas 1 y 2-, dos consumidores - los individuos 1 y 2- y dos bienes -los bienes 1 y 2. Los consumidores tienen preferencias representadas por $u^1\left( q_{1}^{1},q_{2}^{1}\right) = \sqrt{q_{1}^{1}q_{2}^{1}}$ y $u^2\left( q_{1}^{2},q_{2}^{2}\right) = \frac{1}{2}\ln(q_{1}^{2})+\frac{1}{4}\ln(q_{2}^{2})$, respectivamente. A su vez, la empresa 1 produce el bien 1 según la tecnología $q_1=K_{1}^{1/4}L_{1}^{1/4}$, mientras que la empresa 2 produce el bien 2 a través de la tecnología $q_2=K_{2}^{1/3}L_{2}^{1/3}$. Las dotaciones de factores son las dadas por el vector $(K, L)\gg 0$, los precios de los bienes 1 y 2 son $p_1$ y $p_2$, respectivamente, y los de los factores $K$ y $L$, $r$ y $w$. La empresa 1 es propiedad del consumidor 1 y la 2 del consumidor 2. Supongamos, por último que el Estado representa sus preferencias mediante la función de utilidad o bienes social $W$. Teniendo en cuenta que en la asignación de quilibrio walrasiano y sobre la frontera de posibilidades de producción (\emph{FPP}) se puede definir un máximo de $W$ para un valor único de $q_1$, determínese este valor de $q_1$ en función de $K$ y $L$:
+		\begin{enumerate}[a)]
+			\item Si la función de bienestar social $(FBS)$ es $W\left( u^1,u^2\right) = u^1\left( q_{1}^{1},q_{2}^{1}\right)$; es decir, es una función que privilegia al consumidor 1.
+			\item Si la $FBS$ es $W\left( u^1,u^2\right) = u^2\left( q_{1}^{2},q_{2}^{2}\right)$, en cuyo caso privilegia al consumidor 2.
+		\end{enumerate}
+			\textbf{\LARGE Solución}\\
+				\input{solucionario/sol_10}
+\end{enumerate}
+%------------------------------------------------------------------------------------
+\end{document}		
+%====================================================================================

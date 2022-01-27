@@ -1,0 +1,141 @@
+%====================================================================================
+% Preamble
+%------------------------------------------------------------------------------------
+\documentclass[10pt,a4paper]{article}
+
+% Apartado de texto
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+
+% Apartado matemático
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage[libertine]{newtxmath}
+
+% Apartadode no sangría
+\usepackage{parskip}
+
+% Aparatod posición del texto
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{fancyhdr}
+
+\usepackage{graphicx}
+\usepackage{xcolor}
+\definecolor{cardinal}{rgb}{0.77, 0.12, 0.23}
+
+% Apartado de columnas y filas: juntarlas o separarlas
+\usepackage{multicol, multirow}
+
+% Apartado differents label en listado
+\usepackage[shortlabels]{enumitem}
+
+% Apartado hyperres
+\usepackage[hidelinks]{hyperref}
+
+\usepackage{tcolorbox}
+\newtcolorbox{nota}[1]{
+	colback=cardinal!5!white,
+	colframe=cardinal!75!black,
+	fonttitle=\bfseries,
+	title=#1
+}
+
+% Apartado dibujos
+\usepackage{tikz, pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{positioning,calc,arrows}
+\usetikzlibrary{shapes.arrows}
+\usetikzlibrary{patterns}
+\usetikzlibrary{babel} % Para que recono > y <, en inglés no se pone, pero en spañol sí
+\usetikzlibrary{shadings,shadows}
+\usetikzlibrary{matrix}
+\usetikzlibrary{intersections}
+
+% Apartado cambio como por punto
+\decimalpoint
+
+% \highlight[<colour>]{<stuff>}
+\newcommand{\highlight}[2][yellow]{\mathchoice%
+	{\colorbox{#1}{$\displaystyle#2$}}%
+	{\colorbox{#1}{$\textstyle#2$}}%
+	{\colorbox{#1}{$\scriptstyle#2$}}%
+	{\colorbox{#1}{$\scriptscriptstyle#2$}}}%
+
+% Definir oprerador
+\DeclareMathOperator*{\M}{Max}
+
+%====================================================================================
+
+%====================================================================================
+% Body
+%====================================================================================
+% Title Page
+%-----------
+\textwidth=450pt \textheight=620pt \oddsidemargin=0in
+\topmargin=-10pt
+\pagestyle{fancy} \rhead{\scriptsize{\textbf{Código del Curso:} xxXXXXX} \\
+	\textbf{Fecha:} XX/XX/2021 \& 2021-I \hspace{0.04cm}}
+\lhead{\scriptsize{\textbf{Profesor:} José A. Valderrama}  \\
+	\textbf{Curso:} Teoría Microeconómica II}
+\newcommand{\re}[1]{\smallskip\textsf{\textbf{Respuesta}} \begin{sf}\\ #1 \end{sf} \bigskip}
+\newcommand{\ay}[1]{ \scriptsize{\textsl{Hint: #1}}\normalsize{}}
+\newcommand{\pr}[2]{\frac{\partial #1}{\partial #2}}
+
+%------------------------------------------------------------------------------------
+% Title
+%---------
+\begin{document}
+	\begin{center}
+		{\Large {\textbf{Práctica Dirigida N$^{\circ}$6}}}
+
+		\textsc{Selección Adversa \& Señalización}
+		
+	\end{center}
+% EJERCICIOS---------------------------------------------------------------------------------
+\begin{enumerate}
+	\item Supongamos que un empresario (neutral ante el riesgo) quiere contratar a un trabajador, pero no conoce todas las características de dicho trabajador. Lo que desconoce es la productividad que el esfuerzo del trabajador tiene en el proceso de producción para el que desea contratarle. Sabe, sin embargo, que el trabajador es neutral ante el riesgo y que puede ser de dos tipos: o bien su productividad es alta, con lo que su esfuerzo es igual a $e^{2}$, o bien es baja y su esfuerzo es igual a $e^{2}$
+	Al primer tipo de trabajador le llamaremos  ``$B$'' y al segundo ``$M$'', ya que éste último sufre mayor desutilidad que el primero. La función de utilidad del trabajador es por tanto $U^{B}(w, e)=w-e^{2}$ o $U^{M}(w, e)=w-2e^{2}$. La probabilidad de que el trabajador sea de tipo $B$ es $q$ (y por tanto con probabilidad $(1-q)$ el trabajador es de tipo $M$). La utilidad de reserva de ambos tipos de trabajador s $\underline{U}=0 .$ El empresario, por su parte, valora el esfuerzo del trabajador en $\pi=ke$, donde $k$ es una constante suficientemente grande (de tal modo que el empresario está interesado en contratar al trabajador sea cual sea su tipo). Por cada unidad de esfuerzo del trabajador el empresario obtiene, or tanto, $k$ unidades de beneficio.
+		\begin{enumerate}[a)]
+			\item Formular el problema que resuelve el principal con información simétrica. Calcular los contratos óptimos. ¿Cuáles son los esfuerzos que pide y los salarios que paga?
+			\item Formular el programa que debería resolver el principal en información asimétrica y resuelvalo. ¿Cuáles son los contratos que el principal ofrece a los agentes? Comparar los casos de información simétrica y asimétrica.
+		\end{enumerate}
+		\textbf{\LARGE Solución}\\
+			\input{solucionario/sol_01}
+	
+	\item Una compañía ofrece el servicio de vuelo entre dos ciudades, siendo el costo por pasajero $C$. Hay dos tipos de clientes de esta compañía: los ejecutivos que se desplazan por razones de negocio y los turistas. La proporción de ejecutivos que demandan este destino es $\alpha$ y están dispuestos a pagar $P_A$ por el viaje. La proporción de turistas es $(1-\alpha)$ y están dispuestos a pagar $P_B$ por el mismo viaje. La utilidad que deriva cada ejecutivo del viaje es $U_A$ y la de cada tursitas $U_B$ con ($U_A > U_B$)Todos los pasajeros tienen una utilidad de reserva $U$. El problema al que se enfrenta la compañía es determinar la política de precios y plazas para los ejecutivos y los turistas, sin conocer a priori quienes son los unos y los otros. Escriba el problema de optimización del principal (sin resolverlo), con selección adversa.\\
+	
+		\textbf{\LARGE Solución}\\
+			\input{solucionario/sol_02}
+	
+	\item Hay muchos compradores de autos deportivos de color rojo. Los \emph{``snobs''} (en proporción $q$) están dispuestos a pagar hasta $50.000$ dólares por un auto de color rojo (logrando una utilidad $U_{s} > 50.000$ dólares). Por otra parte, los \emph{``menos snobs''} (en proporción $1-q$) pagarían hasta $30.000$ dólares por un auto de color rojo logrando una utilidad $U_{M}>30.000$ dólares. Se sabe que $U_S > U_{M}$. Los vendedores de autos tienen que elegir el tipo de contrato que desean ofrecer a cada comprador le autos rojos. Teniendo en cuenta que la utilidad de reserva de los compradores \emph{``snobs''} es de $U_{S}=25.000$ dólares y la de los \emph{``menos snobs''} es de $U_{M}=15.000$ dólares. ¿Cómo diseñan los vendedores sus contratos, en selección adversa? (formule el problema sin resolverlo).\\
+	
+		\textbf{\LARGE Solución}\\
+			\input{solucionario/sol_03}
+	
+	\item Supongamos que un empresario quiere contratar a un trabajador, pero no conoce todas las características de éste. Lo que si sabe es que es neutral ante el riesgo, pero con respecto a la desutilidad del esfuerzo puede ser de dos tipos. O bien su desutilidad es igual a $e^{2}$, o bien es igual a $2e^{2}$. Es decir, que el segundo (que llamaremos el ``malo'') sufre mayor desutilidad por el esfuerzo que el primero (el ``bueno''). La función de utilidad del trabajador es, por tanto, $U^{B}(w, e)=w-e^{2}$, o $U^{M}(w, e)=w-2 e^{2}$, en función de cual sea su tipo. La probabilidad de que el trabajador sea de tipo $B$ es $q$. La utilidad de reserva para ambos tipos de trabajador es $\underline{U}=0$. El empresario, por su parte, es también neutral ante el riesgo, y valora el esfuerzo del trabajador en $\Pi( e)=k e$, donde $k$ es una constante suficientemente grande (de tal modo que el empresario está interesado en contratar al trabajador sea cual sea su tipo). Por cada unidad de esfuerzo del trabajador el empresario obtiene, por tanto, $k$ unidades de beneficio.
+		\begin{enumerate}[a)]
+			\item Escribir y resolver el programa que resolvería el empresario si tuviese información perfecta sobre la característica del trabajador. ¿Cuáles son los esfuerzos que pide y los salarios que paga?
+			\item Escríbase el programa cuando se plantea efectivamente un problema de selección adversa.
+			\item Calcular la solución del programa anterior. (Puede utilizarse el hecho de que algunas restricciones no están saturadas, pero justifiquese si se hace).
+			\item Compárense los casos de información simétrica y asimétrica
+		\end{enumerate}
+		
+	\item Supongamos el mismo marco considerado en el ejercicio 1 . Pero consideremos ahora que los beneficios de la empresa son $\Pi(e, w)=e-w$ (es decir, $k=1$ ) y que la probabilidad ex ante de que el trabajador sea bueno es $q=1/2$.
+	\begin{enumerate}[a)]
+		\item Escríbanse en este caso las soluciones óptimas para el empresario, en información simétrica y en información asimétrica (en la que contrata a ambos tipos de trabajador). Calcular los beneficios para estos contratos.		
+		\item Considérese la otra posibilidad que tiene el empresario: contratar solamente al agente si es bueno. Calcular el contrato óptimo en este caso (estamos aún en información asimétrica). Calcular los beneficios de la empresa.		
+		\item Compárense las situaciones descritas en los puntos a) y b) en información asimétrica. ¿Cual es el contrato óptimo?		
+	\end{enumerate}
+	\item Supongamos que un empresario (neutral ante el riesgo) quiere contratar a un trabajador, pero no conoce todas las características de dicho trabajador. Lo que desconoce es la productividad que el esfuerzo del trabajador tiene en el proceso de producción para el que desea contratarle. Sabe, sin embargo, que el trabajador es neutral ante el riesgo y que puede ser de dos tipos: o bien su productividad es alta, con lo que su esfuerzo permite obtener un ingreso esperado de $\Pi(e)=10+4 e^{1/2}$, o bien es baja y su esfuerzo permite obtener un ingreso esperado de $\Pi(e)=10+2 e^{1/2}$. Al primer tipo de trabajador le llamaremos ``$B$'' y al segundo ``$M$'', ya que éste puede obtener menos ingreso por unidad de esfuerzo. La función de utilidad del trabajador es independiente de su tipo, es decir: $U^{B}(w, e)=w-e$, y $U^{M}(w, e)=w-e$. La probabilidad de que el trabajador sea de tipo $B$ es $q$ (y por tanto con probabilidad $(1-q)$ el trabajador es de tipo $M$ ). La utilidad de reserva de cada tipo de trabajador es diferente: $\underline{U}^{M}=0$, mientras que $\underline{U}^{B}=8$.
+	\begin{enumerate}[a)]
+		\item  Calcúlense los contratos óptimos en información simétrica (después de escribir el problema que resuelve el principal). ¿Qué ocurre si hay información asimétrica respecto del tipo del agente y se ofrecen los contratos hallados anteriormente? (Un gráfico puede ser útil.)
+		\item  Escríbase el programa que debería resolver el principal en información asimétrica y resolverlo. ¿Cuáles son los contratos que el principal ofrece a los agentes? Coméntese cuidadosamente el resultado.
+	\end{enumerate}
+\end{enumerate}
+%------------------------------------------------------------------------------------
+\end{document}		
+%====================================================================================

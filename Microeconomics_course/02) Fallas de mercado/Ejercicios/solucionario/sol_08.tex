@@ -1,0 +1,12 @@
+Sea $N_{A}$ el número de plazas disponibles para los ejecutivos y $N_{B}$ las plazas para los turistas, el problema se estructura de esta manera:
+\begin{align*}
+	& \M \limits_{N_A,N_B,P_A,P_B} N_AP_A+N_BP_A - \left( N_A + N_B\right) C\\
+	& \begin{array}{lll}
+		\text{ s.a. } & U_{A}-P_{A} \geq \underline{U} & \text { (R.P.1) } \\
+		& U_{B}-P_{B} \geq \underline{U} & \text { (R.P.2) } \\
+		& U_{A}-P_{A} \geq U_{A}-P_{B}   & \text { (R.I.1) } \\
+		& U_{B}-P_{B} \geq U_{B}-P_{A}   & \text { (R.I.2) }
+	\end{array}
+\end{align*}
+La R.P. 1 es redundante con $U_{A}>U_{B}$ :
+$$ U_{A}-P_{A} \geq U_{A}-P_{B}>U_{B}-P_{B} \geq \underline{U} \Rightarrow U_{A}-P_{A}>\underline{U} $$

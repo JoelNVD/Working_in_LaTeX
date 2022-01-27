@@ -1,0 +1,113 @@
+\vspace{-0.3cm}
+\begin{center}
+	\begingroup
+		\setlength{\tabcolsep}{10pt} % Default value: 6pt
+		\renewcommand{\arraystretch}{1.5} % Default value: 1
+			\begin{tabular}{ccc}
+					\hline
+				\multicolumn{3}{c}{Datos} \\
+					\hline
+				2 consumidores: & {} & $A$ y $B$ \\
+				2 bienes: & {} &$x$ e $y$ \\
+				F.U: & {} &$U_{A} = 2x_{A}y_{A}$ y $U_{B} = 4x_{B}^{2}y_{B}$ \\
+				Dotaciones: & {} &$\overline{x} = 30$ y $\overline{y} = 30$ \\
+				Reparto: & {} &$w_{A} = (10, 10)$ y $w_{B}=(20,20)$\\
+					\hline
+			\end{tabular}
+	\endgroup
+\end{center}
+
+\begin{itemize}
+	\item Pregunta 7a:
+			\begin{gather*}
+				RMS^{A} = RMS^{B} \Rightarrow \frac{y_A}{x_A}	= \frac{2y_B}{x_B} \\
+				x_A + x_B = \overline{x} = \overline{x}_A + \overline{x}_B = 10 + 20 = 30 \Rightarrow x_B = 30 - x_A\\
+				y_A + y_B = \overline{y} = \overline{y}_A + \overline{y}_B = 10 + 20 = 30 \Rightarrow y_B = 30 - y_A\\
+				\frac{y_A}{x_A}	= \frac{2\left(30 - y_A \right) }{30 -x_A}\\
+				y_A = \frac{60x_A}{30+x_A}
+			\end{gather*}
+			Gráfica de la función:
+				$$ \frac{\partial y_A}{\partial x_A} = \frac{1800}{\left( 30 - x_A\right)^2 } > 0 \qquad \frac{\partial^2 y_A}{\partial x_{A}^{2}} = - \frac{3600}{(30-x_A)^3} < 0$$
+				
+				\begin{center}
+					\begin{tikzpicture}[scale=0.8]
+						% Curvas de contrato
+							\draw [purple] (0,0) .. controls (0.2,3.8) and (2.2,5.8) .. (6,6);
+						% Formación de la caja
+							% Consumidor A
+								\draw (0,0) node[align=center, below left] {\footnotesize $O_A$} -- (0,6) node[above left] {30};
+								\draw (0,0) -- (6,0) node[below right] {30};
+							%Consumidor B
+								\draw (6,6) node[align=center, above right] {\footnotesize $O_B$} -- (0,6);
+								\draw (6,6) -- (6,0);
+					\end{tikzpicture}
+				\end{center}
+	\item Pregunta 7b:
+				$$\frac{y_A}{x_A}	= \frac{2y_B}{x_B} \Longrightarrow \frac{10}{10} = \frac{2 \cdot 20}{20} \Longrightarrow 1 \neq 2$$
+			La dotación inicial  no es asignación \emph{Eficiente en el Sentido de Pareto} (ESP). Por otro lado, si la dotación inicial fuese ESP debería pertenecer a la curva de contrato; es decir:
+				$$y_A = \frac{60x_A}{30+x_A} \Longrightarrow 10 \neq 15 = \frac{60 \cdot 10}{30 +10}$$
+			$\therefore$ Se afirma que no es ESP.
+	\item Pregunta 7c:
+				$$RMS^{A} = RMS^{B} = \frac{p_x}{p_y}$$
+				
+				$$\begin{array}{ccc}
+					x_Ap_x + y_Ap_y	= 10p_x + 10p_y & {} & x_Bp_x + y_Bp_y	= 20p_x + 20p_y   \\[.5cm]
+					x_{A}^{*}=\frac{5p_x+5p_y}{p_x} & {} & x_{B}^{*}=\frac{40p_x+40p_y}{3p_x} \\[.5cm]
+					y_{A}^{*}=\frac{5p_x+5p_y}{p_y} & {} & y_{B}^{*}=\frac{20p_x+20p_y}{3p_y}
+				\end{array}$$
+			
+				$$x_A + x_B = 30 \Longrightarrow x_{A}^{*} + x_{B}^{*} = 30 \Longrightarrow \frac{5p_x+5p_y}{p_x} + \frac{40p_x+40p_y}{3p_x} = 30 \Longrightarrow \left( \frac{p_x}{p_y} \right)^{*}= \frac{110}{70}$$
+				
+			Si evaluas con $y \Longrightarrow \left( \frac{p_y}{p_x}\right)^{*} = \frac{70}{110}$\\
+			
+			Reemplazando $\left( \frac{p_x}{p_y} \right)^{*}$ o $\left( \frac{p_y}{p_x}\right)^{*}$ en las funciones de demanda (FD); es decir, en $x_{A}^{*}, y_{A}^{*}, x_{B}^{*}, y_{B}^{*}$ los resultados serán:
+				$$x_{A}^{*} = \frac{90}{11}, \enskip y_{A}^{*} = \frac{240}{11}, \enskip x_{B}^{*} = \frac{90}{7}, \enskip y_{B}^{*} = \frac{120}{70}$$
+			
+				\begin{nota}{Nota 1}
+					Con las F.U Cobb-Douglass $U=aX^{\alpha}Y^{\beta}$
+						$$ X^* = \frac{\alpha M}{(\alpha + \beta)P_X} \quad Y^* = \frac{\beta M}{(\alpha + \beta) P_Y} $$
+					Donde $M = XP_X+YP_Y = W_XP_X + W_YP_Y$
+				\end{nota}
+			
+				\begin{nota}{Nota 2}
+					Si se conoce $X_{A}^*$ y $Y_{A}^*$ solo reemplazas en:
+						\begin{gather*}
+							X_{B}^* = 30 - X_{A}^* \\
+							Y_{B}^* = 30 - Y_{A}^*
+						\end{gather*}
+					para hallas fácilmente $X_{B}^*$ y $Y_{B}^*$
+				\end{nota}
+	\item Pregunta 7d:
+				\begin{center}
+					\emph{Ley de Walras}: $ED = P_x z_x+P_y z_y=0$ \\[0.4cm]
+					$z_x$: ED en el mercado del bien $x$\\[0.4cm]
+					$z_y$: ED en el mercado del bien $y$
+				\end{center}
+			Entonces:
+				\begin{gather*}
+					z_x = x - \overline{x} = x^* - \overline{x}  = \left(x_{A}^* + x_{B}^* \right) - \left(\overline{x}_A + \overline{x}_B \right) = \left( x_{A}^* - \overline{x}_A\right) + \left( x_{B}^* - \overline{x}_B\right) = z_{A}^{x} + z_{B}^{x} \\[0.4cm]
+					z_y = y - \overline{y} = y^* - \overline{y}  = \left(y_{A}^* + y_{B}^* \right) - \left(\overline{y}_A + \overline{y}_B \right) = \left( y_{A}^* - \overline{y}_A\right) + \left( y_{B}^* - \overline{y}_B\right) = z_{A}^{y} + z_{B}^{y}
+				\end{gather*}
+			Haciendo la suma respectiva:
+				\begin{center}
+					\begin{tikzpicture}
+						\matrix (m) [matrix of math nodes,]
+							{
+								z_{1}^{A} & = & x_{1}^{*A} - w_{1}^{A} = \frac{90}{11} - 10 & = & -\frac{20}{11}\\
+								z_{1}^{B} & = & x_{1}^{*B} - w_{1}^{B} = \frac{240}{11} - 20 & = & \frac{20}{11}\\
+								z_{2}^{A} & = & x_{2}^{*A} - w_{2}^{A} = \frac{90}{7} - 10 & = & \frac{20}{7} \\
+								z_{2}^{B} & = & x_{2}^{*B} - w_{2}^{B} = \frac{120}{7} - 20 & = &-  \frac{20}{7} \\
+								{}        & {} &              {}                           & {} &      0       \\
+							};	
+						\draw[thick, ->] (2.8,1.5) -- (2.8,0.25) node [right, very thick, scale=0.7mm] {+}-- (2.8,-1);
+						\draw[thick] (1.8,-1.05) -- (2.6,-1.05);
+					\end{tikzpicture}
+				\end{center}
+				\vspace{-0.5cm}
+			$\therefore$ Se cumple la \emph{Ley de Walras}
+				\begin{nota}{Nota 3}
+					Todo EW es un OP, pero no todo OP es un EW
+				\end{nota}
+			
+
+\end{itemize}

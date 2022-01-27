@@ -1,0 +1,26 @@
+\begin{tikzpicture}
+	% Formato de CAJA
+		\draw[->] (0.5,0.5) node[align=center, below left] {\footnotesize $O_A$} -- (0.5,4.5) node[align=center, above] {\footnotesize $x_{2}^{A}$};
+		\draw[->] (0.5,0.5) -- (8.5,0.5) node[align=center, right] {\footnotesize $x_{1}^{A}$};
+		
+		\draw[->] (8,4) node[align=center, above right] {\footnotesize $O_B$} -- (0,4) node[align=center, left] {\footnotesize $x_{2}^{B}$};
+		\draw[->] (8,4) -- (8,0) node[align=center, below] {\footnotesize $x_{2}^{B}$};
+	
+	% Curvas de indiferencia1
+		% Agente A1
+			\draw [blue] (1.51,2) --  (1.51,1.14) -- (2.4,1.14);
+			\draw [blue] (2.82,2.84) -- (2.82,1.98) --  (3.71,1.98);
+			\draw [blue] (4.28,3.77) --  (4.28,2.91) -- (5.17,2.91);
+		% Agente B 0.93
+			\draw [red] (3.06,1.45) --  (3.99,1.45) -- (3.99,0.59);
+			\draw [red] (4.36,2.27) --  (5.29,2.27) -- (5.29,1.41);
+			\draw [red] (5.74,3.16) --  (6.67,3.16) -- (6.67,2.3);
+			
+	% Curva de contrato
+		\draw [purple] (0.5,0.5) -- (6,4);
+		\draw [purple] (8,4) -- (2.5,0.5);
+			% Rellenando la curva de contrato
+				\fill [pattern=crosshatch dots,pattern color=purple!30!white](0.5,0.5)--(6,4)--(8,4)--(2.5,0.5)--(0.5,0.5);
+			% Conjunto paretiano
+				\node [scale=0.15mm]  at (6.7, 3.8)  {\textbf{Conjunto paretiano}};
+\end{tikzpicture}

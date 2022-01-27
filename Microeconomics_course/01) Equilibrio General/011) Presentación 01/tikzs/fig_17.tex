@@ -1,0 +1,40 @@
+\begin{tikzpicture}[scale=1.1]
+	% Formación de la caja
+		% Consumidor A
+			\draw[->] (0.5,0.5) node[align=center, below left] {\footnotesize $O_A$} -- (0.5,4.5) node[align=center, above] {\footnotesize $x_{2}^{A}$};
+			\draw[->] (0.5,0.5) -- (8.5,0.5) node[align=center, right] {\footnotesize $x_{1}^{B}$};
+		
+		%Consumidor B
+			\draw[->] (8,4) node[align=center, above right] {\footnotesize $O_B$} -- (0,4) node[align=center, left] {\footnotesize $x_{1}^{B}$};
+			\draw[->] (8,4) -- (8,0) node[align=center, below] {\footnotesize $x_{2}^{B}$};
+		
+	% Intersección de una dotación
+		% Demanda: X
+			\draw[dashed] (5.2,4) node[above] {\footnotesize $x_{1}^{B}$} -- (5.2,0.5) node[below]{\footnotesize $x_{1}^{A}$};
+			\draw[dashed] (0.5,2) node[left] {\footnotesize $x_{2}^{A}$} -- (8,2)node[right]{\footnotesize $x_{2}^{B}$};
+		
+		% Oferta: w
+			\draw[dashed, opacity=0.4] (6,4) -- (6,0.5);
+			\draw[dashed, opacity=0.4] (0.5,1.62)  -- (8,1.62);
+			
+				\draw (8,1.62)  node [right] {\footnotesize $w_{2}^{B}$};
+				\draw (6,4)  node [above] {\footnotesize $w_{1}^{B}$};
+				
+				\draw (0.5,1.62)  node [left] {\footnotesize $w_{2}^{A}$};
+				\draw (6,0.5)  node [below] {\footnotesize $w_{1}^{A}$};
+	
+	% Curvas de indiferencia
+		\draw [blue] (3.5,4) .. controls (4.6,2) and (5.2,1.7) .. (8,1.4);
+		\draw [red] (0.5,2.7) .. controls (4.915,2.515) and (5.915,2.015) .. (6.5,0.5);
+	
+	% Recta presupuestaria
+		\draw (0.5,4.23) -- (8.36,0.5);
+	
+	% Puntos
+		\draw[black, fill=black] (5.2,2) circle[radius=0.05] node [above right, scale=0.25mm] {$X$};
+		\draw[black, fill=black] (6,1.62) circle[radius=0.05] node [above right, scale=0.25mm] {$W$};
+		
+	% Flecha y rectángulo
+		\draw [->] (2.48,3.29) -- (2.67,3.69) node [left, scale = 0.3mm] {\footnotesize $p$};
+		\draw [rotate around={-25:(2.48,3.29)}] (2.48,3.29) rectangle (2.6, 3.4);
+\end{tikzpicture}

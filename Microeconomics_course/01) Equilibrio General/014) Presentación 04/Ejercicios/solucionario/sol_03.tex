@@ -1,0 +1,16 @@
+$\ln\left( XY\right) $ es una transformación monotónica de la \emph{Cobb-Douglas}; así que solo se igualan \emph{TMS}
+	\begin{itemize}
+		\item $\frac{y_A}{x_A} = \frac{y_B}{x_B} \rightarrow x_A = y_A$ y $x_B = y_B$
+		\item Reemplazando
+				$$U_A = \ln(x_Ax_A) \rightarrow x_A = e^{U_A/2} \qquad U_B = \ln(x_Bx_B) \rightarrow x_B = e^{U_B/2}$$
+	\end{itemize}
+Por lo tanto
+	$$x_A + x_B = 5 \longrightarrow e^{U_A/2} + e^{U_B/2} = 5 \longrightarrow \therefore U_B = 2\ln(5-e^{U_A/2})$$
+Gráficamente:
+	\begin{center}
+		\begin{tikzpicture}[scale = 1.5, samples = 100]
+			\draw[purple, domain = 0:2.77] plot({\x},{2*ln(5-e^(\x/2))});
+			\draw[<->] (0,3) node [above] {$U_B$} -- (0,0) -- (3,0) node [right] {$U_A$};
+			\draw (1,2.7) node[right, purple] {$U_B = 2\ln(5-e^{U_A/2})$};
+		\end{tikzpicture}
+	\end{center}

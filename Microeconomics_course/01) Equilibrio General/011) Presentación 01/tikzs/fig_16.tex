@@ -1,0 +1,68 @@
+\begin{tikzpicture}[transform canvas={scale=0.55}]
+	% Formato de CAJA: Sola A
+		\draw[->] (0.5,0.5) node[align=center, below left] {\footnotesize $O_A$} -- (0.5,4.8) node[align=center, above] {\footnotesize $x_{2}^{A}$};
+		\draw[->] (0.5,0.5) -- (8.5,0.5) node[align=center, right] {\footnotesize $x_{1}^{A}$};
+	
+		% Rellenando el triangulo
+			\fill [pattern=crosshatch dots,pattern color=orange!60!white] (0.5,4.3) -- (7.27,0.5) -- (0.5,0.5) -- (0.5,4.3) ;
+			
+		% Recta presupuestaria
+			\draw (0.5,4.3) -- (7.27,0.5);
+		
+		% Punto
+			\draw[black, fill=black] (4.6,2) circle[radius=0.1] node [ above right] {$w^{A}$};
+		
+		% Intersección de una dotación
+			\draw[dashed] (4.6,2) -- (4.6,0.5) node[below] {\footnotesize $w_{1}^{A}$};
+			\draw[dashed] (0.5,2) node[left] {\footnotesize $w_{2}^{A}$} -- (4.6,2);
+		
+		% Ecuación
+			\node at (4.5, 3.7)  {$p_{1}x_{1}^{A}+p_{2}x_{2}^{A}=p_{1}w_{1}^{A}+p_{2}w_{2}^{A}$};
+	
+	% Formato de CAJA: Sola B
+		\draw[->] (10.5,0.5) node[align=center, below left] {\footnotesize $O_B$} -- (10.5,4.8) node[align=center, above] {\footnotesize $x_{2}^{B}$};
+		\draw[->] (10.5,0.5) -- (18.5,0.5) node[align=center, right] {\footnotesize $x_{1}^{B}$};
+		
+		% Rellenando el triangulo
+			\fill [pattern=crosshatch dots,pattern color=green!50!white] (17.47,0.5) -- (10.5,4.41) -- (10.5,0.5) -- (17.47,0.5) ;
+		
+		% Recta presupuestaria
+			\draw (17.47,0.5) -- (10.5,4.41);
+		
+		% Punto
+			\draw[black, fill=black] (13.9,2.5) circle[radius=0.1] node [ above right] {$w^{B}$};
+		
+		% Intersección de una dotación
+			\draw[dashed] (13.9,2.5) -- (13.9,0.5) node[below] {\footnotesize $w_{1}^{A}$};
+			\draw[dashed] (10.5,2.5) node[left] {\footnotesize $w_{2}^{A}$} -- (13.9,2.5);
+		
+		% Ecuación
+			\node at (14.5, 3.7)  {$p_{1}x_{1}^{B}+p_{2}x_{2}^{B}=p_{1}w_{1}^{B}+p_{2}w_{2}^{B}$};
+	
+	% Formato de CAJA: A y B conjunto
+		\draw[->] (5.5,-5.5) node[align=center, below left] {\footnotesize $O_A$} -- (13.8,-5.5) node[align=center, right] {\footnotesize $x_{1}^{A}$};
+		\draw[->] (5.5,-5.5) -- (5.5,-1.2) node[align=center, above] {\footnotesize $x_{2}^{A}$};
+		
+		\draw[->] (13,-2) node[align=center, above right] {\footnotesize $O_B$} -- (4.7,-2) node[align=center, left] {\footnotesize $x_{1}^{B}$};
+		\draw[->] (13,-2) -- (13,-6.3) node[align=center, below] {\footnotesize $x_{2}^{B}$};
+		
+		% Rellenos
+			% Naranaja
+				\fill [pattern=crosshatch dots,pattern color=orange!60!white] (5.5,-1.7) -- (12.27,-5.5) -- (5.5,-5.5) -- (5.5,-1.7);
+			
+			% Verde
+				\fill [pattern=crosshatch dots,pattern color=green!50!white] (6.04,-2) -- (13,-2) -- (13,-5.91) -- (6.04,-2) ;
+		
+		% Intersectando
+			% Vertical
+				\draw[dashed] (9.6, -2)  node[above] {\footnotesize $w_{1}^{B}$} -- (9.6,-5.5) node[below] {\footnotesize $w_{1}^{A}$};
+			
+			% Horizontal
+				\draw[dashed] (5.5,-4) node[left] {\footnotesize $w_{2}^{A}$} -- (13,-4) node[right] {\footnotesize $w_{2}^{B}$};
+		
+		% punto
+			\draw[black, fill=black, opacity=3] (9.6,-4) circle[radius=0.1] node [ above right] {$w$};
+		
+		% Recta presupuestaria
+			\draw (5.5,-1.7) -- (13,-5.91);
+\end{tikzpicture}

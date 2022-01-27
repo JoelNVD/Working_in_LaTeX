@@ -1,0 +1,67 @@
+% Apartado de letras
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+
+% Aparatdo matemático
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+% Apartado tablas, figuras, y otros
+\usepackage{multirow,booktabs,setspace,caption,multicol,tabularx, float}
+\captionsetup{skip=0pt}
+
+% Apartado Tablas y Figuras en APA
+\DeclareCaptionLabelSeparator*{spaced}{\\[1ex]}
+\captionsetup[table]{name = Tabla, textfont=it,format=plain,justification=justified,
+	singlelinecheck=false,labelsep=spaced,skip=0pt}
+\captionsetup[figure]{name = Figura, labelsep=period,labelfont=it,justification=justified,
+	singlelinecheck=false,font=doublespacing}
+	% Para hacer tablas APA más fácil
+	\usepackage[flushleft]{threeparttable}
+
+% Apartado hyperres
+\usepackage{hyperref}
+
+% Apartado Tikz
+\usepackage{tikz, pgfplots}
+\usetikzlibrary{positioning,calc,arrows}
+\usetikzlibrary{shapes.arrows}
+\usetikzlibrary{patterns}
+
+	\tikzset{ % to make dots on the graph
+		dot/.style = {circle, fill, minimum size=#1,
+			inner sep=0pt, outer sep=0pt},
+		dot/.default = 6pt % size of the circle diameter 
+	}
+
+% Apartado de colores
+\usepackage{xcolor}
+
+% Apartado tipò de letra
+\usepackage{textcomp}
+\usepackage{libertine}
+\usepackage[libertine]{newtxmath}
+
+% Apartado de íconos
+\usepackage{fontawesome5}
+
+%Creación de entornos matemáticas
+\newtheorem{defi}{Definición}[section]
+\newtheorem{lema}{Lema}[section]
+\newtheorem{teo}{Teorema}[section]
+\newtheorem{coro}{Corolario}[section]
+
+% Diversos
+\usefonttheme[onlymath]{serif}
+\usepackage{remreset}
+\usepackage{makecell}
+\usepackage{float}
+\usepackage{subfigure}
+
+% Apartado justificación de textos
+\usepackage{ragged2e}
+\justifying
+\renewcommand{\raggedright}{\leftskip=0pt \rightskip=0pt plus 0cm}

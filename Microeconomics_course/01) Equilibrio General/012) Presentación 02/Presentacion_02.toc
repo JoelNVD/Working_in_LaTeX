@@ -1,0 +1,5 @@
+\babel@toc {spanish}{}
+\beamer@sectionintoc {1}{Producción en la caja de Edgeworth}{3}{0}{1}
+\beamer@sectionintoc {2}{La frontera de posibilidades de producción}{9}{0}{2}
+\beamer@sectionintoc {3}{Economía Robinson Crusoe: Análisis de Pareto}{16}{0}{3}
+\beamer@sectionintoc {4}{Aplicación al comercio internacional}{27}{0}{4}

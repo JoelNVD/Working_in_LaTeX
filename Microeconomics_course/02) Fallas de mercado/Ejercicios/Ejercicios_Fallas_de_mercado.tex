@@ -1,0 +1,215 @@
+%====================================================================================
+% Preamble
+%------------------------------------------------------------------------------------
+\documentclass[10pt,a4paper]{article}
+
+% Apartado de texto
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+
+% Apartado matemático
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage[libertine]{newtxmath}
+
+% Apartadode no sangría
+\usepackage{parskip}
+
+% Aparatod posición del texto
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{fancyhdr}
+
+\usepackage{graphicx}
+\usepackage{xcolor}
+\definecolor{cardinal}{rgb}{0.77, 0.12, 0.23}
+
+% Apartado de columnas y filas: juntarlas o separarlas
+\usepackage{multicol, multirow}
+
+% Apartado differents label en listado
+\usepackage[shortlabels]{enumitem}
+
+% Apartado hyperres
+\usepackage[hidelinks]{hyperref}
+
+\usepackage{tcolorbox}
+\newtcolorbox{nota}[1]{
+	colback=cardinal!5!white,
+	colframe=cardinal!75!black,
+	fonttitle=\bfseries,
+	title=#1
+}
+
+% Apartado dibujos
+\usepackage{tikz, pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{positioning,calc,arrows}
+\usetikzlibrary{shapes.arrows}
+\usetikzlibrary{patterns}
+\usetikzlibrary{babel} % Para que recono > y <, en inglés no se pone, pero en spañol sí
+\usetikzlibrary{shadings,shadows}
+\usetikzlibrary{matrix}
+\usetikzlibrary{intersections}
+
+% Apartado cambio como por punto
+\decimalpoint
+
+% \highlight[<colour>]{<stuff>}
+\newcommand{\highlight}[2][yellow]{\mathchoice%
+	{\colorbox{#1}{$\displaystyle#2$}}%
+	{\colorbox{#1}{$\textstyle#2$}}%
+	{\colorbox{#1}{$\scriptstyle#2$}}%
+	{\colorbox{#1}{$\scriptscriptstyle#2$}}}%
+
+% Definir oprerador
+\DeclareMathOperator*{\M}{Max}
+
+%====================================================================================
+
+%====================================================================================
+% Body
+%====================================================================================
+% Title Page
+%-----------
+\textwidth=450pt \textheight=620pt \oddsidemargin=0in
+\topmargin=-10pt
+\pagestyle{fancy} \rhead{\scriptsize{\textbf{Código del Curso:} xxXXXXX} \\
+	\textbf{Fecha:} XX/XX/2021 \& 2021-I \hspace{0.04cm}}
+\lhead{\scriptsize{\textbf{Profesor:} José A. Valderrama}  \\
+	\textbf{Curso:} Teoría Microeconómica II}
+\newcommand{\re}[1]{\smallskip\textsf{\textbf{Respuesta}} \begin{sf}\\ #1 \end{sf} \bigskip}
+\newcommand{\ay}[1]{ \scriptsize{\textsl{Hint: #1}}\normalsize{}}
+\newcommand{\pr}[2]{\frac{\partial #1}{\partial #2}}
+
+%------------------------------------------------------------------------------------
+% Title
+%---------
+\begin{document}
+	\begin{center}
+		{\Large {\textbf{Fallas de mercado}}}		
+	\end{center}
+% EJERCICIOS---------------------------------------------------------------------------------
+\textbf{\LARGE Externalidades}
+	\begin{enumerate}
+		\item Una industria refinadora competitiva arroja una unidad de desperdicio en la atmósfera por cada unidad de producto refinado. La función inversa de demanda del producto refinado es $p=30-q$. La curva inversa de oferta para el refinamiento es $CM=3+q$. La curva de costo externo marginal es $CEM=1.5q$,  donde CEM es el costo externo marginal cuando la industria arroja q unidades de desperdicio. ¿Cuál es el precio y cantidad de equilibrio para el producto refinado?\\
+		
+			\textbf{\large Solución}\\
+				\input{solucionario/sol_01}
+		
+		\item De la pregunta anterior, ¿cuánto debe ser la oferta de mercado en el óptimo social?\\
+		
+			\textbf{\large Solución}\\
+				\input{solucionario/sol_02}
+		
+		\item Suponga que donde usted vive hay una empresa contaminante cuyo producto es vendido a un precio de 30 soles. Asumimos que la función de costo marginal es: $CMG = 5 + 2Q$, por último el costo marginal externo es: $CME = 0.5Q$. Se pide la cantidad que debe producir la empresa para alcanzar la externalidad óptima.\\
+		
+			\textbf{\large Solución}\\
+				\input{solucionario/sol_03}
+	\end{enumerate}
+
+\textbf{\LARGE Bienes públicos}
+	\begin{enumerate}
+		\item [4.] Considere  dos consumidores con las siguientes funciones de demanda por un bien público: $P_{1}=10 - \frac{G}{10}$, $P_{2}= 20 - \frac{G}{10}$, donde $P_{i}$ es el precio que i está deseando pagar por la cantidad $G$. ¿Cuál es el nivel óptimo de consumo del bien público, si su costo marginal es igual a 25?\\
+		
+			\textbf{\large Solución}\\
+				\input{solucionario/sol_04}
+		
+		\item [5.] Sean dos estudiantes: Eva y Teresa, que comparten una habitación. Ambas tienen la misma función de utilidad respecto de los cuadros (bien $X$) y de las cervezas (bien $Y$).\\ 
+		La función de utilidad de las 2 estudiantes es la siguiente:
+			$$U_{i} = X^{\frac{1}{3}}_{i}Y^{\frac{2}{3}}_{i}$$
+		Donde i representa a cada estudiante. Cada estudiante tiene un ingreso de 3000 para gastar. El precio de $X$ es 100 y el precio de $Y$ es 0.2. Se pide hallar el consumo de cuadros y cervezas, si cada persona vive sola.\\
+			\textbf{\large Solución}\\
+				\input{solucionario/sol_05}
+		
+		\item [6.] De la pregunta anterior, si ambas viven juntas. ¿Cuál es el nivel óptimo del bien público (bien $X$)?\\
+			\textbf{\large Solución}\\
+				\input{solucionario/sol_06}
+	\end{enumerate}
+
+\textbf{\LARGE Selección Adversa}
+	\begin{enumerate}
+		\item [7.] Supongamos que un empresario (neutral ante el riesgo) quiere contratar a un trabajador, pero no conoce todas las características de dicho trabajador. Lo que desconoce es la productividad que el esfuerzo del trabajador tiene en el proceso de producción para el que desea contratarle. Sabe, sin embargo, que el trabajador es neutral ante el riesgo y que puede ser de dos tipos: o bien su productividad es alta, con lo que su esfuerzo es igual a $e^{2}$, o bien es baja y su esfuerzo es igual a $e^{2}$
+		Al primer tipo de trabajador le llamaremos  ``$B$'' y al segundo ``$M$'', ya que éste último sufre mayor desutilidad que el primero. La función de utilidad del trabajador es por tanto $U^{B}(w, e)=w-e^{2}$ o $U^{M}(w, e)=w-2e^{2}$. La probabilidad de que el trabajador sea de tipo $B$ es $q$ (y por tanto con probabilidad $(1-q)$ el trabajador es de tipo $M$). La utilidad de reserva de ambos tipos de trabajador s $\underline{U}=0 .$ El empresario, por su parte, valora el esfuerzo del trabajador en $\pi=ke$, donde $k$ es una constante suficientemente grande (de tal modo que el empresario está interesado en contratar al trabajador sea cual sea su tipo). Por cada unidad de esfuerzo del trabajador el empresario obtiene, or tanto, $k$ unidades de beneficio.
+			\begin{enumerate}[a)]
+				\item Formular el problema que resuelve el principal con información simétrica. Calcular los contratos óptimos. ¿Cuáles son los esfuerzos que pide y los salarios que paga?
+				\item Formular el programa que debería resolver el principal en información asimétrica y resuelvalo. ¿Cuáles son los contratos que el principal ofrece a los agentes? Comparar los casos de información simétrica y asimétrica.
+			\end{enumerate}
+				\textbf{\large Solución}\\
+					\input{solucionario/sol_07}
+		
+		\item [8.] Una compañía ofrece el servicio de vuelo entre dos ciudades, siendo el costo por pasajero $C$. Hay dos tipos de clientes de esta compañía: los ejecutivos que se desplazan por razones de negocio y los turistas. La proporción de ejecutivos que demandan este destino es $\alpha$ y están dispuestos a pagar $P_A$ por el viaje. La proporción de turistas es $(1-\alpha)$ y están dispuestos a pagar $P_B$ por el mismo viaje. La utilidad que deriva cada ejecutivo del viaje es $U_A$ y la de cada tursitas $U_B$ con ($U_A > U_B$)Todos los pasajeros tienen una utilidad de reserva $U$. El problema al que se enfrenta la compañía es determinar la política de precios y plazas para los ejecutivos y los turistas, sin conocer a priori quienes son los unos y los otros. Escriba el problema de optimización del principal (sin resolverlo), con selección adversa.\\
+		
+			\textbf{\large Solución}\\
+				\input{solucionario/sol_08}
+		
+		\item [9.] Hay muchos compradores de autos deportivos de color rojo. Los \emph{``snobs''} (en proporción $q$) están dispuestos a pagar hasta $50.000$ dólares por un auto de color rojo (logrando una utilidad $U_{s} > 50.000$ dólares). Por otra parte, los \emph{``menos snobs''} (en proporción $1-q$) pagarían hasta $30.000$ dólares por un auto de color rojo logrando una utilidad $U_{M}>30.000$ dólares. Se sabe que $U_S > U_{M}$. Los vendedores de autos tienen que elegir el tipo de contrato que desean ofrecer a cada comprador le autos rojos. Teniendo en cuenta que la utilidad de reserva de los compradores \emph{``snobs''} es de $U_{S}=25.000$ dólares y la de los \emph{``menos snobs''} es de $U_{M}=15.000$ dólares. ¿Cómo diseñan los vendedores sus contratos, en selección adversa? (formule el problema sin resolverlo).\\
+		
+			\textbf{\large Solución}\\
+				\input{solucionario/sol_09}
+	\end{enumerate}
+	
+\textbf{\LARGE Riesgo Moral}
+	\begin{enumerate}
+		\item [10.] Un trabajador puede ejerce dos esfuerzos, ``bueno'' y ``malo'', lo que induce la observación de fallos en el resultado con probabilidades 0.25 y 0.75 respectivamente. Su función de utilidad es $U(w,e) = 100-(10/w)-v$ , donde $w$es el salario que recibe, y $v$ toma el valor 2 si incorpora el buen esfuerzo y 0 si elige el malo. La aparición de un fallo (por ejemplo, una avería) es una variable que puede ser incluida en los términos del contrato, pero el esfuerzo no. El producto que se obtiene vale 20 si no hay errores, y no vale nada si tiene alguno. El principal es neutral ante el riesgo. Suponemos que el trabajador tiene una utilidad de reserva igual a $\underline{U} =0$. Calcule el contrato óptimo y el esfuerzo que el principal desea conseguir, en condiciones de información simétrica y de información asimétrica sobre el comportamiento del agente.\\
+			
+			\textbf{\large Solución}\\
+				\input{solucionario/sol_10}
+		\item [11.] Sea una relación de agencia en la que le principal contrata a un agente cuyo esfuerzo determina el resultado. Supongamos que la incertidumbre está representada  por tres estados de la naturaleza . El agente puede elegir entre dos esfuerzo. Los resultados están recogidos en la tabla siguiente
+						\begin{center}
+							\begingroup
+								\setlength{\tabcolsep}{10pt} % Default value: 6pt
+								\renewcommand{\arraystretch}{1.5} % Default value: 1
+									\begin{tabular}{cc|ccc}
+												&& \multicolumn{3}{c}{Estados de la naturaleza}\\
+												&& $\varepsilon_1$ & $\varepsilon_2$ & $\varepsilon_3$\\
+										\hline
+											\multirow{2}{*}{Esfuerzos} & e=6 & 60.000 & 60.000 & 30.000\\
+																	   & e=4 & 30.000 & 60.000 & 30.000
+									\end{tabular}
+							\endgroup
+						\end{center}
+		El principal y el agente creen que la probabilidad de cada uno de los estados es un tercio. Las funciones objetivos del principal y del agente son, respectivamente:
+				\begin{align*}
+					B(x,w) & = x-w\\
+					U(w,e) & = \sqrt{w} - e^2
+				\end{align*}
+		donde $x=x(e,\varepsilon)$ es el resultado monetario de la relación, $y=w(x)$ representa el pago monetario que recibe el agente. Supondremos que el agente solo acepta el contrato si obtiene por lo menos una utilidad esperada de 114 (su nivel de utilidad de reserva)
+			\begin{enumerate}[a)]
+				\item ¿Qué puede deducirse de las funciones objetivo de los participantes?
+				\item ¿Cuál será el esfuerzo y el pago en una situación de información simétrica? ¿Qué ocurriría si el principal no fuese neutral ante el riesgo?
+				\item ¿Qué ocurre en una situación de información asimétrica? ¿Qué esquema de pago permite conseguir el esfuerzo $e=4$? ¿Qué esquema de pago permite conseguir el esfuerzo $e=6$? ¿Qué esfuerzo decide conseguir el principal? Analice el resultado
+			\end{enumerate}
+					\textbf{\large Solución}\\
+						\input{solucionario/sol_11}
+		\item [12.] Supongamos una relación entre un empresario (principal) y un agente en la que dos resultados son posibles cuyos valores son 50.000 y 25.000. El agente tiene que elegir entre tres posibles esfuerzos que tienen efecto sobre la distribución de los resultados. La distribución de probabilidades sobre los resultados en función de los esfuerzos viene dada por la tabla siguiente:
+				\begin{center}
+					\begingroup
+						\setlength{\tabcolsep}{10pt} % Default value: 6pt
+						\renewcommand{\arraystretch}{1.5} % Default value: 1
+							\begin{tabular}{cc|cc}
+									&& \multicolumn{2}{c}{Resultados}\\
+											&& 25.000 & 50.000\\
+								\hline
+									\multirow{3}{*}{Esfuerzos} & $e^1$ & 1/4 & 3/4\\
+															   & $e^2$ & 1/2 & 1/2\\
+															   & $e^3$ & 3/4 & 1/4
+							\end{tabular}
+						\endgroup
+				\end{center}
+			Suponemos que el principal es neutral ante el riesgo y el agente adverso, con las preferencias descritas respectivamente por las siguientes funciones:
+			$$B(x,w)=x-w \quad \text{y} \quad U(w,e)=\sqrt{w}-v(e)$$
+			con $v\left(e^{1}\right)=10$, $v\left(e^{2}\right)=4$, y $v\left(e^{3}\right)=0$. El nivel de utilidad de reserva del agente es $\underline{U}=120$.
+				\begin{enumerate}[a)]
+					\item Escríbanse los contrato óptimos en información simétrica para cada nivel de esfuerzo y los beneficios obtenidos por el principal en cada caso. ¿Qué nivel de esfuerzo prefiere el principal?
+					\item Escríbase los contrato óptimos cuando existe un problema de riesgo moral. ¿Cuál es el nivel d esfuerzo y el contrato que el princiapl elige? ¿Dónde influye el problema de riesgo moral?
+				\end{enumerate}
+					\textbf{\large Solución}\\
+						\input{solucionario/sol_12}
+	\end{enumerate}
+%------------------------------------------------------------------------------------
+\end{document}		
+%====================================================================================

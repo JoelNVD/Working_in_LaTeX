@@ -1,0 +1,43 @@
+\begin{tikzpicture}[domain=5.5:10,
+					tangent/.style={
+						decoration={
+							markings,% switch on markings
+							mark=
+							at position #1
+							with
+							{
+								\coordinate (tangent point-\pgfkeysvalueof{/pgf/decoration/mark info/sequence number}) at (0pt,0pt);
+								\coordinate (tangent unit vector-\pgfkeysvalueof{/pgf/decoration/mark info/sequence number}) at (1,0pt);
+								\coordinate (tangent orthogonal unit vector-\pgfkeysvalueof{/pgf/decoration/mark info/sequence number}) at (0pt,1);
+							}
+						},
+						postaction=decorate
+					},
+					use tangent/.style={
+						shift=(tangent point-#1),
+						x=(tangent unit vector-#1),
+						y=(tangent orthogonal unit vector-#1)
+					},
+					use tangent/.default=1,
+					scale=0.8
+					]
+	
+	% Relleno
+		\fill [pattern=crosshatch dots,pattern color=orange!60!white] (5.69,4.15) -- plot (\x, {sqrt(10-\x)/0.5 }) -- (5.69,0);\textbf{}
+	% Ejes
+		\draw[<->] (5,0) node[align=center, left] {\footnotesize $-L$} -- (10,0)-- (10,4.5) node[align=center, above] {\footnotesize $q$};
+	% Curva
+		\draw[color=orange,samples=1000, tangent=0.4] plot (\x, {sqrt(10-\x)/0.5 });
+	% Punto arbitario
+		\filldraw[use tangent] (0,0) circle (2pt);
+	% Tangente
+		\draw[use tangent] (-2.2,0) -- (2.18,0);
+	% Etiquetas
+		\draw (10,1.4) node [scale=0.8, right] {$\frac{\pi(p,w)}{p}$};
+		\draw (5.5,4.3) node [scale=0.8, left] {$q=f(L)$};
+		\draw (5.6,0) node [scale=0.8, below] {$-\overline{L}$};
+	% Linea punteadas
+		\draw[dashed] (7.73,0) node [scale=0.8, below] {$-L(p,w)$} -- (7.73,3.03) -- (10,3.03) node [scale=0.8, right] {$q(p,w)$};
+	% linea
+		\draw (5.69,0)--(5.69,4.15);
+\end{tikzpicture}

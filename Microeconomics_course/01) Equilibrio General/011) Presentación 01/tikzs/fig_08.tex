@@ -1,0 +1,78 @@
+\begin{tikzpicture}[scale=1.1]
+	% Formación de la caja
+		% Consumidor A
+			\draw[->] (0.5,0.5) node[align=center, below left] {\footnotesize $O_J$} -- (0.5,4.5) node[align=center, above] {\footnotesize $6R$};
+			\draw[->] (0.5,0.5) -- (8.5,0.5) node[align=center, right] {\footnotesize $10A$};
+		
+		%Consumidor B
+			\draw[->] (8,4) node[align=center, above right] {\footnotesize $O_K$} -- (0,4) node[align=center, left] {\footnotesize $10A$};
+			\draw[->] (8,4) -- (8,0) node[align=center, below] {\footnotesize $6R$};
+		
+		% Flechas
+			\node[draw, single arrow,
+					minimum height=22mm, minimum width=1mm,
+					single arrow head extend=1.5mm,
+					anchor=west, red, scale=0.5, rotate=-90,transform shape] at (8.4,2.87) {\small Ropa de Karen};
+			
+			\node[draw, single arrow,
+					minimum height=22mm, minimum width=1mm,
+					single arrow head extend=1.5mm,
+					anchor=west, blue, scale=0.5, rotate=90,transform shape] at (0.1,1.57) {\small Ropa de Jaime};
+			
+			\node[draw, single arrow,
+					minimum height=22mm, minimum width=1mm,
+					single arrow head extend=1.5mm,
+					anchor=west, red, scale=0.5, rotate=180,transform shape] at (5,4.3) {\rotatebox {180} {\small Alimento de Karen}};
+			
+			\node[draw, single arrow,
+					minimum height=22mm, minimum width=1mm,
+					single arrow head extend=1.5mm,
+					anchor=west, blue, scale=0.5,transform shape] at (3.5,0.2) {\small Alimento de Jaime};
+		
+	% Curvas de indiferencia
+		\begin{axis}[
+					hide axis,
+					xmin=0, xmax=10, 
+					ymin=0, ymax=10,
+					ytick=\empty,
+					]
+			
+			% Curvas de indiferencia
+				% Agente A
+					\draw [blue] (axis cs:4,6.9) to [bend right=40] coordinate[pos=1] (l_i) (axis cs:9,1.5);
+					\draw [blue] (axis cs:4.8,6.9) to [bend right=40] coordinate[pos=1] (l_i) (axis cs:9,2.3);
+					\draw [blue] (axis cs:6.2,6.9) to [bend right=40] coordinate[pos=1] (l_i) (axis cs:9,3.7);
+				
+				% Agente B
+					\draw [red] (axis cs:8.5,1) to [bend right=40] coordinate[pos=0.5] (l_i) (axis cs:3.6,6.5);
+					\draw [red] (axis cs:7.1,1) to [bend right=40] coordinate[pos=0.5] (l_i) (axis cs:3.6,5.1);
+					\draw [red] (axis cs:6.3,1) to [bend right=40] coordinate[pos=0.5] (l_i) (axis cs:3.6,4.3);
+		\end{axis}
+
+	
+	% Curva de contrato
+		\draw  [purple, very thick] (0.5,0.5) ..controls (1.8,1.5) and (2.5,0.7) .. (3.7,1.9) .. controls (3.8,2.1) .. (4.1,2.2) .. controls (4.5,2.3) .. (4.82,2.7) ..controls (6.12,3.7) and (6.8,2.8) .. (8,4);
+	
+	% Punto
+		\draw[black, fill=black] (4.1,2.2) circle[radius=0.05] node [above] {$E$};
+		\draw[black, fill=black] (3.7,1.9) circle[radius=0.05] node [below] {$F$};
+		\draw[black, fill=black] (4.82,2.7) circle[radius=0.05] node [above] {$G$};
+	
+	% Etiqueta de función de utilidad
+		% Agente A
+			\node [blue, scale=0.18mm]  at (6.35,0.8) {$u_{J}^{1}$};
+			\node [blue, scale=0.18mm]  at (6.35,1.27) {$u_{J}^{1}$};
+			\node [blue, scale=0.18mm]  at (6.35,2.06) {$u_{J}^{1}$};
+		
+		% Agente B
+			\node [red, scale=0.18mm]  at (2.3,3.8) {$u_{K}^{1}$};
+			\node [red, scale=0.18mm]  at (2.3,3.5) {$u_{K}^{2}$};
+			\node [red, scale=0.18mm]  at (2.3,3) {$u_{K}^{3}$};
+			\node [red, scale=0.18mm]  at (2.3,2.55) {$u_{K}^{4}$};
+			
+	% Flechas
+		\node[draw, single arrow,
+				minimum height=22mm, minimum width=1mm,
+				single arrow head extend=1.5mm,
+				anchor=west, purple, scale=0.5,,transform shape] at (0.8,1.4) {Curva de contrato};
+\end{tikzpicture}

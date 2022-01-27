@@ -1,0 +1,94 @@
+%====================================================================================
+\section{Actividades}
+%====================================================================================
+\begin{frame}{Actividad 1}
+	Considere una economía der intercambio con dos consumidores y dos bienes en la cual las preferencias son $u_{1}\left( x_{11},x_{12}\right) = x_{11}^{3}x_{12}, u_{2}\left( x_{21},x_{22}\right) = x_{21}x_{22}$ y la dotación agregada es $\overline{w} = (16,16)$. Se tiene las siguientes asignaciones de consumo:
+			\bigskip
+		\begin{enumerate}
+			\item $\left( x_{11},x_{12}\right) = (10,4)$ y $\left( x_{21},x_{22}\right) = (8,8 )$
+			\item $\left( x_{11},x_{12}\right) = (10,4)$ y $\left( x_{21},x_{22}\right) = (8,12)$
+			\item $\left( x_{11},x_{12}\right) = (12,8)$ y $\left( x_{21},x_{22}\right) = (4,6 )$
+			\item $\left( x_{11},x_{12}\right) = (12,4)$ y $\left( x_{21},x_{22}\right) = (3,10)$
+		\end{enumerate}
+			\bigskip
+	Determine qué asignación son Pareto Óptimas. Para las que no son, describa qué tipo de intercambio daría lugar a una mejora paretiana.
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Actividad 1}
+	\begin{block}{\textbf{Óptimo de pareto}}
+		\begin{enumerate}
+			\item \textbf{Condición de factibilidad}
+			\item \textbf{Condición de optimización}
+		\end{enumerate}
+	\end{block}
+	
+	\textcolor{red}{\textbf{Condición de factibilidad}}
+		$$\sum x = \sum w$$
+	La condición de factibilidad para este ejercicio queda de la siguiente manera:
+		\begin{gather*}
+			x_{1}^{A} + x_{1}^{B} = w_{1}^{A} + w_{1}^{B}\\
+			x_{2}^{A} + x_{2}^{B} = w_{2}^{A} + w_{2}^{B}
+		\end{gather*}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Actividad 1}
+	\textbf{Datos: $w_{1}^{A} + w_{1}^{B} = 16$ , $w_{2}^{A} + w_{2}^{B}=16$}
+		$$\begin{array}{ccc}
+			x_{11} + x_{21}=16 & , & x_{12} + x_{22}=16\\[0.2cm]
+			10 + 8 \neq 16 & , & 4 + 8  \neq 16\\
+			10 + 8 \neq 16 & , & 4 + 12 = 16\\
+			12 + 4 = 16    & , & 8 + 6  \neq 16\\
+			12 + 3 \neq 16 & , & 4 + 10 \neq 16
+		\end{array}$$
+	La condición de factibilidad debe cumplir simultáneamente y no de manera parcial como en el ejercicio. En adición, se observa situaciones de Excesos de Demanda (ED) y Exceso de Oferta (EO):
+		$$\begin{array}{ccc}
+			18 > 16 \text{ ED} & , & 12 < 16 \text{ EO} \\
+			18 > 16 \text{ ED} & , & \text{Factible}    \\
+			\text{Factible}    & , & 14 < 16 \text{ EO} \\
+			15 > 16 \text{ ED} & , & 14 < 16 \text{ EO}
+		\end{array}$$
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Actividad 2}
+	Sea una economía de intercambio en la que hay 2 bienes $(x, y)$ en cantidades $\overline{x}=10$ e $\overline{y}=10$ y dos consumidores $(A, B)$ con sus funciones de utilidad $u_{A}=x_{A}^{2}y_{A}$,  $u_{B}=x_{B}y_{B}^{2}$
+		\begin{enumerate}
+			\item Considerando los siguientes estados, determine los que son factibles\\
+				\begin{table}
+					\centering
+						\begin{tabular}{|c|c|c|}
+								\hline
+							Estados & $\left( x_{A},y_{A}\right)$ & $\left( x_{B},y_{B}\right)$ \\
+								\hline
+							1 & (1,6) & (9,4) \\
+							2 & (5,5) & (5,5) \\
+							3 & (5,2) & (5,8) \\
+							4 & (1,8) & (9,4) \\
+								\hline
+						\end{tabular}
+				\end{table}
+			\item Calcular los niveles de utlidad para cada consumidor en cada estado y comparar cada par de estados, explicitando si existe superioridad de uno de ellos.
+			\item Determine todos los estados óptimos en sentido de Pareto de esta economía e indique si alguno de los 4 estados anteriores es una de ellos.
+		\end{enumerate}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Actividad 2}
+	\textbf{Dotaciones: $\overline{x}=10$ , $\overline{y}=10$ \qquad FU: $u_{A}=x_{A}^{2}y_{A}$ , $u_{B}=x_{B}y_{B}^{2}$}
+	\begin{enumerate}
+		\item Por la condición de factibilidad, el estado 1, 2 y 3 cumplen.
+		\item Multiplicando $xy$, obtenemos los siguiente resultados
+				$$\begin{array}{ccc}
+					u_{1}^{A} = 6   & < & u_{1}^{B}=144\\
+					u_{2}^{A} = 125 & = & u_{2}^{B}=125\\
+					u_{3}^{A} = 50  & < & u_{3}^{B}=320\\
+					u_{4}^{A} = 8   & < & u_{4}^{B}=144
+				\end{array}$$
+		\item \textcolor{red}{\textbf{Condición de optimalidad}}
+				\begin{gather*}
+						TMS^{A} = TMS^{B} \rightarrow RMS^{A} = RMS^{B} \rightarrow \frac{2y_{A}}{x_{A}} = \frac{y_{B}}{2x_{B}}
+				\end{gather*}
+			  Si reemplazas los datos de las cestas factibles, solo cumple el estado 3
+				  \begin{alertblock}{\textbf{Nota}}
+				  	\textbf{Todo OP cumple la CF, pero no toda CF cumple OP}
+				  \end{alertblock}
+	\end{enumerate}
+\end{frame}

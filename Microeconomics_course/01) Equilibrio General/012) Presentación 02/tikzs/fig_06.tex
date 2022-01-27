@@ -1,0 +1,32 @@
+\begin{tikzpicture}
+	% FPP
+		% Ejes
+			\draw[->] (10,0)-- (10,5) node[align=center, above] {\footnotesize $q_{y}$};
+			\draw[->] (10,0) -- (15,0) node[align=center, right] {\footnotesize $q_{x}$};
+		% Curva
+			\draw [orange] (10,4.5) ..controls (13,3.5) and (14,2.5) .. (14.5,0);
+			
+	% Minicaja
+		% Intersección
+			\draw [<->] (9.5,2.7) -- (13.29,2.7) node [below right, scale=0.7] {$O_B$} -- (13.29,-0.5);
+			\draw [<->] (10,3.2) -- (10,0) node [left, scale=0.7] {$O_A$} -- (13.79,0);
+		% Puntos
+			\draw[black, fill=black] (13.29,2.7) circle[radius=0.05] node [above right, scale=0.7] {$\overline{Q}_G$};
+		% Curva de contrato
+			\draw [purple] (10,0) ..controls (11.29,0.2) and (12.29,2.4) .. (13.29,2.7);
+			\draw [blue] (10.2,2.3) ..  controls (11.7,1.4) and (11.9,1.15) .. (12.1,0.08);
+			\draw [red] (11.2,2.6) ..  controls (11.2,1.6) and (11.8,0.7) .. (13.2,0.2);
+		% Pendientes
+			\draw (11.27,4.99) -- (14.68,1.13);
+			\draw (10.36,2.7) -- (12.74,0);
+		% Símbolo de paraleleas
+			\draw (10.55,2.35) -- (10.69,2.48);
+			\draw (10.59,2.3) -- (10.74,2.43);
+			
+			\draw (12.19,3.8) -- (12.34,3.93);
+			\draw (12.24,3.75) -- (12.38,3.88);
+		% 	Etqiueta
+			\draw (15, 3.5) node {$RMS_A = RMS_B = RMT$};
+		% Punto
+			\draw[black, fill=black] (11.67,1.22) circle[radius=0.05] node [right, scale=0.7] {$\overline{G}$};
+\end{tikzpicture}

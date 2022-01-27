@@ -1,0 +1,58 @@
+\begin{itemize}
+	\item Pregunta 9a:
+			Para el agente $A$:
+				\begin{align*}
+					& \text{Max } \quad U_A = \alpha \ln(x_A) + (1-\alpha)\ln(x_A) \\[0.2cm]
+					& \begin{array}{ll}
+						\text{s.a: } & p_xx_A + p_yy_A = \overline{y}p_y + \overline{x}p_x \qquad (\overline{y}=1, \overline{x}=0)
+					\end{array}
+				\end{align*}
+			
+			Se forma el lagrange y se aplican las condiciones de primer orden:
+			$$ \mathscr{L} =  \ln(x_A) + (1-\alpha)\ln(x_A) - \lambda\left[p_y - p_xx_A - p_yy_A  \right]$$
+			
+				$$\left.
+					\begin{array}{l}
+						\frac{\partial \mathscr{L}}{\partial x_{A}} = \frac{\alpha}{x_A} - \lambda p_x= 0\\[0.4cm]
+						\frac{\partial \mathscr{L}}{\partial y_{A}} = \frac{(1-\alpha)}{y_A} - \lambda p_y=0
+					\end{array}
+				  \right\} \Longrightarrow 
+				    \begin{array}{ccc}
+						\frac{\alpha}{x_Ap_x} & = & \frac{(1-\alpha)}{y_Ap_y}  \\[0.3cm]
+				  		y_A & = & \frac{(1-\alpha)}{\alpha p_y}x_Ap_x
+				    \end{array}$$
+			
+				\begin{align*}
+					p_xx_A + p_yy_A & = p_y\\[0.3cm]
+					p_xx_A + p_y\left( \frac{(1-\alpha)}{\alpha p_y}x_Ap_x\right)  & = p_y\\[0.3cm]
+					x_{A}^* & = \frac{\alpha p_y}{p_x}\\[0.3cm]
+					y_{A}^* & = 1 - \alpha
+				\end{align*}
+			
+			Para el agente $B$:
+				\begin{align*}
+					& \text{Max } \quad U_B = \text{Min} \left\lbrace x_B, y_B\right\rbrace \\[0.2cm]
+					& \begin{array}{ll}
+						\text{s.a: } & p_xx_A + p_yy_A = \overline{y}p_y + \overline{x}p_x  \qquad (\overline{y}=0, \overline{x}=1)
+					  \end{array}
+				\end{align*}
+			
+			Como $x$ e $y$ son complementarios perfectos
+				$$x_B = y_B$$
+			Y reemplazamos en la recta presupuestaria
+				\begin{align*}
+					p_xx_B + p_yy_B & = p_x\\[0.3cm]
+					p_xx_B + p_yx_B  & = p_x\\[0.3cm]
+					x_B\left( p_x + p_y\right) &= p_x\\[0.3cm]
+					x_{B}^* & = \frac{p_x}{p_x+p_y} = y_{B}^*
+				\end{align*}
+			El criterio de la condición de factibilidad nos indica que los mercados se limpian; es decir, la demanda debe ser igual a la oferta (dotación)
+				\begin{itemize}
+					\item $x_a + x_B = \overline{x}_A + \overline{x}_B \Longrightarrow (1 - \alpha) + \frac{p_x}{p_x+p_y} = 0 + 1$
+					\item $y_a + y_B = \overline{x}_A + \overline{x}_B \Longrightarrow \frac{\alpha p_y}{p_x} + \frac{p_x}{p_x+p_y} = 1 + 0$
+				\end{itemize}
+			Usando la expresión de $y$, los precios relativos son:
+				$$\frac{p_y}{p_x} = \frac{1-\alpha}{\alpha}$$
+	\item Pregunta 9b:
+			$$\nexists \enskip p < 0 \enskip \Longrightarrow \enskip \frac{1 - \alpha}{\alpha} > 0 \enskip \Longrightarrow \enskip  \alpha \in <0,1>$$
+\end{itemize}

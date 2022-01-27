@@ -1,0 +1,169 @@
+%====================================================================================
+% Preamble
+%------------------------------------------------------------------------------------
+\documentclass[10pt,a4paper]{article}
+
+% Apartado de texto
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+
+% Apartado matemático
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage[libertine]{newtxmath}
+
+% Apartadode no sangría
+\usepackage{parskip}
+
+% Aparatod posición del texto
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{fancyhdr}
+
+\usepackage{graphicx}
+\usepackage{xcolor}
+\definecolor{cardinal}{rgb}{0.77, 0.12, 0.23}
+
+% Apartado de columnas y filas: juntarlas o separarlas
+\usepackage{multicol, multirow}
+
+% Apartado differents label en listado
+\usepackage[shortlabels]{enumitem}
+
+% Apartado hyperres
+\usepackage[hidelinks]{hyperref}
+
+\usepackage{tcolorbox}
+\newtcolorbox{nota}[1]{
+	colback=cardinal!5!white,
+	colframe=cardinal!75!black,
+	fonttitle=\bfseries,
+	title=#1
+}
+
+% Apartado dibujos
+\usepackage{tikz, pgfplots}
+\usetikzlibrary{positioning,calc,arrows}
+\usetikzlibrary{shapes.arrows}
+\usetikzlibrary{patterns}
+\usetikzlibrary{babel} % Para que recono > y <, en inglés no se pone, pero en spañol sí
+\usetikzlibrary{shadings,shadows}
+\usetikzlibrary{matrix}
+
+% Apartado cambio como por punto
+\decimalpoint
+
+%====================================================================================
+
+%====================================================================================
+% Body
+%====================================================================================
+% Title Page
+%-----------
+\textwidth=450pt \textheight=620pt \oddsidemargin=0in
+\topmargin=-10pt
+\pagestyle{fancy} \rhead{\scriptsize{\textbf{Código del Curso:} xxXXXXX} \\
+	\textbf{Fecha:} XX/XX/2021 \& 2021-I \hspace{0.04cm}}
+\lhead{\scriptsize{\textbf{Profesor:} José A. Valderrama}  \\
+	\textbf{Curso:} Teoría Microeconómica II}
+\newcommand{\re}[1]{\smallskip\textsf{\textbf{Respuesta}} \begin{sf}\\ #1 \end{sf} \bigskip}
+\newcommand{\ay}[1]{ \scriptsize{\textsl{Hint: #1}}\normalsize{}}
+\newcommand{\pr}[2]{\frac{\partial #1}{\partial #2}}
+
+%------------------------------------------------------------------------------------
+% Title
+%---------
+\begin{document}
+	\begin{center}
+		{\Large {\textbf{Práctica Dirigida N$^{\circ}$2}}}
+
+		\textsc{Equilibrio General con Producción\\
+				Frontera de Posibilidades de Producción}
+		
+	\end{center}
+% EJERCICIOS---------------------------------------------------------------------------------
+\begin{enumerate}
+	\item Sea una economía Robinson Crusoe, donde la función de producción de cocos es $q=f(L)=\sqrt{L}$.
+			\begin{enumerate}[a)]
+				\item Determinar la función de demanda de trabajo, de oferta de cocos y el beneficio máximo de Robinson.
+				\item Si la función de utilidad de Robinson es $c=u\left( R,c\right) =RC$, determina la función de demanda de cocos y de oferta de trabajo.
+				\item Halle la relación de precios de equilibrio walrasiano, ¿cuáles son la cantidades de bien t de factor?¿cuál es el beneficio que obtiene Robinson?
+			\end{enumerate}
+			%\\[0.5cm]
+			\textbf{\LARGE Solución}\\
+				\input{solucionario/sol_01}
+	\item Obtenga la Frontera de Posibilidades de Producción (FPP) en una economía con dos outputs (1 y 2), obtenidos a partir de dos factores $(L y K)$, sabiendo que las funciones de producción de los dos outputs son las siguientes:
+			$$q_x = L_x + K_x \quad q_y = L_y + K_y$$
+	y que las dotaciones factoriales totales en la economía son:y que las dotaciones factoriales totales en la economía son:  $\overline{L}=2,\enskip \overline{K}=2$.\\[0.5cm]
+		\textbf{\LARGE Solución}\\
+			\input{solucionario/sol_02}
+	\item Suponga una economía en la que se producen dos mercancías (q1 y q2) a partir de dos inputs z1 y z2 de acuerdo
+	con las siguientes funciones de producción:
+			\begin{gather*}
+				q_x = L_{A_x}^{\frac{1}{2}}K_{A_x}^{\frac{1}{2}}\\
+				q_y = L_{B_y}^{\frac{1}{3}}K_{B_y}^{\frac{2}{3}}
+			\end{gather*}	
+	La cantidad de ambos inputs en la economía está limitada, de modo que sólo se dispone de $\overline{L}$ del primer
+	factor y de $\overline{K}$ del segundo.
+			\begin{enumerate}[a)]
+				\item Halle el conjunto de asignaciones Pareto-eficientes en la producción.
+				\item ¿Sería productivamente eficiente una asignación igualitaria de los factores entre las dos empresas?
+			\end{enumerate}
+		\textbf{\LARGE Solución}\\
+			\input{solucionario/sol_03}
+	\item En una economía se producen dos bienes $x$ e $y$, de acuerdo a las siguientes funciones de producción: $x = L_{x}^{\frac{1}{4}}K_{x}^{\frac{1}{4}}; y = L_{y}^{\frac{1}{2}}K_{y}^{\frac{1}{2}}$. La dotación inicial de factores está limitada, disponiéndose de $25$ unidades de trabajo y $25$ unidades de capital. El único consumidor que opera en esta economía tiene unas preferencias representadas por la función de utilidad $u = xy$. Determine:
+			\begin{enumerate}[a)]
+				\item La expresión del conjunto paretiano en producción
+				\item La expresión de la frontera de posibilidades de producción.
+				\item Los niveles de producción y los precios correspondientes al equilibrio competitivo.
+				\item La asignación de factores correspondientes al óptimo de pareto.
+			\end{enumerate}
+		\textbf{\LARGE Solución}\\
+			\input{solucionario/sol_04}
+	\item Sea una economía con dos empresas. La empresa $1$ produce el bien $x$ de acuerdo con la función de producción $f_x(L_x)=L_{x}^{0.5}$, y la empresa $2$ produce el bien $y$ de acuerdo con la función de producción $f_y(l_y, q_y)=\left( \frac{L_y}{1+0.06q_{x}^{2}}\right)^{0.5}$, donde $L_x$ y $L_y$ son, respectivamente, las cantidades utilizadas en la producción de los bienes $x$ e $y$ del único factor existente en la economía ($L$), del que hay una dotación inicial de 800 unidades. El único consumidor de esta economía tiene unas preferencias representadas por la función de utilidad $u\left( c_x, c_y\right) = \ln(c_x) + \ln(c_y)$
+			\begin{itemize}
+				\item Obtenga la expresión de la Frontera de Posibilidades de Producción (FPP) de esta economía.
+				\item Calcule las cantidades de producción óptimo paretianas de esta economía.
+			\end{itemize}
+		\textbf{\LARGE Solución}\\
+			\input{solucionario/sol_05}
+	\item En una economía se producen dos bienes $x$ y $y$, de acuerdo con las siguientes funciones de producción $x=\frac{L_x}{2}$, y $y=L_{y}^{\frac{1}{2}}$. La dotación total de mano de obra es 100 unidades. Determine la ecuación de la FPP y la relación marginal de transformación.\\
+		\textbf{\LARGE Solución}\\
+			\input{solucionario/sol_06}
+	\item Considérese una determinada economía cuya dotación de los factores de producción capital $K$, y trabajo, $L$, es la dada por el vector $(K, L) = (20, 10)$. Estos inputs son utilizados en la producción de los bienes 1 y 2 de acuerdo con las tecnologías representadas por las funciones de producción $q_1 = min \{K_1, 2L_1\}$ y $q_2 = min \{2K_2, L_2\}$, respectivamente. En estas condiciones determinar:
+		\begin{enumerate}[a)]
+			\item Las asignaciones de factores o planes de producción $\left[\left( q_1, K_1, L_1\right) , \left(q_2, K_2, L_2 \right)  \right] $ eficientes en la producción.
+			\item La frontera de posibilidades de producción $(FPP)$ de esta economía.
+			\item El equilibrio walrasiano de esta economía con (solo) producción
+		\end{enumerate}
+		\textbf{\LARGE Solución}\\
+			\input{solucionario/sol_07}
+	\item Consideremos una economía compuesta por un único input - el trabajo - y cuya dotación es $L$, dos bienes finales - los bienes 1 y 2 - producidos por sendas empresas mediante las tecnologías descritas por la funciones de producción $q_1 = L_{1}^{\alpha}$ y $q_2 = L_{2}^{\beta}$, siendo $\alpha, \beta  > 0$.
+		\begin{enumerate}[a)]
+			\item Determinar la frontera de posibilidades de producción $(FPP)$ o curva de transformación de esta economúa y las propiedades de dicha $FPP$
+			\item Analizar la curvatura de la $FPP$ según los valores uqe pueden adoptar los parámetros $\alpha$ y $\beta$.
+		\end{enumerate}
+		\textbf{\LARGE Solución}\\
+			\input{solucionario/sol_08}
+	\item Considérese una economía en la que, existen dos factores productivos - los inputs $K$ y $L$- cuyas dotaciones iniciales son las dadas por el vector $(K,L) = (30,10)$, y dos bienes finales - los bienes 1 y 2- que se obtienen a partir de los inputs mencionados de acuerdo con las tecnología descritas por la sfunciones de producción de inputs sustitutivos $q_1 = 2K_1 + L_!$ y $q_2 = K_2 + 2L_2$, respectivamente. En estas condiciones, determinar:
+		\begin{enumerate}[a)]
+			\item Los usos eficientes de factores en la producción.
+			\item El conjunto de posibilidades de producción $(CPP)$ de la economía.
+			\item El equilibrio Walrasiano.
+		\end{enumerate}
+		\textbf{\LARGE Solución}\\
+			\input{solucionario/sol_09}
+	\item Considérese una economía $2 \times 4 \times 2 $ en la que existen dos inputs productivos básicos - los inputs $K$ y $L$- en cantidades $(K,L) = (10,10)$. En esta economía se pueden obtener dos vienes finales - los bienes 1 y 2- mediante las tecnología descritas por las funciones de producción $q_1 = K_1 + 2L2$ y $q_2 = K_2 + 2L_2$, respectivamente. Finalmente, en la economía también existen dos consumidores 1 y 2 - cuyas preferencias sobre los bienes finales esta´n dadas por las funciones de utilidad $u^1\left( q_{1}^{1},q_{2}^{1}\right) = q_{1}^{1} + q_{2}^{1}$ y $u^2\left( q_{1}^{2},q_{2}^{2}\right) = q_{2}^{2}$, respectivamente. En estas condiciones,
+		\begin{enumerate}[a)]
+			\item Calcular el conjunto de posibilidades de producción $(CPP)$ y el conjuntos de posibilidades de producción $(CPU)$ de esta economía.
+			\item Comprobar que la asignación de consumo $\left[\left( q_{1}^{1},q_{2}^{1}\right), \left( q_{1}^{2},q_{2}^{2}\right)\right] = \left[\left( 10,5 \right), \left( 0,15\right)\right]$ es eficiente. Determinar, asimismo, los precios y la distribución incial de recursos que hacen que dichos consumos, así como las decisiones de producción que los hacen posibles, puedan descentralizarse como equilibrios walrasianos.
+		\end{enumerate}
+		\textbf{\LARGE Solución}\\
+			\input{solucionario/sol_10}
+\end{enumerate}
+%------------------------------------------------------------------------------------
+\end{document}		
+%====================================================================================

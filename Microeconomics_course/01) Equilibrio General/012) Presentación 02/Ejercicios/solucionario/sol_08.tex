@@ -1,0 +1,32 @@
+\begin{enumerate}[a)]
+	\item En la espacio de productos $\{q_1, q_2\}$, la $FPP$ no es más que el conjunto de puntos que representan la máxima producción posible de uno de los bienes, dado el nivel de producción del otro. La $FPP$ es, pues, el resultado de utilizar eficientemente los recursos existentes en la producción de los bienes finales de tal manera que si reescribimos la tecnología de la empresa 1 en forma de requerimientos o necesidades de factor para producir un determinado nivel de output $q_1$, resulta
+		$$L_1 = q_{1}^{\frac{1}{\alpha}}$$
+	y, teniendo en cuenta la condición de factibilidad de recursos $L_1 + L_2 = L$, la función de producción del bien 2 se convierte en 
+		\begin{gather}
+			q_2 = (L - L_{1})^\beta = \left( L - q_{1}^{\frac{1}{\alpha}}\right)^{\beta} \label{eq2}
+		\end{gather}
+	que es justamente la expresión del $FPP$ de la economía al reflejar la relación existente entre lo niveles de producción de ambos bienes cuando todos los recursos existentes son utilizados eficienmente en la producción de dichos bienes. La $FPP$ dada en (\ref{eq2}):
+		\begin{itemize}
+			\item Tiene pendiente negativa ya que
+						\begin{align*}
+							\frac{dq_2}{dq_1} & = -\frac{\beta}{\alpha} \left( L - q_{1}^{\frac{1}{\alpha}}\right)^{\beta - 1}q_{1}^{\frac{1 - \alpha}{\alpha}}\\
+											  & = -\frac{\beta}{\alpha}q_{2}^{\frac{\beta - 1}{\beta}}q_{1}^{\frac{1 - \alpha}{\alpha}} < 0
+						\end{align*}
+					excepto en los casos extremos $(q_1,q_2) = (0,L^{\beta})$ y $(q_1,q_2) = (L^{\alpha},0)$ en los cuales todos los recursos existentes son dedicados íntegramente a la producción de uno de lo bienes.
+			\item Puede ser cóncava o convexa ya que 
+						$$\frac{d^2q_2}{dq_{1}^2} = \frac{\beta}{\alpha^2}\left( L - q_{1}^{\frac{1}{\alpha}}\right)^{\beta - 2}q_{1}^{\frac{1 - 2\alpha}{\alpha}}\left[(\beta - 1)q_{1}^{\frac{1}{\alpha}} + (\alpha - 1) \left( L - q_{1}^{\frac{1}{\alpha}}\right)\right]$$
+					con lo cual
+						$$\frac{d^2q_2}{dq_{1}^2} \lesseqqgtr 0 \Leftrightarrow (\beta - 1)q_{1}^{\frac{1}{\alpha}} + (\alpha - 1) \left( L - q_{1}^{\frac{1}{\alpha}}\right) \lesseqqgtr 0$$
+					es decir
+						$$\frac{d^2q_2}{dq_{1}^2} \lesseqqgtr 0 \Leftrightarrow q_{1}^{\frac{1}{\alpha}} \lesseqqgtr \frac{1-\alpha}{\beta -\alpha} \Leftrightarrow L_1 \lesseqqgtr \frac{1-\alpha}{\beta -\alpha}$$
+		\end{itemize}
+	\item Si $\alpha < 1$ y $\beta < 1$, las tecnología de las dos empresas presentan rendimientos a escala decrecientes. En este caso, $\frac{dq_2}{dq_1} < 0$ y $\frac{d^2q_2}{dq_{1}^2} < 0$; es decir, la cuerva de transformación es decreciente u cóncava.\\
+	
+	Por otra parte, si $\alpha < 1$ y $\beta > 1$, la $FPP$ presenta un tramo cóncavo (para valores suficientemente pequeños de $q_1$ o , lo uqe es lo mismo, de $L_1$) y otro convexo (para valores suficientemente elevados de $q_1$ o, lo que es lo mismo, de $L_1$). Así por ejemplo, si $\alpha = 0.5$ y $\beta =  1.25$, entonces
+			$$q_2(q_1) = \left( L - q_{1}^{2}\right)^{1.25}$$
+	con lo cual
+			$$\frac{d^2q_2}{dq_{1}^2} \lesseqqgtr 0 \Leftrightarrow L_1 \lesseqqgtr \frac{2}{3}L$$
+	es decir, la $FPP$ pasa de cóncava a convexa cuando la cantidad de trabajo dedicada a la producción del bien 1 es superior a las dos terceras partes del trabajo total existente. Dicho de otra forma, la $FPP$ se vuelve convexa cuando el efecto de los rendimientos decrecientes en la industria del bien 1 pasa a estar dominado por el efecto de los rendimientos crecientes en al industria del bien 2. Y cuanto más elevados sean los rendimientos crecientes en la industria del bien 2, menor el valor de $L_1$ a partir del cual la $FPP$ se torna convexa, lo que equivale a que la $FPP$ es convexa en un intervalo más amplio.\footnote{Si $\alpha = \beta = 1$, los rendimientos son constantes en ambas empresas y , además, no existe diferencia tecnológica entre un y otra (es decir, no existe diferencia en intensidad con la que las dos empresas utilizan el input $L$). Es por ello que, en este caso, $\frac{d^2q_2}{dq_{1}^2} = 0$; es decir, la $FPP$ de la economía es lineal.}\\
+	
+	Finalmente, si $\alpha > 1$ y $\beta > 1$, las tecnología e las dos empresas exhiben rendimientos a escala crecientes. En este caso, la $FPP$ es convexa cualquiera que sea la distribución $(L_1,L_2)$ entre las empresas, por cuanto $\frac{d^2q_2}{dq_{1}^2} > 0$\footnote{El problema que plantea una $DPP$ covexa es que a la hora de maximizar el valor de la producción de una determinada economía o país, tomando como dados los precios de los bienes (precios formados en el mercado internacional), el punto de tangencia no satisface las condiciones de segundo orden de máximo, con lo cual el óptimo puede venir definido por una solución de esquina (especialización) y no interior}.
+\end{enumerate}

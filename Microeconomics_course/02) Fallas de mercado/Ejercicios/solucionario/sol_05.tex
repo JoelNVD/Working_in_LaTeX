@@ -1,0 +1,26 @@
+Para hallar el consumo óptimo de cuadros y cervezas de cada estudiante cuando vive solo. Se aplica lo siguiente:
+	$$\frac{Umg_{X}^{i}}{Umg_{Y}^{i}} = \frac{P_{X}}{P_{Y}}$$
+Resolviendo:
+	\begin{align*}
+		\frac{\frac{1}{3}X^{\frac{-2}{3}}_{i}Y^{\frac{2}{3}}_{i} }{\frac{2}{3}X^{\frac{1}{3}}_{i}Y^{\frac{-1}{3}}_{i}} &= \frac{P_{X}}{P_{Y}}\\
+		\frac{Y_{i}}{2X_{i}} &= \frac{P_{X}}{P_{Y}}
+	\end{align*}
+Tenemos la restricción presupuestaria:
+	$$X_{i}P_{X} + Y_{i}P_{Y} = M$$
+Hallando $X_{i}$:
+	\begin{align*}
+		X_{i}P_{X} + 2X_{i}\frac{P_{X}}{P_{Y}}P_{Y} &= M\\
+		3X_{i}P_{X} &= M\\
+		X_{i}^* &= \frac{M}{3P_{X}}
+	\end{align*}
+Hallando $Y_{i}$:    
+	\begin{align*}
+		Y^*_{i} &= 2X_{i}^*\frac{P_{X}}{P_{Y}}\\
+		Y^*_{i} &= 2\frac{M}{3P_{X}}\frac{P_{X}}{P_{Y}}\\
+		Y^*_{i} &= \frac{2M}{3P_{Y}}
+	\end{align*}
+Reemplazando los datos: $M=3000$, $P_{X}=100$, $P_{Y}=0.2$, se tiene los consumos óptimos.
+	\begin{align*}
+		X^*_{i} &= 10\\
+		Y^*_{i} &= 10000
+	\end{align*}

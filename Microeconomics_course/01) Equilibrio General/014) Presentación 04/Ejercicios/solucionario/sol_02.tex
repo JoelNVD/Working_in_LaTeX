@@ -1,0 +1,25 @@
+La pregunta anterior se resolvió de la forma general, pero se puede resolver de forma práctica igualando \emph{TMS}; si y solo si, las funciones de utilidad son tipo \emph{Cobb-Douglas} o transformaciones monotónicas de esta. Veamos.
+
+	\begin{enumerate}[a)]
+		\item \colorbox{yellow}{$TMS_A = TMS_B$}
+				Teniendo en cuenta:
+					$$TMS = \frac{UMg_x}{UMg_y} = \frac{\partial U/\partial x}{\partial U/\partial y}$$
+				entonces,
+					$$\frac{y_A}{x_A} = \frac{y_B}{x_B} \rightarrow \frac{y_A}{x_A} = \frac{3-y_A}{2-x_A} \rightarrow y_A = \frac{3x_A}{2} \text{ y } y_B = \frac{3x_B}{2}$$
+		\item $$
+				\begin{array}{c|c}
+					U_A = x_A\left( \frac{3x_A}{2}\right)  & U_B = x_B\left( \frac{3x_B}{2}\right) \\[0.3cm]
+					x_A = \frac{\sqrt{6}}{3}U_A^{1/2} & x_B = \frac{\sqrt{6}}{3}U_B^{1/2}
+				\end{array}
+			  $$
+			  	$x_A + x_B = 2 \longrightarrow U_A^{1/2}+U_B^{1/2} = \sqrt{6} \longrightarrow \therefore U_B = \left( \sqrt{6} - U_A^{1/2}\right)^{2} $
+			  	\begin{center}
+			  		\begin{tikzpicture}[scale = 0.7, samples = 100]
+			  			\draw[purple, domain = 0:6] plot({\x},{(sqrt(6)-(\x)^(0.5))^(2)});
+			  			\draw[<->] (0,7) node [above] {$U_B$} -- (0,0) -- (7,0) node [right] {$U_A$};
+			  			\draw[black, fill=black] (0,6) circle[radius=0.07] node [left] {6};
+			  			\draw[black, fill=black] (6,0) circle[radius=0.07] node [below] {6};
+			  		\end{tikzpicture}
+			  	\end{center}
+			  	
+	\end{enumerate}

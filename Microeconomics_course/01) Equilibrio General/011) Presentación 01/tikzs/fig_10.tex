@@ -1,0 +1,43 @@
+\begin{tikzpicture}
+	% Formato de CAJA
+	\draw[->] (0.5,0.5) node[align=center, below left] {\footnotesize $O_A$} -- (0.5,4.5) node[align=center, above] {\footnotesize $x_{2}^{A}$};
+	\draw[->] (0.5,0.5) -- (8.5,0.5) node[align=center, right] {\footnotesize $x_{1}^{A}$};
+	
+	\draw[->] (8,4) node[align=center, above right] {\footnotesize $O_B$} -- (0,4) node[align=center, left] {\footnotesize $x_{2}^{B}$};
+	\draw[->] (8,4) -- (8,0) node[align=center, below] {\footnotesize $x_{2}^{B}$};
+	
+	% Curvas de indiferencia1
+		% Agente A1
+			\draw [blue] (1.51,3.5) --  (1.51,1.14) -- (4.01,1.14);
+			\draw [blue] (2.82,3.5) -- (2.82,1.98) --  (4.4,1.98);
+			\draw [blue] (4.28,3.5) --  (4.28,2.91) -- (4.9,2.91);
+			
+		% Agente B
+			\draw  [red] (0.6,1.5) ..controls (1.4,1.4) and (1.74,1) .. (2,0.55);
+			\draw  [red] (1.6,2.5) ..controls (2.4,2.4) and (3,2) .. (3.3,1.2);
+			\draw  [red] (3.2,3.5) ..controls (3.7,3.4) and (4.3,3.2) .. (4.8,2.1);
+			
+		% Curva de contrato
+			\draw [purple] (0.5,0.5) -- (6,4);
+			
+		% Puntos
+			\draw[black, fill=black] (1.51,1.14) circle[radius=0.04];
+			\draw[black, fill=black] (2.82,1.98) circle[radius=0.04];
+			\draw[black, fill=black] (4.28,2.91) circle[radius=0.04];
+	
+	% Flechas
+		\node[draw, single arrow,
+				minimum height=21mm, minimum width=1mm,
+				single arrow head extend=1.5mm,
+				anchor=west, blue, fill=blue, scale=0.5, rotate=33] at (1.7,2.7) {};
+		\node[draw, single arrow,
+				minimum height=28mm, minimum width=1mm,
+				single arrow head extend=1.5mm,
+				anchor=west, red, fill=red, rotate=-147, scale=0.5] at (4.5,2.3) {};
+		
+		% Conjunto paretiano
+			\node[draw, single arrow,
+					minimum height=22mm, minimum width=1mm,
+					single arrow head extend=1.5mm,
+					anchor=west, purple, scale=0.5, rotate=180,transform shape] at (7.2,3.5) {\rotatebox {180} { \small Conjunto paretiano}};
+\end{tikzpicture}

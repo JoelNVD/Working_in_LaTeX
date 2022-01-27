@@ -1,0 +1,37 @@
+\begin{enumerate}[a)]
+	\item En información simétrica el agente recibirá un pago fijo, determinado por su restricción de participación.
+			\begin{enumerate}[i)]
+				\item Si $e^1$, el salario es $w=25.600$ y los beneficios del principal $U_P = 18.150$.
+				\item Si $e^2$, $w=19.600$ y $U_P=17.900$.
+				\item Si $e^3$, $w=15.625$ y $U_P=15.625$
+			\end{enumerate}
+		Por tanto, en información simétrica, el principal elige $e^1$.
+	\item Si existe un problema de riesgo moral, entonces
+			\begin{enumerate}[i)]
+				\item cuando el principal desea conseguir el esfuerzo $e^1$, construye el mecanismo de pago contingente al resultado $\left[ w(25), w(50)\right]$ siguiendo el programa:
+					\begin{align*}
+						& \M \limits_{w(25), w(50)} \quad \frac{1}{4} w(25)+\frac{3}{4} w(50)\\[0.2cm]
+						& \begin{array}{ll}
+							\text{s.a.}  & \frac{1}{4} w(25)^{1 / 2}+\frac{3}{4} w(50)^{1 / 2}-40 \geq 120 \\[0.2cm]
+										 & \frac{1}{4} w(25)^{1 / 2}+\frac{3}{4} w(50)^{1 / 2}-40 \geq \frac{1}{2} w(25)^{1 / 2}+\frac{1}{2} w(50)^{1 / 2}-20 \\[0.2cm]
+										 & \frac{1}{4} w(25)^{1 / 2}+\frac{3}{4} w(50)^{1 / 2}-40 \geq \frac{3}{4} w(25)^{1 / 2}+\frac{1}{4} w(50)^{1 / 2}-5
+						  \end{array}
+					\end{align*}
+				La solución es $w(25)=10.000, w(50)=32.400$ y $U_P=16.950$
+				
+				\item Si el principal quiere el esfuerzo $e^2$, entonces el mecanismo de pago $w(25)=12.100, w(50)=28.900$ y $U_P=17.00$\\
+				
+						De forma rigurosa, $s(25) = w(25)^{1/2}$ y $s(50)=w(50)^{1/2}$, el programa será
+							\begin{align*}
+								& \M \limits_{s(25), s(50)} \quad -s(25)^{2}-s(50)^{2}\\
+								& \begin{array}{ll}
+									\text{s.a.} & s(25)+s(50) \geq 280 \\
+												& s(25)-s(50) \leq 80  \\
+												& s(50)-s(25) \geq 60
+								  \end{array}
+							\end{align*}
+						Sean $\lambda, \mu$ y $\delta$ los multiplicadores de las tres restricciones. Las condiciones de primer orden del lagrangiano se escriben: $-2s(25)+\lambda+\mu-\delta=0$ y $-2s(50)+\lambda-\mu+\delta$, lo que implica que $\lambda=s(50)+s(25)$. La primera restricción se verifica con igualdad. Como las restricciones segunda y tercera son incompatibles con igualdad, una de ellas estará no saturada, luego o biene $\mu=0$, o bien $\delta=0$. Si $\delta=0$, entonces, por las condiciones de primer orden del lagrangiano y por la expresión de $\lambda$, tenemos que $\mu=s(25)-s(50)$, pero ello es imposible pues $s(50)-s(25)\geq 60\geq0$. Luego $\mu=0$, con lo que $\delta=s(50)-s(25)>0$. Esto implica que la tercera restricción se verifica con igualdad. $s(25)$ y $s(50)$ salen, pues, del sistema formado por la primera y tercera restricciones verificadas con igualdad.
+						
+				\item El contrato óptimo para conseguir el esfuerzo $e^3$ es el mismo que en información simétrica, luego $w(25)=w(50)=15.625$ y $U_P=15.625$. En información asimétrica el principal elige el esfuerzo $e^2$. La información asimétrica no solo influye en que, dado $e^2$, los beneficios son menores $(17.00<17.900)$, sino que el esfuerzo elegido también es distinto ($e^2<e^1$)
+			\end{enumerate}
+\end{enumerate}

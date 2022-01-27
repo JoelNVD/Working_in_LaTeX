@@ -1,0 +1,130 @@
+\begin{enumerate}[a)]
+	\item Dado que las tecnología disponibles son las propias de inputs sustitutivos, las asignaciones eficientes de inputs no son asignaciones interiores del tipo $(K_r,L_r) \gg 0, r = 1, 2$, sino de esquina. Es por ellos que no es posible determinar tales asignaciones resolviendo de manera analítica el problema $MAX_{(K_1,L_1)} 2K_1 + L_1$, s.a: $K_2 + 2 L_2 \geq q_2$ a través de la $CPO$ del lagrangiano correspondiente. En su lugar, lo que hacemos es optar por la resolución del problema a partir de la definición de eficiencia productiva con la ayuda de la representación gráfica del problema. Si representamos, mediante una cada de Edgeworth de la producción, los mapas de curvas isocuantas correspondientes a las tecnologías de las dos empresas, es claro que las asignaciones o usos eficientes de factores en la producción corresponden a los puntos de las fronteras inferior de dicha caja (donde se mide el factor $K$) y derecha (donde se mide el input $L$) de la siguiente figura:
+			\begin{center}
+				\begin{tikzpicture}
+					% Curvas de indiferencia
+						% Empresa 1
+							\draw[blue] (0,4) -- (2.56,0);
+							\draw[blue] (1.32,4) -- (3.87,0);
+							\draw[blue] (5.44,4) -- (8,0);
+						
+						% Empresa 2
+							\draw[red] (0,3.26) -- (3.87,0);
+							\draw[red] (0,4) -- (5.15,0);
+							\draw[red] (2.85,4) -- (8,0);
+							\draw[red] (4.77,4) -- (8,1.36);
+					% Caja
+						\draw[<->] (0,4.5) node[align=center, above, scale=0.8] {$L_1$} -- (0,0) node[below left] {\footnotesize $O_1$} -- (8.5,0) node[align=center, right, scale=0.8] {$K_1$};
+						\draw[<->] (-0.5,4) node[align=center, left, scale=0.8] {$K_2$} -- (8,4) node[align=center, above right, scale=0.8] {$O_2$} -- (8,-0.5) node[align=center, below, scale=0.8] {$L_2$}; 
+					% Flechas
+						\node[draw, single arrow,
+							  minimum height=28mm, minimum width=1mm,
+							  single arrow head extend=1.5mm,
+							  anchor=west, blue, fill=blue, scale=0.5, rotate=33] at (1.7,2.3) {};
+						\node[draw, single arrow,
+							  minimum height=28mm, minimum width=1mm,
+							  single arrow head extend=1.5mm,
+							  anchor=west, red, fill=red, rotate=-147, scale=0.5] at (7,2.3) {};
+				\end{tikzpicture}
+			\end{center}
+	Estas asignaciones técnicamente eficientes representadas por los puntos de los segmentos $O_1A$ y $AO_2$ quedan definidas por el conjunto
+			\begin{align}
+					\left\lbrace \left(q_1, K_1, L_1 \right) \right\rbrace = & \left\lbrace 0 \leq K_1 \leq 30 \text{ y } L_1 = 0, \text{ si } 0\leq q_1 \leq 60 \right\rbrace \notag \\
+																		     & \cup \left\lbrace K_1 = 30 \text{y} 0 \leq L_1 \leq 10, \text{ si } 60 \leq q_1 \leq 70\right\rbrace \label{eq3}
+			\end{align}
+	\item Para determinar el $CPP$ en el espacio de productos $\left\lbrace q_1, q_2 \right\rbrace $, es necesario diferenciar los dos subconjuntos expresados en (\ref{eq3}):
+			\begin{itemize}
+				\item En el tramo horizontal de $O_1AO_2$ ( y visto desde el vértice $O_1$) no se dedica nada del factor $L$ a la producción del bien 1. Por lo tanto, tenemos que $q_2 = K_2 + L_1 = 2K_1$, con lo cual se obtiene $K_1 = 0.5q_1$. Luego la expresión $q_2=(30-K_1) + 2\time 10 = 30 - 0.5q_1 +20$. En definitiva, $q_2 = 50 - 0.5q_1$, si $0\leq q_1 \leq 60$.
+				\item En el tramo vertical de $O_1AO_2$ (y visto desde el vértice $O_2$) no se destina cantidad alguna de factor $K$ a la producción del bien 2. Es por ello que $q_2 = K_2 + 2L_2$ o, lo que es lo mismo, $L_2 = 0.5q_2$. A su vez, la expresión $q_1 = 2K_1 + L_1$ se reescribe como $q_1 = 2	\times 30 + 10 - L_2 = 60 + 10 - 0.5q_2$. Es decir, $q_2(q_1) ? 140 - 2q_1$, si $60 \leq q_1 \leq 70$
+			\end{itemize}
+	Teniendo en cuenta estos dos tramos, el $CPP$ o curva de ornamentación de la economía es el da dado por las rectas
+		\begin{equation}
+			q_2(q_1) =
+				\begin{cases}
+					50 -0.5q_1 & \text{, si } 0 \leq q_1 \leq 60 \\
+					140 - 2q_1 & \text{, si } 60 \leq q_1 \leq 70
+				\end{cases} \label{eq4} 
+		\end{equation}
+	y , gráficamente, es el representado en la siguiente figura:
+			\begin{center}
+				\begin{tikzpicture}
+					% Producción
+						\draw[dashed] (0,2) node[left] {20} -- (6,2) -- (6,0) node[below] {60};
+					% FPP
+						\draw[orange, very thick] (0,5) node[left, black] {50} -- (6,2) -- (7,0) node[below, black] {70};
+					% Eje
+						\draw[<->] (0,5.5) node[align=center, above] {$q_2$} -- (0,0)  -- (7.5,0) node[align=center, right] {$q_1$};
+				\end{tikzpicture}
+			\end{center}
+	\item Las demandas de factores de la empresa 1 son las dadas por
+			\begin{equation}
+				(K_1, L_1) =
+					\begin{cases}
+						(0.5q_1,0) & \text{, si } r < 2w\\
+						(0,q_1)    & \text{, si } r > 2w
+					\end{cases} \label{eq5} 
+			\end{equation}
+	y las de la empresa 2 por
+			\begin{equation}
+				(K_2, L_2) =
+					\begin{cases}
+						(q_2,0) & \text{, si } r < 0.5w\\
+						(0,0.5q_2)    & \text{, si } r > 0.5w
+					\end{cases} \label{eq6} 
+			\end{equation}
+	Como siempre, la situación de equilibrio walrasiano requiere que para precios de los inputs $(r,w) \gg 0$ el exceso de demanda sea nulo en cada uno de los dos mercados de factores, o bien si algún precios es nulo - pero no ambos a la vez -  que exista exceso de oferta en el mercado del input cuyo precio es nulo.
+		\begin{itemize}
+			\item Si $r$ y $w$ son tales que $r < 0.5w$, entonces de (\ref{eq5}) y (\ref{eq6}) se obtiene
+					$$0.5q_1 + q_2 = 30$$
+			y
+					$$0 + 0 = 100$$
+			es decir, la oferta existente del input $K$ es demandada en su totalidad (lo cual define una situación propia de equilibrio en el mercado de dicho inputs), pero del input $L$ no se demanda cantidad alguna (con lo cual existe excesos de oferta en dicho mercado. Dado $r \geq 0$, si suponemos que $w > 0$, entonces debería existir un exceso de demanda nulo en el mercado de input $L$ y no un exceso de oferta como el que se origina en este caso. Con todo, el exceso de oferta aún sería compatible con una situación de equilibrio general siempre y cuando $w =0$ (en cuyo caso, el input $L$ sería considerado un bien libre). Sin embargo, $w = 0$ no es factible en razón del supuesto $r < 0.5w$.
+			
+			\item Si $r$ y $w$ verifican la condición $0.5w < r < 2w$, entonces
+					$$0.5q_1 + 0 = 30$$
+			y
+					$$0 + 0.5q_2 = 10$$
+			es decir, todo el capital es demasiado por la empresa 1 y to el trabajo por la empresa 2. Y ello es plenamente consistente con una situación de equilibrio general.
+			
+			\item Finalmente, si $r$ y $w$ son tales que $r > 2w$, entonces
+					$$0 + 0 > 30$$
+			y
+					$$q_1 + 0.5q_2 = 10$$
+			en cuyo caso no se demanda cantidad alguna del input $K$ o, lo que es lo mismo, existe un exceso de oferta en el mercado de dicho input.\\
+			Y dado que $w >geq 0$, es evidente que para compatibilizar un exceso de oferta en el mercado del input $K$ con una situación de equilibrio general, debería ocurrir que  $r = 0$ (en cuyo caso el capital sería considerado un bien libre), pero ellos contradice las suposición de que $r > 2w$.
+		\end{itemize}
+   En definitiva, la única situación de equilibrio de esta economía es la configurada por el para de precios de los inputs  $(r,w)$ tala que
+   		$$w > 0 \text{ y } 0.5w < r < 2w$$
+   junto con el plan de producción
+   		$$\left\lbrace \left[\left(q_1,K_1,L_1 \right), \left(q_2,K_2,L_2 \right) \right] \right\rbrace = \left\lbrace \left[\left(10,30,0 \right), \left(30,0,10 \right) \right] \right\rbrace$$
+   	el cual corresponde al punto $A$
+	   \begin{center}
+	   		\begin{tikzpicture}
+	   			% Curvas de indiferencia
+		   			% Empresa 1
+			   			\draw[blue] (0,4) -- (2.56,0);
+			   			\draw[blue] (1.32,4) -- (3.87,0);
+			   			\draw[blue] (5.44,4) -- (8,0);
+		   			
+		   			% Empresa 2
+			   			\draw[red] (0,3.26) -- (3.87,0);
+			   			\draw[red] (0,4) -- (5.15,0);
+			   			\draw[red] (2.85,4) -- (8,0);
+			   			\draw[red] (4.77,4) -- (8,1.36);
+	   			% Caja
+	   				\draw[<->] (0,4.5) node[align=center, above, scale=0.8] {$L_1$} -- (0,0) node[below left] {\footnotesize $O_1$} -- (8.5,0) node[align=center, right, scale=0.8] {$K_1$};
+	   				\draw[<->] (-0.5,4) node[align=center, left, scale=0.8] {$K_2$} -- (8,4) node[align=center, above right, scale=0.8] {$O_2$} -- (8,-0.5) node[align=center, below, scale=0.8] {$L_2$}; 
+	   			% Flechas
+		   			\node[draw, single arrow,
+				   			minimum height=28mm, minimum width=1mm,
+				   			single arrow head extend=1.5mm,
+				   			anchor=west, blue, fill=blue, scale=0.5, rotate=33] at (1.7,2.3) {};
+		   			\node[draw, single arrow,
+				   			minimum height=28mm, minimum width=1mm,
+				   			single arrow head extend=1.5mm,
+				   			anchor=west, red, fill=red, rotate=-147, scale=0.5] at (7,2.3) {};
+				% Punto A
+					\draw[black, fill=black] (8,0) circle[radius=0.06] node[below right] {$A$};
+	   		\end{tikzpicture}
+	   	\end{center}
+\end{enumerate}

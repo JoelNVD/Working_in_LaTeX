@@ -1,0 +1,106 @@
+%====================================================================================
+% Preamble
+%------------------------------------------------------------------------------------
+
+\documentclass{beamer}
+
+% Essential Packages
+\input{packages/packs}
+
+% Apartado de configuración del Beamer
+\mode<presentation> {
+	\usetheme{Frankfurt}
+	\setbeameroption{show notes}
+	\setbeamertemplate{footline}[frame number]
+	\usefonttheme[onlylarge]{structuresmallcapsserif}
+	\usefonttheme[onlysmall]{structurebold}
+	\usecolortheme{beaver}
+	\setbeamercovered{transparent}
+	\setbeamertemplate{navigation symbols}{}
+	
+	\setbeamercolor{section in head/foot}{bg=gray!8!white,fg=yellow!25!red}	
+	\setbeamercolor{frametitle}{bg=gray!15!white,fg=yellow!20!red}
+	\setbeamercolor{title}{bg=gray!25!white,fg=yellow!20!red}
+	\setbeamercolor{item projected}{fg=white,bg=yellow!30!red}
+}
+
+% Apartado transparencia de contenido
+\AtBeginSection[]
+{
+	\begin{frame}<beamer>{Contenido}
+		\tableofcontents[currentsection,currentsubsection]
+	\end{frame}
+}
+\AtBeginSubsection[]
+{
+	\begin{frame}<beamer>{Contenido}
+		\tableofcontents[currentsection,currentsubsection]
+	\end{frame}
+}
+
+% Apartado de logo
+\logo{\includegraphics[scale=.06]{figures/logo.png}}
+
+% Apartado cambio como por punto
+\decimalpoint
+
+%====================================================================================
+
+%====================================================================================
+% Body
+%====================================================================================
+% Title Page
+%-----------
+\title{Teoría Microeconómica II\\
+		Tema 6: Bienes Públicos}
+\author[José A. Valderrama]{\large{José A. Valderrama}\\
+		{\small \texttt{jvalder@ulima.edu.pe} {\color{black}{\faIcon{envelope}}}}}
+\institute{\large Universidad de Lima - Carrera de Economía}
+
+\date{\today}
+
+%------------------------------------------------------------------------------------
+% Title
+%---------
+\begin{document}
+	\begin{frame}[plain]
+		\maketitle
+	\end{frame}
+%------------------------------------------------------------------------------------
+% Sections
+%---------
+	\begin{frame}{Contenido}
+		\tableofcontents
+	\end{frame}
+
+%1) Introducción --------------------------------
+	\include{sections/sec_01}
+%2) Bién Público --------------------------------
+	\include{sections/sec_02}
+%3) Provisión de Bn Público ---------------------
+	\include{sections/sec_03}
+%4) Ejemplo Free rider --------------------------
+	\include{sections/sec_04}
+%5) Ser Free rider ------------------------------
+	\include{sections/sec_05}
+%6) Modelo --------------------------------------
+	\include{sections/sec_06}
+%7) Relevancia ----------------------------------
+	\include{sections/sec_07}
+%------------------------------------------------
+
+%------------------------------------------------------------------------------------
+% End
+%----
+	\begin{frame}
+		\maketitle
+		{\small
+			\LaTeX \enskip support and edition:\\
+			Joel Vicencio-Damian\\
+			\vspace{-0.05cm}
+			joel.nestor.damian@gmail.com \faIcon{envelope}}
+	\end{frame}
+
+%------------------------------------------------------------------------------------
+\end{document}
+%====================================================================================

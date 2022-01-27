@@ -1,0 +1,47 @@
+\begin{tikzpicture}[transform canvas={scale=0.6}]
+	% Formato de CAJA
+		\draw[->] (0.5,0.5) node[align=center, below left] {\footnotesize $O_A$} -- (0.5,4.5) node[align=center, above] {\footnotesize $x_{2}^{A}$};
+		\draw[->] (0.5,0.5) -- (8.5,0.5) node[align=center, right] {\footnotesize $x_{1}^{A}$};
+		
+		\draw[->] (8,4) node[align=center, above right] {\footnotesize $O_B$} -- (0,4) node[align=center, left] {\footnotesize $x_{2}^{B}$};
+		\draw[->] (8,4) -- (8,0) node[align=center, below] {\footnotesize $x_{2}^{B}$};
+	
+	% Curvas de indiferencia
+		% Agente A
+			\draw [blue] (1.5,3.5) -- (1.5,1);
+			\draw [blue] (2,3.5) -- (2,1);
+			\draw [blue] (2.5,3.5) -- (2.5,1);
+		% Agente B
+			\draw [red] (1,3) -- (6.5,3);
+			\draw [red] (1,2.5) -- (6.5,2.5);
+			\draw [red] (1,2) -- (6.5,2);
+		
+	% Flechas
+		\node[draw, single arrow,
+			minimum height=10mm, minimum width=1mm,
+			single arrow head extend=1.5mm,
+			anchor=west, blue, fill=blue] at (1.5,1.5) {};
+		\node[draw, single arrow,
+			minimum height=10mm, minimum width=1mm,
+			single arrow head extend=1.5mm,
+			anchor=west, red, fill=red, rotate=-90] at (6,3) {};
+	
+	% Formato de CAJA
+		\draw[->] (10.5,0.5) node[align=center, below left] {\footnotesize $O_A$} -- (10.5,4.5) node[align=center, above] {\footnotesize $x_{2}^{A}$};
+		\draw[->] (10.5,0.5) -- (18.5,0.5) node[align=center, right] {\footnotesize $x_{1}^{A}$};
+		
+		\draw[->] (18,4) node[align=center, above right] {\footnotesize $O_B$} -- (10,4) node[align=center, left] {\footnotesize $x_{2}^{B}$};
+		\draw[->] (18,4) -- (18,0) node[align=center, below] {\footnotesize $x_{2}^{B}$};
+	
+	% Flecha
+		\node[draw, single arrow,
+			minimum height=10mm, minimum width=1mm,
+			single arrow head extend=1.5mm,
+			anchor=west, purple, fill=purple, rotate=-45] at (17,1.5) {};
+	
+	% Rectangulo
+		\draw [purple, fill=purple] (17.9,0.45) rectangle (18.1,0.55);
+	
+	% Conjunto paretiano
+		\node [left]  at (17, 1.7)  {\small Conjunto paretiano};
+\end{tikzpicture}

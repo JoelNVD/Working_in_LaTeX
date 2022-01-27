@@ -1,0 +1,5 @@
+\babel@toc {spanish}{}
+\beamer@sectionintoc {1}{Teoremas del bienestar}{3}{0}{1}
+\beamer@sectionintoc {2}{Primer Teorema del Bienestar}{6}{0}{2}
+\beamer@sectionintoc {3}{Segundo Teorema del Bienestar}{11}{0}{3}
+\beamer@sectionintoc {4}{Fallas de mercado}{19}{0}{4}

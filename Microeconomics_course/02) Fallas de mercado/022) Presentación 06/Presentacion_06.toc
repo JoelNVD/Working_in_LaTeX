@@ -1,0 +1,8 @@
+\babel@toc {spanish}{}
+\beamer@sectionintoc {1}{Introducción}{3}{0}{1}
+\beamer@sectionintoc {2}{Bienes Públicos y Eficiencia Económica}{8}{0}{2}
+\beamer@sectionintoc {3}{Provisión óptima de un Bien Público}{17}{0}{3}
+\beamer@sectionintoc {4}{Ejemplo del comportamiento \emph {Free rider}}{41}{0}{4}
+\beamer@sectionintoc {5}{¿Cuando es racional ser \emph {Free rider}?}{43}{0}{5}
+\beamer@sectionintoc {6}{Un modelo simplificado de economía con bienes públicos}{46}{0}{6}
+\beamer@sectionintoc {7}{Aspectos relevantes en el análisis de economías con Bienes Públicos}{52}{0}{7}

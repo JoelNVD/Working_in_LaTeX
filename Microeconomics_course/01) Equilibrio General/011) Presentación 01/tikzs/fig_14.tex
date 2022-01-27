@@ -1,0 +1,56 @@
+\begin{tikzpicture}[transform canvas={scale=0.6}]
+	% Formato de CAJA
+		\draw[->] (0.5,0.5) node[align=center, below left] {\footnotesize $O_A$} -- (0.5,4.5) node[align=center, above] {\footnotesize $x_{2}^{A}$};
+		\draw[->] (0.5,0.5) -- (8.5,0.5) node[align=center, right] {\footnotesize $x_{1}^{A}$};
+		
+		\draw[->] (8,4) node[align=center, above right] {\footnotesize $O_B$} -- (0,4) node[align=center, left] {\footnotesize $x_{2}^{B}$};
+		\draw[->] (8,4) -- (8,0) node[align=center, below] {\footnotesize $x_{2}^{B}$};
+	
+		% Curvas de indiferencia1
+			% Agente A
+			\draw  [blue] (0.5,1.5) ..controls (1.4,1.4) and (1.74,1) .. (2,0.5);
+			\draw  [blue] (0.5,2.5) ..controls (2.4,2.4) and (3,2) .. (3.3,0.5);
+			\draw  [blue] (0.5,3.5) ..controls (3.7,3.4) and (4.3,3.2) .. (4.8,0.5);
+			% Agente B
+			\draw [red] (4.4,4) --  (8,3);
+			\draw [red] (3.25,4) -- (8,2.64);
+			\draw [red] (2,4) --  (8,2.29);
+		
+		% Flechas
+		\node[draw, single arrow,
+				minimum height=25mm, minimum width=1mm,
+				single arrow head extend=1.5mm,
+				anchor=west, blue, fill=blue, scale=0.5, rotate=-120] at (1.7,2.7) {};
+		\node[draw, single arrow,
+				minimum height=28mm, minimum width=1mm,
+				single arrow head extend=1.5mm,
+				anchor=west, red, fill=red, rotate=-105, scale=0.5] at (7.5,3.5) {};
+	
+	% Formato de CAJA rotada
+		\draw[->] (10.5,0.5) node[align=center, below left] {\footnotesize $O_A$} -- (10.5,4.5) node[align=center,      above] {\footnotesize $x_{2}^{A}$};
+		\draw[->] (10.5,0.5) -- (18.5,0.5) node[align=center, right] {\footnotesize $x_{1}^{A}$};
+		
+		\draw[->] (18,4) node[align=center, above right] {\footnotesize $O_B$} -- (10,4) node[align=center, left]       {\footnotesize $x_{2}^{B}$};
+		\draw[->] (18,4) -- (18,0) node[align=center, below] {\footnotesize $x_{2}^{B}$};
+	
+		% Curvas de indiferencia
+			% Agente A
+			\draw  [blue] (10.5,2.5) ..controls (12.4,2.4) and (13,2) .. (13.3,0.5);
+			% Agente B
+			\draw [red] (10.5,2.5) --  (13.3,0.5);
+			
+			% Curva de contrato
+			\draw [purple, very thick] (10.5,0.5) -- (10.5,4);
+			\draw [purple, very thick] (10.5,0.5) -- (18,0.5);
+	
+		% Flechas
+		\node[draw, single arrow,
+				minimum height=22mm, minimum width=1mm,
+				single arrow head extend=1.5mm,
+				anchor=west, purple, scale=0.5, rotate=180,transform shape] at (12.2,3.5) {\rotatebox {180} {\small Conjunto paretiano}};
+		
+		\node[draw, single arrow,
+				minimum height=22mm, minimum width=1mm,
+				single arrow head extend=1.5mm,
+				anchor=west, purple, scale=0.5, rotate=-90,transform shape] at (17.4,2.2) {\small Conjunto paretiano};
+\end{tikzpicture}
