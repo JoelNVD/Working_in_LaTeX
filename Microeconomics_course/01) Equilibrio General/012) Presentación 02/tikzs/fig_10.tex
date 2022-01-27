@@ -1,0 +1,43 @@
+\begin{tikzpicture}[domain=5:10,
+					tangent/.style={
+						decoration={
+							markings,% switch on markings
+							mark=
+							at position #1
+							with
+							{
+								\coordinate (tangent point-\pgfkeysvalueof{/pgf/decoration/mark info/sequence number}) at (0pt,0pt);
+								\coordinate (tangent unit vector-\pgfkeysvalueof{/pgf/decoration/mark info/sequence number}) at (1,0pt);
+								\coordinate (tangent orthogonal unit vector-\pgfkeysvalueof{/pgf/decoration/mark info/sequence number}) at (0pt,1);
+							}
+						},
+						postaction=decorate
+					},
+					use tangent/.style={
+						shift=(tangent point-#1),
+						x=(tangent unit vector-#1),
+						y=(tangent orthogonal unit vector-#1)
+					},
+					use tangent/.default=1
+					]
+	% Ejes
+		\draw[<->] (4,0) node[align=center, left, scale=0.8] {$-L$} -- (10,0) node[align=center, below] {\footnotesize $O_L$} -- (10,5) node[align=center, above, scale=0.8] {$q$};
+		\draw[<->] (5,5) node[align=center, above, scale=0.8] {$c$} -- (5,0) node[align=center, below, scale=0.8] {$O_R$} -- (11,0) node[align=center, right, scale=0.8] {$R$};
+	% Curva
+		\draw[color=orange,samples=1000, tangent=0.4] plot (\x, {sqrt(10-\x)/0.5 });
+	% Flechas bidirecionales
+		\draw[<->] (5.1,0.5) -- (6.2,0.5) node[align=center, above, scale=0.8] {$R(p^*,w^*)$} -- (7.38,0.5);
+		\draw[<->] (7.58,0.5) -- (8.8,0.5) node[align=center, above, scale=0.8] {$L(p^*,w^*)$} -- (9.9,0.5);
+		\draw[<->] (5,-0.5) -- (7.5,-0.5) node[align=center, below, scale=0.8] {$\overline{L}$} -- (10,-0.5);
+	% Curvas de indiferencia
+		\draw [smooth,blue,thick] (5.8,5) to[out=299, in=161] (9.8,2.2);
+	% Punto - Tangente
+		\draw[use tangent] (-2.92,0) -- (4,0);
+		\filldraw[use tangent] (0,0) circle (2pt);
+	% Lineas punteadas
+		\draw[dashed,] (7.48,0) -- (7.48,3.18) -- (5,3.18) node [scale=0.8, left] {$c(p^*,w^*)$};
+		\draw[dashed] (7.48,3.18) --(10,3.18) node [scale=0.8, right] {$q(p^*,w^*)$};
+	% Flecha y rectángulo
+		\draw [->] (7.48,3.18) -- (7.67,3.58) node [above right, scale=0.8] {$(p^*,w^*)$};
+		\draw [rotate around={-29.5:(7.48,3.18)}] (7.48,3.18) rectangle (7.6, 3.29);
+\end{tikzpicture}

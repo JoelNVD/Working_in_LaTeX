@@ -1,0 +1,8 @@
+\babel@toc {spanish}{}
+\beamer@sectionintoc {1}{Introducción}{3}{0}{1}
+\beamer@sectionintoc {2}{Externalidades de consumo}{7}{0}{2}
+\beamer@sectionintoc {3}{Externalidades de producción}{14}{0}{3}
+\beamer@sectionintoc {4}{¿Cómo conseguir que las empresas reconozcan el costo social?}{27}{0}{4}
+\beamer@sectionintoc {5}{Impuesto Pigouviano}{30}{0}{5}
+\beamer@sectionintoc {6}{Teorema de Coase}{35}{0}{6}
+\beamer@subsectionintoc {6}{1}{Más sobre el Teorema de Coase}{42}{0}{6}

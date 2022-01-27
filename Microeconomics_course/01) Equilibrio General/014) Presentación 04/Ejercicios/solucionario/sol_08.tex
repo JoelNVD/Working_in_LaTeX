@@ -1,0 +1,66 @@
+\begin{enumerate}[a)]
+	\item El punto $D$ es Pareto-inferior para los puntos $A$ y $B$, por lo tanto, no pertenece a la \emph{FPU}: solo los puntos Pareto-eficiente pertenecen a la \emph{FPU}
+			\begin{center}
+				\begin{tikzpicture}[scale=0.8]
+					% Relleno
+						\fill [pattern=crosshatch dots,pattern color=green!30!white] (0,4.5) -- (4.5,4.5) -- (4.5,0) -- (0,0) -- cycle;
+						\fill [pattern=crosshatch dots,pattern color=purple!30!white] (0,2) -- (6,2) -- (6,0) -- (0,0) -- cycle;
+						
+					% Lineas
+						\draw[<->] (0,9) node [above] {$U_1$} -- (0,0) -- (9,0) node [right] {$U_2$};
+						\draw[dashed] (0,4.5) -- (4.5,4.5) -- (4.5,0);
+						\draw[dashed] (0,2) -- (6,2) -- (6,0);
+					% Puntos
+						\draw[black, fill=black] (2,6) circle[radius=0.07] node [above right] {$C$};
+						\draw[black, fill=black] (4.5,4.5) circle[radius=0.07] node [above right] {$B$};
+						\draw[black, fill=black] (4.5,2) circle[radius=0.07] node [above right] {$D$};
+						\draw[black, fill=black] (6,2) circle[radius=0.07] node [above right] {$A$};
+					
+					% Cuadros de texto
+						\draw (-2,3) rectangle (-0.5,3.5) node[midway,text width=25mm,text centered, scale=0.2mm] {Puntos Pareto inferior a B};
+						\draw (1,-1) rectangle (2.5,-0.5) node[midway,text width=25mm,text centered, scale=0.2mm] {Puntos Pareto inferior a B};
+					
+					% Flechas
+						\draw[->] (-0.5,3.25) -- (0.5,3.25);
+						\draw[->] (1.75,-0.5) -- (1.75,0.5);
+				\end{tikzpicture}
+			\end{center}
+	\item Todo los puntos de la frontera son, por definición, Pareto-eficiente. Por lo tanto, no hay lugar para mejoras a lo Pareto; en otras palabras, no hay punto que sea Pereto-superior a $C$ en la \emph{FPU}
+			\begin{center}
+				\begin{tikzpicture}[scale=0.8]
+					% Relleno
+						\fill [pattern=crosshatch dots,pattern color=gray!95!white] ((0,9) -- (2,9) -- (2,6) -- (0,6) -- cycle;
+						\fill [pattern=crosshatch dots,pattern color=gray!95!white] ((2,6) -- (4.5,6) -- (4.5,4.5) -- (2,4.5) -- cycle;
+						\fill [pattern=crosshatch dots,pattern color=gray!95!white] ((4.5,4.5) -- (6,4.5) -- (6,2) -- (4.5,2) -- cycle;
+						\fill [pattern=crosshatch dots,pattern color=gray!95!white] ((6,2) -- (9,2) -- (9,0) -- (6,0) -- cycle;
+					% Líneas
+						\draw[<->] (0,9) node [above] {$U_1$} -- (0,0) -- (9,0) node [right] {$U_2$};
+						\foreach \x in {2, 4.5, 6}{
+							\foreach \y in {2, 4.5, 6}{
+								\draw [dashed](0, \y) -- (9, \y);
+								}
+							\draw [dashed](\x, 0) -- (\x, 9);
+						}
+					% Puntos
+						\draw[black, fill=black] (2,6) circle[radius=0.07] node [above right] {$C$};
+						\draw[black, fill=black] (4.5,4.5) circle[radius=0.07] node [above right] {$B$};
+						\draw[black, fill=black] (4.5,2) circle[radius=0.07] node [above right] {$D$};
+						\draw[black, fill=black] (6,2) circle[radius=0.07] node [above right] {$A$};
+				\end{tikzpicture}
+			\end{center}
+	\item La Función de Bienestar Social (\emph{FBS}) tilitarista expresa el bienestar social como la suma de las utilidad individuales. Las curvas de indiferencia serán líneas inclinada con pendiente negativa, con una inclinación de 45, siempre que todos y cada uno de los individuos tengan la misma importancia (peso) en la \emph{FBS}. El punto $B$ pertenece a la curva de indiferencia más alta $(W_B = 5+5 = 10 > W_A = 2+7=9 = W_C = 7+2=9 > W_D = 2+5=7)$
+			\begin{center}
+				\begin{tikzpicture}[scale=0.8]
+					% Líneas
+						\draw[<->] (0,9.5) node [above] {$U_1$} -- (0,0) -- (9.5,0) node [right] {$U_2$};
+						\foreach \y in {6.5, 8, 9}{
+							\draw[dashed, domain = 0:\y] plot({\x},{\y-\x});
+						}
+					% Puntos
+						\draw[black, fill=black] (2,6) circle[radius=0.07] node [above right] {$C$};
+						\draw[black, fill=black] (4.5,4.5) circle[radius=0.07] node [above right] {$B$};
+						\draw[black, fill=black] (4.5,2) circle[radius=0.07] node [above right] {$D$};
+						\draw[black, fill=black] (6,2) circle[radius=0.07] node [above right] {$A$};
+				\end{tikzpicture}
+			\end{center}
+\end{enumerate}

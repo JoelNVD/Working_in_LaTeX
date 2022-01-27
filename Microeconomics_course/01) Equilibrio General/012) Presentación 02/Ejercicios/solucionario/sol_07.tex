@@ -1,0 +1,78 @@
+\begin{enumerate}[a)]
+	\item Dadas las tecnología Leontief de las empresas, no es posible resolver el problema de forma analítica. Si los resolvemos aplicando directamente el concepto de eficiencia productiva ,ayudándonos para ello de las representaciones gráficas de esta economía, la cual se hace en la siguiente figura:
+		\begin{center}
+			\begin{tikzpicture}
+				% Curva de contrato
+					\draw[purple] (0,0) -- (6,4);
+					\draw[purple] (4.5,0) -- (6,4);
+					
+				% Relleno
+					\fill [pattern=crosshatch dots,pattern color=purple!20!white] (0,0) -- (6,4) -- (4.5,0) -- (0,0);
+					
+				% Caja
+					\draw[<->] (0,4.5) node[align=center, above, scale=0.8] {$L_1$} -- (0,0) node[below left] {\footnotesize $O_1$} -- (6.5,0) node[align=center, right, scale=0.8] {$K_1$};
+					\draw[<->] (-0.5,4) node[align=center, left, scale=0.8] {$K_2$} -- (6,4) node[align=center, above right, scale=0.8] {$O_2$} -- (6,-0.5) node[align=center, below, scale=0.8] {$L_2$};
+					
+				% Union de puntos
+					\draw[dashed, black, fill=black] (4.5,0) circle[radius=0.05] node [below, scale=0.7] {$A$} -- (4.5,3) circle[radius=0.05] node [above, scale=0.7] {$B$};
+					
+				% Curvas de indiferencia
+					% Agente A
+						\draw[blue] (3,2.5) -- (3,2) -- (3.5,2);
+						\draw[blue] (2,2.5) -- (2,1.33) -- (3.17,1.33); 
+					% Agente B
+						\draw[red] (4.75,2) -- (5.25,2) -- (5.25,1.5);
+						\draw[red] (3.82,1.33) -- (5,1.33) -- (5,0.16);
+						
+				% Texto
+					\draw[purple] (3,0.5) node[align=center, above, scale=0.8] {Conjunto Paretiano};
+			\end{tikzpicture}
+		\end{center}
+	Es evidente que la asignaciones eficientes en la producción son la dadas por los puntos del conjunto cerrado $O_1AO_2$. Es decir,
+		\begin{gather}
+			\left\lbrace \left( q_1, K_1, L_1\right) \right\rbrace = \left\lbrace 0 \leq K_1 \leq 15 \text{ y } L_1 \leq 0.5K_1\right\rbrace \cup \left\lbrace 15 \leq K_1 \leq 20 \text{ y }  0.5K_1\geq L_1 \geq 2K_1 - 30\right\rbrace \label{eq1}
+		\end{gather}
+	y donde el subconjunto $\{0 \leq K_1 \leq 15$ y $L_1 \leq 0.5K_1 \}$ es el representado gráficamente por el triángulo $O_1AB$, en tanto que el sobconjunto $\{15 \leq K_1 \leq 20$ y $ 0.5K_1\geq L_1 \geq 2K_1 - 30 \}$ es el dado por el triangulo $ABO_2$.
+	
+	\item Para determinar el $CPP$, lo que hacemos es tomar algunos puntos del conjunto de contrato (de la producción) definido en (\ref{eq1}) y representarlo en el espacio de productos $\left\lbrace q_1,q_2\right\rbrace$. Por ejemplo, a lo largo de la recta $L_1 = 0.5 K_1$, la correspondencia es la siguiente:
+		\begin{center}
+			\begin{tabular}{ccc}
+				\hline
+					$\left( K_1, L_1\right)$ & {} & $\left( q_1, q_2\right)$ \\
+				\hline
+					(0,0) 	 & {} & (0,10)	\\
+					(6,3) 	 & {} & (6,7)	\\
+					(10,5)   & {} & (10,5)	\\
+					(15,7.5) & {} & (15,2.5) \\
+				\hline
+			\end{tabular}
+		\end{center}
+	y es evidente que la FPP es\footnote{Tómense los punto (0,10) y (15,2.5) y recuérdese la ecuación de una recta que pasa por dos puntos.}
+			$$q_2 = 10 - 0.5q_1, \text{ si } 0 \leq q_1 \leq 15$$
+	Análogamente, si del $CCP$ definido en (\ref{eq1}) tomamos algunos puntos a lo largo de la recta $L_1 = 2K_1 - 30$ y los proyectamos en el espacio de productos $\left\lbrace q_1,q_2\right\rbrace $, se llega a
+		\begin{center}
+			\begin{tabular}{ccc}
+				\hline
+					$\left( K_2, L_2\right)$ & {} & $\left( q_1, q_2\right)$ \\
+				\hline
+					(15,0) 	 & {} & (0,10)	\\
+					(18,6) 	 & {} & (12,4)	\\
+					(19,8)   & {} & (16,2)	\\
+					(20,10)  & {} & (20,0)  \\
+				\hline
+			\end{tabular}
+		\end{center}
+	pudiéndose inferir que
+			$$q_2 = 10 - 0.5q_1, \text{ si } 0 \leq q_1 \leq 20$$
+	En definitiva, la $FPP$ de esta economía es el conjunto de producciones
+			$$\left\lbrace \left(q_1, q_2 \right) \in \mathbb{R}_{+}^{2} \mid q_2 \left( q_1\right) = 10 -0.5q_1, 0 \leq q_1 \leq 20 \right\rbrace $$
+	\item A partir de la tecnología de la empresa 1, es evidente que las demandas de factores de esta empresa son las dadas por
+			$$\left( K_1, L_1\right) = \left( \frac{2q_1}{2r + w}, \frac{q_1}{2r + w}\right) $$
+	ya que los inputs $K$ y $L$ pueden ser interpretados como un ``input compuesto'' cuyp coste es $2r+w$. Análogamente, las demandas de inputs de la empresa 2 son
+			$$\left( K_2, L_2\right) = \left( \frac{q_2}{r + 2w}, \frac{2q_2}{r + 2w}\right) $$
+	Luego, el par de precios $(r, w)$ tales que
+			$$\frac{2q_1}{2r + w}+  \frac{q_1}{2r + w} \leq 20$$
+	y
+			$$\frac{q_2}{r + 2w} + \frac{2q_2}{r + 2w} \leq 10$$
+	define el equilibrio walrasiano de esta economía de inputs complementarios.
+\end{enumerate}

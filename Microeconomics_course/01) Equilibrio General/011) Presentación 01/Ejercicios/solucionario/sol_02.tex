@@ -1,0 +1,74 @@
+El tamaño de la caja será de $15$ unidades del bien 1 por 12 del bien 2. Se calcula las utilidades del punto inicial y de los propuestos:
+
+	\begin{center}
+		\begingroup
+			\setlength{\tabcolsep}{10pt} % Default value: 6pt
+			\renewcommand{\arraystretch}{1.5} % Default value: 1
+				\begin{tabular}{ccccc}
+						\hline
+					Consumidor $A$ & {} & Consumidor $B$ & {} & Situación \\
+						\hline
+					$U_A(12,3) = 36$ & {} & $U_B(3,9) = 27$ & {} & Inicial\\
+					$U_A(9,5)  = 45$ & {} & $U_B(6,7) = 42$ & {} & Ganan\\
+					$U_A(8,9)  = 72$ & {} & $U_B(7,3) = 21$ & {} & A gana y B pierde\\
+						\hline
+				\end{tabular}
+		\endgroup
+	\end{center}
+
+En general cualquier punto perteneciente al área de intercambio cumple con lo siguiente:
+	\begin{gather*}
+		U^{A}\left(x_{1}^{A}, x_{2}^{A}\right) \geq U^{A}\left(w_{1}^{A}, w_{2}^{A}\right) \\
+		U^{B}\left(x_{1}^{B}, x_{2}^{B}\right) \geq U^{B}\left(w_{1}^{B}, w_{2}^{B}\right)
+	\end{gather*}
+
+En este ejercicio sería así:
+	$$x_{1}^{A} \cdot x_{2}^{A} \geq 36 \qquad x_{1}^{B} \cdot x_{2}^{B} \geq 27$$
+
+y sabiendo que 
+	$$x_{1}^{B} = 36 - x_{1}^{A} \qquad x_{2}^{B} = 27 - x_{2}^{A}$$
+	\vspace{-0.8cm}
+gráficamente
+\begin{center}
+	\begin{tikzpicture}[scale=1.1]
+		% Formación de la caja
+			% Consumidor A
+				\draw[->] (0.5,0.5) node[align=center, below left] {\footnotesize $O_A$} -- (0.5,4.5) node[align=center, above] {\footnotesize $x_{1}^{A}$};
+				\draw[->] (0.5,0.5) -- (8.5,0.5) node[align=center, right] {\footnotesize $x_{2}^{A}$};
+			
+			%Consumidor B
+				\draw[->] (8,4) node[align=center, above right] {\footnotesize $O_B$} -- (0,4) node[align=center, left] {\footnotesize $x_{1}^{B}$};
+				\draw[->] (8,4) -- (8,0) node[align=center, below] {\footnotesize $x_{2}^{B}$};
+		
+		% Curvas de indiferencia
+			\begin{axis}[
+						hide axis,
+						xmin=0, xmax=10, 
+						ymin=0, ymax=10,
+						ytick=\empty,
+						]
+				% Área sombreada
+						\fill [pattern=crosshatch dots,pattern color=green!60!white] (axis cs:4.07,6.462) to [bend right=34] coordinate[pos=0.5] (l_i) (axis cs:8.43,1.57) to (axis cs:8.42,1.56) to [bend right=34] coordinate[pos=0] (l_i) (axis cs:4,6.461);
+				
+				% Curvas de indiferencia
+					% Agente A
+						\draw [blue] (axis cs:4,6.9) to [bend right=40] coordinate[pos=1] (l_i) (axis cs:9,1.5);
+					% Agente B
+						\draw [red] (axis cs:8.5,1) to [bend right=40] coordinate[pos=0.5] (l_i) (axis cs:3.6,6.5);
+				
+			\end{axis}
+		
+		% Punto
+			\draw[black, fill=black] (5.775,0.89) circle[radius=0.05] node [above right] {$w$};
+			\draw[black, fill=black] (4.775,1.95) circle[radius=0.05] node [above] {\footnotesize $(9,5)$};
+			\draw[black, fill=black] (4.4,3.4) circle[radius=0.05] node [above] {\footnotesize (8,9)};
+			
+			% Intersección
+				\draw [dashed] (5.77,0.5) node [below]{\footnotesize $x_{1}^{A}=12$} -- (5.77,4)node [above] {\footnotesize $x_{1}^{B}=3$};
+				\draw [dashed] (0.5,0.89) node [left] {\footnotesize $3=x_{2}^{A}$}-- (8,0.89) node [right] {\footnotesize $x_{2}^{B}=9$};
+	
+		% Etiqueta de función de utilidad
+			\node [above, blue] at (3.1,1.5) {$36=u_{A}$};
+			\node [below, red]  at (5.5,3.1) {$u_{B}=27$};
+	\end{tikzpicture}
+\end{center}

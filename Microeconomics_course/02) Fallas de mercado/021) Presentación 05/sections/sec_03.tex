@@ -1,0 +1,150 @@
+%====================================================================================
+\section[Producción]{Externalidades de producción}
+%====================================================================================
+
+\begin{frame}{Externalidades de producción}
+Se definen:
+	\begin{itemize}
+		\item Costo Marginal Privado $(CMgP)$ o Costo marginal $(CMg)$ = costo de los factores de producción.
+		\item Externalidad $(Ext)$ o Costo Externo marginal $(CEMg)$ = aumento del costo impuesto externamente cuando una o más empresas aumentan su producción en una unidad.
+		\item Costo Marginal Social $(CMgS)$ o Costo Social marginal $(CSMg)= CMg + CEMg$.
+	\end{itemize}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Externalidades de producción}
+		\begin{center}
+		\includegraphics[width = 1\linewidth]{figures/produccion.pdf}
+	\end{center}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Externalidades de producción}
+	\begin{itemize}
+		\item Sean dos empresas: una acería $(S)$ y una piscigranja $(F)$.
+		\item La empresa $S$ produce
+			\begin{itemize}
+				\item $s$ cantidad de acero
+				\item $x$ cantidad de contaminación que se vierte a un río contiguo.
+			\end{itemize}
+		\item La empresa $F$ produce
+			\begin{itemize}
+				\item $f$ cantidad de pescado
+			\end{itemize}
+		\item La empresa $F$ se encuentra río abajo y se perjudica por la contaminación de la empresa $S$.
+		\item Las funciones de costo son:
+			\begin{itemize}
+				\item Para S: $c_s(s,x)$
+				\item Para F: $c_f(f,x)$
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Externalidades de producción}
+	Supuestos
+		\begin{itemize}
+			\item La mayor contaminación eleva el costo de la producción de pescado
+					$$\frac{\partial c_f}{\partial x} > 0$$
+			\item La reducción del nivel de contaminación, elevará el costo de producción de acero
+					$$\frac{\partial c_s}{\partial x} \leq 0$$
+		\end{itemize}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Problemas de maximización de beneficio}
+	\begin{itemize}
+		\item Para la acería: 
+				$$\M \limits_{s,x} \pi_s = p_ss - c_s(s,x)$$
+			  La acería elige la producción de acero y de contaminación que maximice su $\pi$.
+		\item Para la piscigranja: 
+				$$\M \limits_{f}\pi_f = p_f - c_f(f,x)$$
+		      La piscigranja sólo determina cantidad de pescado, no controla la contaminación.
+	\end{itemize}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Problemas de maximización de beneficio}
+	\begingroup
+		\setlength{\tabcolsep}{10pt} % Default value: 6pt
+		\renewcommand{\arraystretch}{1.5} % Default value: 1
+			\begin{tabular}{ccc}
+				\hline
+					Para la acería & {} & Para la piscigranja\\
+					$\M \limits_{s,x} \pi_s = p_ss - c_s(s,x)$ & {} & $\M \limits_{f} \pi_f = p_f - c_f(f,x)$\\
+				\hline 
+					\multicolumn{3}{c}{condiciones de primer orden} \\
+				\hline
+					$\frac{\partial \pi}{\partial s} = 0 \Leftrightarrow p_s - \frac{\partial c_s(s^\ast,x^\ast)}{\partial s} = 0$ & {} & $\frac{\partial \pi}{\partial f} = 0 \Leftrightarrow p_f - \frac{\partial c_f(f^\ast,x^\ast)}{\partial f} = 0$\\
+					$p_s = \frac{\partial c_s(s^\ast,x^\ast)}{\partial s}$ & {} & $p_f = \frac{\partial c_f(f^\ast,x^\ast)}{\partial f}$\\
+					$\frac{\partial \pi}{\partial x} = 0 \Leftrightarrow - \frac{\partial c_s(s^\ast,x^\ast)}{\partial x} = 0$ &{} & {}\\
+					$0 = \frac{\partial c_s(s^\ast,x^\ast)}{\partial x}$& {} & {} \\
+				\hline
+			\end{tabular}
+	\endgroup
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Problemas de maximización de beneficio}
+	Interpretación
+		\begin{itemize}
+			\item La acería produce acero donde precio = $CMg$ de producir dicho acero.
+					$$p_s = \frac{\partial c_s(s^\ast,x^\ast)}{\partial s}$$
+			\item Y genera desechos donde el $CMg$ de producirlos es nulo.
+					$$0 = \frac{\partial c_s(s^\ast,x^\ast)}{\partial x}$$
+			\item La piscifactoría produce donde precio de pescado = CMg de producir pescado.
+					$$p_f = \frac{\partial c_f(f^\ast,x^\ast)}{\partial f}$$
+		\end{itemize}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{¿Por qué hay externalidad?}
+	\begin{itemize}
+		\item La acería produce demasiada contaminación, porque no le cuesta hacerlo.
+		\item La cantidad óptima de acero sólo considera su costo de producción, no el daño que ocasiona a la piscigranja. 
+		\item Como la piscigranja no puede controlar la cantidad de desecho que genera la acería, debe incurrir en mayores costos para eliminar el desecho del agua.
+	\end{itemize}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{La solución eficiente}
+	Fusionarse y maximizar el beneficio conjunto:
+			$$\pi_s + \pi_f = p_ss - c_s(s,x) + p_ff - c_f(f,x)$$
+				\vspace{-0.4cm}
+		\begin{itemize}
+			\item La empresa conjunta tiene en cuenta ahora los costos de todos los agentes ( costos de la producción de acero +  daño que le produce a la piscicultura). 
+			\item Si: 
+					$$\pi = p_ss + p_ff - c_s(s,x) - c_f(f,x)$$
+			\item Las CPO son:
+					\begin{gather*}
+						\frac{\partial \pi}{\partial s} = 0 \Leftrightarrow p_s - \frac{\partial c_s(s^\ast,x^\ast)}{\partial s} = 0 \Leftrightarrow p_s - \frac{\partial c_S}{\partial s} - \frac{\partial c_f}{\partial x} \cdot \frac{\partial x}{\partial s} = 0\\
+						p_s =  \frac{\partial c_s}{\partial s} + \frac{\partial c_f}{\partial x} \cdot \frac{\partial x}{\partial s}
+					\end{gather*}
+		\end{itemize}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Gráficamente}
+Por tanto, la producción óptima social de acero será menor a la producción privada.
+	\begin{center}
+		\input{tikzs/fig_03}
+	\end{center}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{La solución eficiente}
+	\begin{center}
+		\begingroup
+		\setlength{\tabcolsep}{10pt} % Default value: 6pt
+		\renewcommand{\arraystretch}{1.5} % Default value: 1
+			\begin{tabular}{p{4cm}cp{4cm}}
+				\hline
+					\multicolumn{3}{c}{Si: $\pi= p_ss + p_ff - c_s(s,x) - c_f(f,x)$} \\
+				\hline
+					Las CPO son: &{}&\\
+				\hline
+					$\frac{\partial \pi}{\partial x} = 0 \Leftrightarrow -\frac{\partial c_S}{\partial x} - \frac{\partial c_f}{\partial x} = 0$ &{}& $\frac{\partial \pi}{\partial f} \Leftrightarrow p_f - \frac{\partial c_f}{\partial f} = 0$\\
+					$-\frac{\partial c_s}{\partial x} = \frac{\partial c_f}{\partial x}$ &{}& $p_f = \frac{\partial c_f}{\partial f}$\\
+					&{}& Como la actividad de la piscigranja no ejerce externalidad, el óptimo privado es igual al óptimo social. \\
+				\hline
+			\end{tabular}
+		\endgroup
+	\end{center}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Gráficamente}
+La acería producirá menos desecho que antes porque enfrenta un costo positivo al contaminar, frente al costo nulo de antes.
+	\begin{center}
+		\input{tikzs/fig_04}
+	\end{center}
+\end{frame}

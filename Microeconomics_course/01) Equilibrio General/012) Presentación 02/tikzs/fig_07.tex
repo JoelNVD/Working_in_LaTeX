@@ -1,0 +1,41 @@
+\begin{tikzpicture}[domain=5:10,
+					tangent/.style={
+						decoration={
+							markings,% switch on markings
+							mark=
+							at position #1
+							with
+							{
+								\coordinate (tangent point-\pgfkeysvalueof{/pgf/decoration/mark info/sequence number}) at (0pt,0pt);
+								\coordinate (tangent unit vector-\pgfkeysvalueof{/pgf/decoration/mark info/sequence number}) at (1,0pt);
+								\coordinate (tangent orthogonal unit vector-\pgfkeysvalueof{/pgf/decoration/mark info/sequence number}) at (0pt,1);
+							}
+						},
+						postaction=decorate
+					},
+					use tangent/.style={
+						shift=(tangent point-#1),
+						x=(tangent unit vector-#1),
+						y=(tangent orthogonal unit vector-#1)
+					},
+					use tangent/.default=1,
+					scale=0.65
+					]
+	% Relleno
+		\fill [pattern=crosshatch dots,pattern color=orange!60!white] (5,5) -- plot (\x, {sqrt(10-\x)/0.5 }) -- (5,0);\textbf{}
+	% Ejes
+		% Izquierda
+			\draw[<->] (4,0) node[align=center, left, scale=0.8] {$-L$} -- (10,0) node[align=center, below] {\footnotesize $O_L$} -- (10,5) node[align=center, above, scale=0.8] {$q$};
+		% Derecha
+			\draw[<->] (5,5) node[align=center, above, scale=0.8] {$c$} -- (5,0) node[align=center, below, scale=0.8] {$O_R$} -- (11,0) node[align=center, right, scale=0.8] {$R$};
+	% Curva
+		\draw[color=orange,samples=1000, tangent=0.4] plot (\x, {sqrt(10-\x)/0.5 });
+	% Punto - Tangente
+		\filldraw[use tangent] (0,0) circle (2pt) node[align=center, above right, scale=0.8] {$M$};
+	% Flechas
+		\draw[<->] (5,-0.5) -- (7.5,-0.5) node[align=center, below, scale=0.8] {$\overline{L}$} -- (10,-0.5);
+	% Curvas de indiferencia
+		\draw [smooth,blue,thick] (6.3,5.5) to[out=299, in=161] (10.3,2.7);    
+		\draw [smooth,blue,thick] (5.8,5) to[out=299, in=161] (9.8,2.2);
+		\draw [smooth,blue,thick] (5.3,4.5) to[out=299, in=161] (9.3,1.7);
+\end{tikzpicture}

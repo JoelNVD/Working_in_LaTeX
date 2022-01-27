@@ -1,0 +1,45 @@
+%====================================================================================
+\section{Primer Teorema del Bienestar}
+%====================================================================================
+\begin{frame}{Primer Teorema del Bienestar}
+``Si los consumidores son codiciosos y no hay externalidades, las asignaciones de equilibrio walrasiano son óptimas de Pareto''
+	\begin{itemize}
+		\item En equilibrio walrasiano, se identifican asignaciones sobre la recta presupuestaria para las que las curvas de indiferencia son tangentes.
+		\item Por tanto, en una asignación como esta, no podemos encontrar otra asignación factible que permita mejorar a ambos consumidores simultáneamente.
+		\item Por tanto: cualquier asignación de equilibrio walrasiano, necesariamente es una asignación óptimo de Pareto.
+	\end{itemize}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Primer Teorema del Bienestar}
+	\begin{center}
+		\input{tikzs/fig_01}
+	\end{center}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Demostración del primer teorema}
+	\begin{multicols}{2}
+		\begin{itemize}
+			{\small
+			\item Supongamos que $\left[p, \left( x^1, x^2, ... , x^I \right)  \right]$ es un equilibrio walrasiano.
+			\item $\left(x^1, x^2, ... , x^I \right) $ no es eficiente a lo Pareto.
+			\item Entonces existe $\left(\hat{x}^1, \hat{x}^2, ..., \hat{x}^I \right) $ tal que:
+					\begin{align}
+						&\sum \hat{x}^i = \sum \hat{w}^i \label{eq1}\\
+						&\forall i, u^i\left(\hat{x}^i \right) \geq u^i\left(x^i \right) \label{eq2}
+						\intertext{Para algún \textit{i}}
+						& u^i\left(\hat{x}^i \right) \geq u^i\left(x^i \right) \label{eq3}
+					\end{align}
+			\item De (\ref{eq3}) se deduce que en equilibrio: $p\hat{x}^i \geq px^i$
+			\item (\ref{eq2}) implica que para todo $i$: $p\hat{x}^i > px^i$
+			\item Sumando para todos los agentes:
+					$$\sum p\hat{x}^i > \sum px^i$$
+			\item De donde se deduce que:
+					$$p\sum \hat{x}^i > p \sum x^i = p\sum w$$
+			\item Lo cual contradice (\ref{eq1})}
+		\end{itemize}
+	\end{multicols}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Implicancia del Primer Teorema del Bienestar}
+	Si una economía satisface los supuestos del modelo de equilibrio walrasiano y se encuentra en equilibrio, cualquier medida de política económica que pretenda mejorar a un agente, necesariamente perjudicará a otro.
+\end{frame}

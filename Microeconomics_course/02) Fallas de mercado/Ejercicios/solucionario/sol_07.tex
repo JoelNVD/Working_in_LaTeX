@@ -1,0 +1,79 @@
+\begin{enumerate}[a)]
+	\item El problema de principal para el agente $M$ es maximizar su beneficio neto: 
+	\begin{align*}
+		& \M \quad k e-w^{M}\\
+		& \begin{array}{ll}
+			\text{s.a. } & U^{M} \geq 0\\
+			& w^{M}-2 e^{M^{2}} \geq 0
+		\end{array}
+	\end{align*}
+	De la restricción de participación se obtiene: $w^{M}=2 e^{M^{2}}$.\\
+	
+	Por tanto el beneficio neto es: $k e-2e^{2}$. Derivando respecto al esfuerzo e igualando a cero: $k-4e=0$ 
+	$$e^{M*}=\frac{k}{4}$$
+	Reemplazando en la $R.P.$: $w^{M*} =\frac{k^{2}}{16}$\\
+	
+	Similarmente, el problema de principal para el agente B es:
+	\begin{align*}
+		& \M \quad k e-w^{B}\\
+		& \begin{array}{ll}
+			\text{s.a. } & U^{B} \geq 0\\
+			& w^{B}-2e^{B^{2}} \geq 0
+		\end{array}
+	\end{align*}
+	De la restricción de participación se obtiene: $w^{B}=e^{B^{2}}$.\\
+	
+	Por tanto el beneficio neto es: $ke-e^{2}$. Derivando respecto al esfuerzo e igualando a cero:$k-2e=0$
+	$$e^{B*}=\frac{k}{2}$$
+	Reemplazando en la $R.P.$: $w^{B*}=\frac{k^{2}}{4}$.
+	\item El principal ofrece un menú de contratos. El problema de optimización es: 
+	\begin{align*}
+		& \M \quad q\left(ke^{B}-w^{B}\right)+(1-q)\left(ke^{M}-w^{M}\right)\\
+		& \begin{array}{llc}
+			\text{s.a. } & \quad w^{B}-e^{B^{2}} \geq 0 & (R.P.1)\\
+			& \quad w^{M}-2 e^{M^{2}} \geq 0 & (R.P.2) \\
+			& w^{B}-e^{B^{2}} \geq w^{M}-e^{M^{2}} & (R.I.1) \\
+			& w^{M}-2 e^{M^{2}} \geq w^{B}-2 e^{B^{2}} & (R.I.2)
+		\end{array}
+	\end{align*}
+	La restricción de participación del agente $B (R.P.1)$ y la restricción de incentivos del agente $M (R.I.2)$ están incluidas en las demás restricciones.\\
+	
+	El problema se reduce entonces a :
+	\begin{align*}
+		& q\left(ke^{B}-w^{B}\right)+(1-q)\left(ke^{M}-w^{M}\right)\\
+		& \begin{array}{ll}
+			\text{s.a. } & w^{B}-e^{B^{2}} \geq w^{M}-e^{M^{2}} \\
+			& w^{M}-2 e^{M^{2}} \geq 0
+		\end{array}
+	\end{align*}
+	La ecuación de Lagrange será:
+	$$ L=q\left(k e^{B}-w^{B}\right)+(1-q)\left(k e^{M}-w^{M}\right)+\lambda\left(w^{B}-e^{B^{2}}-w^{M}+e^{M^{2}}\right)+\mu\left(w^{M}-2e^{M^{2}}\right) $$
+	Las condiciones de primer orden serán:
+	\begin{align} 
+		&\frac{\partial L}{\partial w^{B}}=0 \Leftrightarrow -q+\lambda=0 \label{eq1}\\
+		&\frac{\partial L}{\partial w^{M}}=0 \Leftrightarrow -1+q-\lambda+\mu=0 \label{eq2}\\
+		&\frac{\partial L}{\partial e^{B}}=0 \Leftrightarrow qk-2 \lambda e^{B}=0 \label{eq3}\\
+		&\frac{\partial L}{\partial e^{M}}=0 \Leftrightarrow (1-q) k+2 \lambda e^{M}-4 \mu e^{M} \label{eq4}
+	\end{align}
+	De (\ref{eq1})
+	\begin{gather}
+		\lambda=q>0 \label{eq5}
+	\end{gather}
+	luego
+	\begin{align}
+		&\text{(\ref{eq5}) en (\ref{eq2})}: -1+q-q+\mu=0 \Rightarrow \mu=1>0 \notag\\
+		&\text{(\ref{eq5}) en (\ref{eq3})}: qk-2qe^{B}=0 \Rightarrow e^{B*}=\frac{k}{2} \label{eq6}\\
+		&\text{(\ref{eq5}) y (\ref{eq6}) en (\ref{eq4})}: (1-q)k+2qe^{M}-4e^{M} \Rightarrow e^{M*}=\frac{(1-q)k}{4-2q} \notag
+	\end{align}
+	De la restricción de participación del agente $M$:
+	$$w^{M*}=2e^{M^{2}}$$
+	De la restricción de incentivos del agente $B$:
+	$$w^{B*}=e^{B^{2}}+w^{M}-e^{M^{2}}=e^{B^{2}}+2 e^{M^{2}}-e^{M^{2}}=e^{B^{2}}+e^{M^{2}}$$
+	El esfuerzo que se pide al agente B es el mismo que con información simétrica $(\mathrm{k} / 2)$.\\
+	
+	El agente $M$ realiza un esfuerzo menor $\left(\frac{(1-q)k}{4-2q}<\frac{k}{4}\right)$\\
+	
+	El agente $M$ obtiene su utilidad de reserva (la restricción de participación se cumple con igualdad).\\
+	
+	El agente $B$ obtiene una renta informacional $\left(e^{B^{2}}+e^{M^{2}}>e^{B^{2}}\right)$
+\end{enumerate}

@@ -1,0 +1,21 @@
+$$\mathscr{L}= x_{A}^{1/2}y_{A}^{1/2} - \lambda \left( x_{B}^{1/2}y_{B}^{1/2} - \overline{U}_B\right)  - \mu_1\left( x_A+x_B-1200\right) - \mu_2\left( y_A + y_B - 300\right)$$
+	$$
+	\begin{array}{c|c}
+		\frac{\partial \mathscr{L}}{\partial x_A} = \frac{1}{2}x_{A}^{-1/2}y_{A}^{1/2} - \mu_1 = 0 & \frac{\partial \mathscr{L}}{\partial x_B} = -\lambda\frac{1}{2}x_{B}^{-1/2}y_{B}^{1/2} - \mu_1 = 0\\[0.4cm]
+		\frac{\partial \mathscr{L}}{\partial y_A} = \frac{1}{2}x_{A}^{1/2}y_{A}^{-1/2} - \mu_2 = 0 & \frac{\partial \mathscr{L}}{\partial y_B} = -\lambda\frac{1}{2}x_{B}^{1/2}y_{B}^{-1/2} - \mu_2 = 0
+	\end{array}
+	$$
+	\begin{enumerate}[a)]
+			\item $\frac{\mu_1}{\mu_2} = \frac{\frac{1}{2}x_{A}^{-1/2}y_{A}^{1/2}}{\frac{1}{2}x_{A}^{1/2}y_{A}^{-1/2}} = \frac{-\lambda\frac{1}{2}x_{B}^{-1/2}y_{B}^{1/2}}{-\lambda\frac{1}{2}x_{B}^{1/2}y_{B}^{-1/2}} \longrightarrow \frac{y_A}{x_A} = \frac{y_B}{x_B}$\\[0.3cm]
+				Reemplazando dotaciones: $ \frac{y_A}{x_A} = \frac{300 - y_A}{1200 - x_A} \longrightarrow \therefore y_A = \frac{x_A}{4} \text{ y } y_B = \frac{x_B}{4}$\\
+				
+				$U_A = x_A^{1/2}\left( \frac{x_A}{4}\right) ^{1/2} \longrightarrow x_A = 2U_A$ y $U_B = x_B^{1/2}\left( \frac{x_B}{4}\right) ^{1/2} \longrightarrow x_B = 2U_B$\\[0.3cm]
+				Reemplazando en $x_A+x_B=1200 \longrightarrow 2U_A + 2U_B = 1200 \longrightarrow \therefore U_A + U_B = 600$
+			\item Gráficamente
+					\begin{center}
+						\begin{tikzpicture}
+							\draw[<->] (0,5) node [above] {$U_B$} -- (0,0) -- (5,0) node [right] {$U_A$};
+							\draw[purple] (0,4) node [left, black] {600} -- (4,0) node [below, black] {600};
+						\end{tikzpicture}
+					\end{center}
+	\end{enumerate}

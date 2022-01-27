@@ -1,0 +1,233 @@
+%====================================================================================
+\section[Intercambio]{Intercambio puro}
+%====================================================================================
+
+\begin{frame}{Ejemplo}
+	Jaime y Karen tienen un total de 10 unidades de alimentos y 6 unidades de ropa.
+	\begin{table}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			Agentes & Asignación inicial & Intercambio & Asignación final \\
+			\hline
+			Jaime & 7A, 1R & -1A, +1R & 6A, 2R\\
+			\hline
+			Karen & 3A, 5R & +1A, -1R & 4A, 4R\\
+			\hline
+		\end{tabular}
+	\end{table}
+	Para saber si estan mejor es necesario conocer sus preferencias por alimentos y comida.
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Ejemplo}
+	\begin{itemize}
+		\item Karen tiene mucha ropa y poco alimento
+		\begin{itemize}
+			\item Supongamos que la RMS de alimento por ropa es 3.
+			\item Para conseguir 1 unidad adicional de alimento tiene que renunciar a 3 unidades de ropa.
+		\end{itemize}
+		\item Supongamos que la RMS de Jaime de comida por ropa es solo de $\frac{1}{2}$.
+		\begin{itemize}
+			\item Estará dispuesto a renunciar a $\frac{1}{2}$ unidad de alimento por 1 unidad adicional de ropa.
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Ejemplo}
+	\begin{itemize}
+		\item Existen condiciones para el intercambio
+		\begin{itemize}
+			\item Jaime valora la ropa más que Karen
+			\item Karen valora el alimento más que Jaime.
+			\item Karen estará dispuesta a renunciar hasta 3 unidades de ropa para conseguir 1 unidad adicional de alimento, pero Jaime solo renunciará a $\frac{1}{2}$	 unidad de ropa por una unidad adicional de alimento
+		\end{itemize}
+		\item Los términos del intercambio se determinan a través de la negociación.
+		\begin{itemize}
+			\item El intercambio de 1 unidad de alimento se realizará a cambio de entre $\frac{1}{2}$ y 3 unidades de ropa.
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Ejemplo}
+	\begin{itemize}
+		\item Supongamos que Karen ofrece a Jaime 1 unidad de ropa por 1 unidad de alimento.
+		\begin{itemize}
+			\item Jaime tendrá más ropa, que él valora más que el
+			alimento.
+			\item Karen tendrá más alimento, que ella valora más que 	la ropa.
+		\end{itemize}
+		\item Siempre que las RMS de dos consumidores sean diferentes hay oportunidad para el intercambio mutuamente beneficioso.
+		\begin{itemize}
+			\item La asignación de los recursos es ineficiente.
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Introducción}
+	Clasificación de los Modelos de equilibrio general
+		\begin{itemize}
+			\item Según el poder de mercado de los agentes:
+				\begin{itemize}
+					\item Equilibrio general competitivo
+					\item Equilibrio general con oligopolios
+				\end{itemize}
+			\item Según cómo se considere a los bienes:
+				\begin{itemize}
+					\item Equilibrio general de intercambio puro
+					\item Equilibrio general con producción
+				\end{itemize}
+		\end{itemize}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Descripción de la economía}
+	\begin{itemize}
+		\item Mercancías
+		\item Un conjunto de consumidores
+			\begin{itemize}
+				\item Preferencias
+				\item Dotación inicial de recursos ($w$)
+				\item Conjunto de consumo ($X$)
+			\end{itemize}
+		\item Un conjunto de empresas
+			\begin{itemize}
+				\item Tecnología
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Definiciones previas}
+	\begin{itemize}
+		\item Economía de intercambio
+			\begin{itemize}
+				\item Es una proyección del conjunto de consumidores sobre el espacio de características de los agentes.
+				\item Problema de los agentes: cómo redistribuir los recursos iniciales de la mejor forma posible.
+				\item Posibles decisiones:
+					\begin{itemize}
+						\item Consumir sus dotaciones iniciales
+						\item Involucrarse en un proceso de intercambio de sus recursos iniciales para diseñar una canasta de consumo mejor.
+						$$\begin{array}{lcl}
+							\hspace{-1cm} \text{Economía de trueque} & \longrightarrow & \text{Núcleo de una economía} \\
+							\hspace{-1cm} \text{Subastador de precios} & \longrightarrow & \text{Equilibrio walrasiano}
+						\end{array}$$
+					\end{itemize}
+			\end{itemize}
+		\item Asignación
+			\begin{itemize}
+				\item Es una función que a cada consumidor $i$ asocia una canasta de consumo $x_i$
+			\end{itemize}
+		\item Asignación factible
+			\begin{itemize}
+				\item Es una asignación tal que la cantidad agregada de bienes se iguala a la cantidad agregada de dotaciones iniciales
+					$$\sum x_i = \sum w_i$$
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Definiciones previas}
+	\begin{itemize}
+		\item Asignación eficiente
+			\begin{itemize}
+				\item Una asignación factible para una economía es eficiente (Pareto-óptima) si no hay una asignación factible alternativa que permite mejorar a un agente sin que otro agente empeore
+					\begin{gather*}
+						\widehat{x} \text{ es eficiente si} \\
+						\sum \widehat{x}_i = \sum w_i \\
+						\nexists x_{i}^{\prime} : \sum x_{i}^{\prime} = \sum w_i \text{ y } x_{i}^{\prime} \succ^{i} \widehat{x}_i,\enskip \forall i
+					\end{gather*}
+			\end{itemize}
+		\item Racionalidad individual
+			\begin{itemize}
+				\item Una asignación $x_i$ satisface la propiedad de racionalidad individual si el consumidor $i$ está dispuesto a intercambiar su dotación inicial $w_i$ por una asignación $x_i$ que le proporciona mayor satisfacción.
+			\end{itemize}
+		\item Coalición
+			\begin{itemize}
+				\item Una coalición $S$ es un subconjunto del conjunto de consumidores
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Definiciones previas}
+	\begin{itemize}
+		\item Mejor asignación para una coalición
+			\begin{itemize}
+				\item Una coalición $S$ puede mejorar sobre una asignación (bloquear) $x$ , si existe una asignación alternativa y para $S$ tal que, sea factible para la coalición y también sea preferida para todos los miembros de la coalición.
+					\begin{gather*}
+						y_i \succ^{i} x_i \enskip , \enskip \forall i\\
+						\sum y_i = \sum w_{y}
+					\end{gather*}
+			\end{itemize}
+		\item Núcleo de la economía
+			\begin{itemize}
+				\item El núcleo es el conjunto de las asignaciones factibles sobre las que ninguna coalición $S$ puede mejorar.
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{El modelo de intercambio puro}
+	\begin{itemize}
+		\item 	Modelo de intercambio puro: el caso especial de los modelos de EG en el que todos los agentes económicos son consumidores e intercambian sus dotaciones iniciales de los bienes.
+		\item Demandante neto de un bien (oferente): el consumidor quiere consumir más (menos) que su dotación inicial de ese bien.
+	\end{itemize}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{intercambio puro: 2 agentes y 2 bienes}
+	\begin{itemize}
+		\item \textbf{Ventaja}
+		\begin{itemize}
+			\item No hay producción: los bienes existentes en la economía porque sí. Son variables exógenas.
+			\item Dos bienes, $1$ y $2$.
+			\item Dos consumidores o economías domésticas.
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{2 agentes y 2 bienes: Dotaciones y Cestas}
+	\begin{itemize}
+		\item \textbf{Novedad}: Los consumidores no tienen rentas sino bienes
+			\begin{itemize}
+				\item Dos consumidores: $A$ y $B$
+				\item Dos bienes: $x_1$ y $x_2$
+				\item Las dotaciones iniciales:
+					\begin{itemize}
+						\item $w^{A}=(w_{1}^{A},w_{2}^{A})$
+						\item $w^{B}=(w_{1}^{B},w_{2}^{A})$
+					\end{itemize}
+				\item Sus consumos:
+					\begin{itemize}
+						\item $x^{A}=(x_{1}^{A},x_{2}^{A})$
+						\item $x^{B}=(x_{1}^{B},x_{2}^{B})$
+					\end{itemize}
+				\item Sin intercambio:
+					\begin{itemize}
+						\item $x^{A}=w^{A}$
+						\item $x^{B}=w^{B}$
+					\end{itemize}
+				\item Con intercambio, muchas situaciones pueden ocurrir, pero lo siguiente es una asignación factible o viable si
+					\begin{itemize}
+						\item $x_{1}^{A}+x_{1}^{A}=w_{1}^{A}+w_{1}^{B}$
+						\item $x_{2}^{B}+x_{2}^{B}=w_{2}^{B}+w_{2}^{B}$
+					\end{itemize}				
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{2 agentes y 2 bienes: Funciones de utilidad}
+Cada agente posee unas preferencias bien definidas sobre las cestas de bienes y puede consumir su dotación inicial o intercambiarla con otros agentes (trueque)\\
+	\bigskip
+\textbf{Preferencias de las economías domésticas:}
+	\begin{itemize}
+		\item Función de utilidad consumidor A:\quad $u^{A}(x_{1}^{A},x_{2}^{A})$
+		\item Función de utilidad consumidor B:\quad $u^{B}(x_{1}^{B},x_{2}^{B})$
+	\end{itemize}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{2 agentes y 2 bienes: Funciones de utilidad}
+		Función de utilidad del agente A\\
+			\vspace{0.5cm}
+		\centering
+			\input{tikzs/fig_01}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{2 agentes y 2 bienes: Funciones de utilidad}
+	Función de utilidad del agente B\\
+		\vspace{3.5cm}
+	\hspace{-0.5cm} \input{tikzs/fig_02}
+\end{frame}

@@ -1,0 +1,74 @@
+%====================================================================================
+\section[Consumo]{Externalidades de consumo}
+%====================================================================================
+
+\begin{frame}{Externalidades de consumo}
+Consideremos una economía con dos consumidores $(h=1,2)$ y dos bienes $(x,z)$. Los consumidores tienen las funciones de utilidad:
+	$$U^1 = x^1 + u_1(z^1) + v_1(z^2) \qquad U^2 = x^2 + u_2(z^2) + v_2(z^1)$$
+\medskip
+La oferta del bien $x$ proviene de las dotaciones individuales.\medskip
+
+La externalidad surge por el consumo del bien $z$. El bien $z$ es producido en un mercado competitivo que utiliza una unidad de $x$ para producir una unidad de $z$.
+Para simplificar: $p_x=1, p_z=1$.
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Externalidades de consumo}
+El equilibrio competitivo es descrito por:
+	\begin{gather*}
+		u_{h}^{\prime}\left( z^h\right) = 1 \quad , \quad h = 1, 2\\
+		x^h +z^h = w ^h \quad , \quad h = 1, 2\\
+		x^1 + z^1 + x^2 + z^2 = w^1 + w^2
+	\end{gather*}
+Para cada consumidor el beneficio marginal privado de cada bien, determinado por la utilidad marginal, es igualado con el costo marginal privado. La externalidad no aparece directamente en la determinación del equilibrio.
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Externalidades de consumo}
+Las asignaciones Pareto eficientes son halladas resolviendo:
+		\begin{align*}
+			& \text{Max } \quad U^1 + U^2 = \left[ x^1 + u_1\left(z^1 \right) + v_1\left(z^2 \right) \right] + \left[ x^2 + u_2\left(z^2 \right) + v_2\left(z^1 \right) \right]\\
+			& \begin{array}{ll}
+				\text{s.a: } & w^1 + w^2 - x^1 - z^1 - x^2 - z^2 \geq 0
+			\end{array}
+		\end{align*}
+La solución es caracterizada por:
+	\begin{gather*}
+		u_1\left(z^1 \right) + v_1\left(z^2 \right) = 1\\
+		u_2\left(z^2 \right) + v_2\left(z^1 \right) = 1
+	\end{gather*}
+La externalidad conduce a una divergencia entre la valoración privada $(u_{h}^{\prime})$ y la social $(u_{h}^{\prime} + v_{\tilde{h}}^{\prime})$.
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Externalidades de consumo}
+	\begin{itemize}
+		\item Si la externalidad es positiva $v_{h}^{\prime} > 0$
+				\begin{itemize}
+					\item La utilidad marginal de cada consumidor es menor en la asignación eficiente que en el equilibrio de mercado
+					\item Se consume poca cantidad de z en equilibrio
+				\end{itemize}
+		\item Si la externalidad es negativa $v_{h}^{\prime} < 0$
+				\begin{itemize}
+					\item La utilidad marginal de cada consumidor es mayor en la asignación de eficiencia que en el equilibrio de mercado
+					\item Se consume demasiada cantidad del bien z en equilibrio.
+				\end{itemize}
+	\end{itemize}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Externalidades de consumo}
+	\begin{multicols}{2}
+		\begin{itemize}
+			\item En el resultado de mercado se iguala el beneficio privado marginal $(BPM)$ al costo marginal $(CMg)$
+			\item En la asignación óptima se iguala el beneficio social marginal $(BSM)$ al $CMg$
+			\item La posición del $BSM$ respecto al $BPM$ depende del efecto externo.
+		\end{itemize}
+		
+		\begin{center}
+			\input{tikzs/fig_02}
+		\end{center}
+	\end{multicols}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Externalidades de consumo}
+	\begin{center}
+		\includegraphics[width = 1\linewidth]{figures/consumo.pdf}
+	\end{center}
+\end{frame}

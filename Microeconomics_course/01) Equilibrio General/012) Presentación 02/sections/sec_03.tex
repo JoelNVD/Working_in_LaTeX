@@ -1,0 +1,129 @@
+%====================================================================================
+\section[Robinson Crusoe]{Economía Robinson Crusoe: Análisis de Pareto}
+%====================================================================================
+
+\begin{frame}{Un modelo sencillo}
+Un agente se comporta simultáneamente como consumidor y como productor.
+	\begin{itemize}
+		\item En esta economía competitiva tendremos:
+		\item Una empresa que, a la vista de los precios de los factores y de los productos, decide contratar una cierta cantidad de horas de trabajo con el objetivo de producir un bien de consumo y maximizar su beneficio;
+		\item un Robinson trabajador que vende horas de su ocio a la empresa en forma de trabajo y recibe un salario;
+		\item un Robinson empresario que recibe el beneficio; y
+		\item un Robinson consumidor que decide comprar una canasta de bienes (ocio, bien de consumo) a la empresa con el objetivo de maximizar su satisfacción.
+	\end{itemize}
+\end{frame}
+%-------------------------------------------------
+\begin{frame}{Un modelo sencillo}
+		\begin{itemize}
+			\item Preferencias de Robinson:
+						$$u(c,R)=u(c,\overline{L}-L)$$
+					$c:$ cantidad consumida del bien, $R:$ cantidad consumida del bien, $\overline{L}:$ Dotación de tiempo y $L:$ horas ofrecidas de trabajo.
+			\item Tecnología
+						$$q=f(L)$$
+					$q:$ Cantidad producida del bien y $L:$ horas demandadas de trabajo.
+		\end{itemize}
+\end{frame}
+%-------------------------------------------------
+\begin{frame}{Un modelo sencillo}
+	El modelo se subdivide en los siguientes problemas:
+		\begin{enumerate}
+			\item Asignación eficiente.
+			\item El problema de la empresa.
+			\item El problema del consumidor.
+		\end{enumerate}
+\end{frame}
+%-------------------------------------------------
+\begin{frame}{Asignación eficiente}
+	Objetivo: identificar la combinación $(L,q)$ consistente con la dotación de tiempo y la tecnología que maximice $u(c,R)$.
+		\begin{align*}
+			& \text{Max } \quad u\left(c,R\right) \\
+			& \begin{array}{ll}
+				\text{s.a: } & c = q = f(L) \\[0.1cm]
+							 & R = \overline{L}- l
+			\end{array}
+		\end{align*}
+	En el óptimo: $RMS = PMg_L$\\
+		\begin{center}
+			\input{tikzs/fig_07}
+		\end{center}
+\end{frame}
+%-------------------------------------------------
+\begin{frame}{El problema de la empresa}
+	Se introduce el mecanismo de mercado. El empresario Robinson debe decidir la cantidad de trabajo a utilizar para maximizar el beneficio, dados los precios de un bien $(p)$ y mano de obra $(w)$.
+			\medskip
+		$$\pi = pq - wl$$
+			\medskip
+	En el óptimo: $PMg_L=\frac{w}{p}$\\
+			\vspace{-0.3cm}
+		\begin{center}
+			\input{tikzs/fig_08}
+		\end{center}
+\end{frame}
+%-------------------------------------------------
+\begin{frame}{El problema del consumidor}
+	El ingreso de Robinson consumidor está compuesto de la venta del ocio en forma de trabajo y del beneficio de la empresa.
+	$$Y = w(\overline{L}-R)+\pi(p,w)$$
+	El problema será:
+		\begin{align*}
+			& \text{Max } \quad u\left(c,R\right) \\
+			& \begin{array}{ll}
+				\text{s.a: } & pc \leq w(\overline{L}-R)+\pi(p,w)
+			  \end{array}
+		\end{align*}
+	En el óptimo: $RMS=\frac{w}{p}$\\
+			\vspace{2.4cm}
+		\begin{center}
+			\hspace{-9cm} \input{tikzs/fig_09}
+		\end{center}
+\end{frame}
+%-------------------------------------------------
+\begin{frame}{Equilibrio Walrasiano}
+	En consecuencia, en equilibrio walrasiano, a los precios $(p^*,w^*)$ tanto el mercado de trabajo como el bien de consumo están equilibrados:
+		\begin{gather*}
+			\text{Oferta del bien = demanda del bien} \qquad q(p^*,w^*) = c(p^*,w*)\\
+			\text{Oferta de trabajo = demanda de trabajo} \qquad \overline{L} - R(p^*,w^*) = L(p*,w*)
+		\end{gather*}
+	
+	\begin{itemize}
+		\item 	Una combinación (consumo, ocio) puede surgir como equilibrio competitivo sss maximiza la utilidad del consumidor sujeto a las restricciones impuestas por la tecnologìa y la disponibilidad de recursos.
+		\item Una asignación walrasiana es la misma asignación que se hubiera obtenido si un planificador central gestionara la economía con el objetivo de maximizar el bienestar del consumidor.
+	\end{itemize}
+\end{frame}
+%-------------------------------------------------
+\begin{frame}{Equilibrio Walrasiano}
+	La solución conjunta al modelo de la Economía Robinson Crusoe.\\
+		\begin{center}
+			\input{tikzs/fig_10}
+		\end{center}
+\end{frame}
+%-------------------------------------------------
+\begin{frame}{Actividad 1}
+	Una economía produce dos bienes $q_1$ y $q_2$, con dos insumos $K$ y $L$ , siendo sus tespectivas funciones de producciònm $q_1=4L_{1}^{\frac{1}{4}}K_{1}^{\frac{1}{4}}$ y $q_2=4L_{2}^{\frac{1}{4}}K_{2}^{\frac{1}{4}}$. La dotación de factores es fija e igual a $L=200$ y $K=100$.
+		\begin{itemize}
+			\item Determine las ecuaciones del conjunto paretiano en producción y la frontera de posibilidades de producción.
+			\item ¿Cúanto se producirá de $q_2$ si la economía desea producir $20$ unidades de $q_1$?
+		\end{itemize}
+\end{frame}
+%-------------------------------------------------
+\begin{frame}{Actividad 1}
+		$q_1=4L_{1}^{\frac{1}{4}}K_{1}^{\frac{1}{4}} \quad L_1 + L_2 = 200$\\
+		$q_2=4L_{2}^{\frac{1}{4}}K_{2}^{\frac{1}{4}} \quad K_1 + K_2 = 100$\\
+	\begin{multicols}{2}
+			\begin{itemize}
+				\item Pregunta A:
+						\begin{align*}
+							\frac{PMg_{L_1}}{PMg_{K_1}} & = \frac{PMg_{L_2}}{PMg_{K_2}}\\
+							\frac{K_1}{L_1} & = \frac{K_2}{L_2} \\
+							\frac{K_1}{L_1} & = \frac{100-K_1}{200-L_1}\\
+							K_1 & = \frac{L_1}{2} \\
+							K_2 & = \frac{L_2}{2}
+						\end{align*}
+						$q_1=4L_{1}^{\frac{1}{4}}\left(\frac{L_1}{2} \right) ^{\frac{1}{4}} \Rightarrow L_1 = \frac{q_{1}^{2}}{2^{\frac{7}{4}}}$\\
+						$q_2=4L_{2}^{\frac{1}{4}}\left(\frac{L_2}{2} \right) ^{\frac{1}{4}} \Rightarrow L_2 = \frac{q_{2}^{2}}{2^{\frac{7}{4}}}$\\
+						$ L_1 + L_2 = 200$\\
+						$ \therefore q_{1}^{2} + q_{2}^{2} = 200\cdot 2^{\frac{7}{4}}$
+				\item Pregunta B:\\
+						Si $q_1=20 \Rightarrow \therefore q_2 = 1.2968$	
+			\end{itemize}
+	\end{multicols}
+\end{frame}

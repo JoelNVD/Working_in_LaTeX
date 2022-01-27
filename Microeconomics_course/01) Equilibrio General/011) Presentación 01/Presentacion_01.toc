@@ -1,0 +1,9 @@
+\babel@toc {spanish}{}
+\beamer@sectionintoc {1}{Intercambio puro}{3}{0}{1}
+\beamer@sectionintoc {2}{La Caja de Edgeworth}{19}{0}{2}
+\beamer@sectionintoc {3}{Asignaciones eficientes}{24}{0}{3}
+\beamer@sectionintoc {4}{Curva de contrato}{31}{0}{4}
+\beamer@sectionintoc {5}{Condiciones del óptimo de Pareto}{41}{0}{5}
+\beamer@sectionintoc {6}{Eficiencia paretiana débil y fuerte}{46}{0}{6}
+\beamer@sectionintoc {7}{Ley de Walras}{49}{0}{7}
+\beamer@sectionintoc {8}{Actividades}{61}{0}{8}

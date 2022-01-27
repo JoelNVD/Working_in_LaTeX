@@ -1,0 +1,13 @@
+Los vendedores tienen que elegir el precio y la cantidad de autos a vender entre los dos grupos de compradores. Considerando $N_{S}$ el número de autos para los \emph{``snobs''} y $N_{N}$ el número de autos para los \emph{``menos snobs''}, el problema se estructura de esta manera si se considera un precio $C$ para cada auto producido y vendido:
+\begin{align*}
+	& \M \limits_{N_A,N_B,P_S,P_{NS}} N_{S}P_{S}+N_{NS}P_{NS}-\left(N_{S}+N_{N S}\right) C \\
+	& \quad \begin{array}{llc}
+		\text{ s.a. } & P_{S} \leq 50.000 &  (1)\\
+		& P_{N S} \leq 30.000 & (2) \\ 
+		& U_{S}-P_{S} \geq 25.000 & (3) \\ 
+		& U_{N S}-P_{N S} \geq 15.000 & (4) \\ 
+		& U_{S}-P_{S} \geq U_{S}-P_{N S} & (5) \\ 
+		& U_{N S}-P_{N S} \geq U_{N S}-P_{S} & (6) \\ 
+	\end{array}
+\end{align*}
+Ninguna de las restricciones es redundante.

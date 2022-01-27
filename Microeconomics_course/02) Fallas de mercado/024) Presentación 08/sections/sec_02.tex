@@ -1,0 +1,74 @@
+%====================================================================================
+\section{El enfoque de Primer Orden}
+%====================================================================================
+
+\begin{frame}{El enfoque de Primer Orden}
+	El modelo general implica una doble maximización:\\
+		\begin{center}
+			\begin{tabular}{ll}
+				$\M \sum p_i\left( e\right) B\left( x_i - w_i\right) $ & Para el principal\\
+				$\M \sum p_iu\left( w_i\right) -v\left( e\right) $ & Para el agente
+			\end{tabular}
+		\end{center}
+	La maximización del agente opera como restricción $(RI)$ en el problema de maximización del principal.\\[0.3cm]
+	
+	El enfoque de primer orden consiste en sustituir el problema de maximización del agente por su $CPO$:
+		$$ \sum p_{i}^{\prime}(e)u\left( w\right) -v^{\prime}\left( e\right)$$
+\end{frame}
+%------------------------------------------------
+\begin{frame}{El enfoque de Primer Orden}
+	Por tanto, el problema de max del principal se transforma en:
+		\begin{align*}
+			& \text{Max } \quad \sum p_{i}(e)B\left[x_i - w_i \right] \\
+			& \begin{array}{ll}
+				\text{s.a: } & \sum p_{i}(e) u\left( w_i\right) - v\left( e \right) \geq \underline{U} \text{ R.P.}\\[0.3cm]
+				& \sum p_{i}^{\prime}(e)u\left(w_i \right) - v^{\prime}\left( e\right) = 0  \text{ R.I.}
+			\end{array}
+		\end{align*}
+	El Lagrangiano:
+		\begin{align*}
+			L = & \sum p_{i}(e)B\left[x_i - w_i \right] +\\[0.3cm]
+				& \lambda \left[  p_{i}(e) u\left( w_i\right) - v\left( e \right) - \underline{U} \right]  +\\[0.3cm]
+				& \mu \left[ \sum p_{i}^{\prime}(e)u\left(w_i \right) - v^{\prime}\left( e\right)\right] 
+		\end{align*}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{El enfoque de Primer Orden}
+	CPO respecto a salarios:
+		\begin{gather*}
+			\frac{\partial L}{\partial w} = -p_i(e)+\lambda p_i(e)u^\prime(w_i) + \mu p_{i}^{\prime}(e)u^{\prime}(w_i) = 0\\[0.3cm]
+			u^{\prime}(w_i)\left[\lambda p_i(e) + \mu p_{i}^{\prime}(e) \right]  = p_{i}(e)\\[0.3cm]
+			u^{\prime}(w_i) = \frac{1}{\lambda + \mu \frac{p_{i}^{\prime}(e)}{p_{i}(e)}}
+		\end{gather*}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{El enfoque de Primer Orden}
+	La variación de los pagos en función del resultado depende de la forma de la función: $\frac{p_{i}^{\prime}(e)}{p_{i}(e)}$\\
+	
+	Cuando $\frac{p^\prime}{p}$ crece en $i$, un resultado alto es señal de que el esfuerzo fue incorporado con mayor probabilidad.\\
+		\begin{itemize}
+			\item es más verosimil que cuando el esfuerzo es alto, el resultado sea bueno.
+			\item $w_i$ depende positivamente de $x_i$.
+		\end{itemize}
+	Reescribiendo CPO con dos esfuerzos:
+		\begin{gather*}
+				u^{\prime}\left[w \left(x_i \right) \right]  = \frac{1}{\lambda + \mu \left(1- \frac{p_{i}^L}{p_{i}^H}\right) } = \frac{1}{\lambda + \mu \left( \frac{p_{i}^H-p_{i}^L}{p_{i}^H}\right) }\\[0.3cm]
+				p_{i}^H-p_{i}^L \cong p_{i}^{\prime}(e)
+		\end{gather*}
+	Variación de la probabilidad cuando el esfuerzo aumenta de eL a eH.$\cong$ Variación de la probabilidad cuando el esfuerzo aumenta en una cantidad infinitesimal
+\end{frame}
+%------------------------------------------------
+\begin{frame}{En resumen}
+	El modelo de riesgo moral analiza una situación en la que el comportamiento del agente una vez iniciada la relación no es verificable.\\[0.3cm]
+	En este caso, los contratos que el principal propondría al agente en un marco de información simétrica ya no son los más beneficiosos para el principal.\\[0.3cm]
+	Para determinar qué contrato resulta más beneficioso, el principal ha de tener en cuenta cuál será el comportamiento del agente una vez firmado el contrato.\\[0.3cm]
+	No poder controlar el comportamiento del agente supone una pérdida de eficiencia importante: el agente seguirá obteniendo su utilidad de reserva pero el principal obtendrá menos beneficios que los que lograría si la información fuese simétrica:
+	\begin{center}
+		El contrato no será eficiente en el sentido de Pareto.
+	\end{center}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{En resumen}
+	El contrato óptimo ha de resolver un arbitraje entre dos objetivos en conflicto: la eficiencia (el reparto óptimo del riesgo entre principal y agente) y los incentivos (para que el agente se esfuerce).\\[0.3cm]
+	Para darle incentivos al agente, el contrato debe pagar más cuanto mayor sea la señal proporcionada por los resultados respecto a que el esfuerzo elegido por el agente es el esfuerzo deseado por el principal.
+\end{frame}

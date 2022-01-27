@@ -1,0 +1,35 @@
+\begin{tikzpicture}[transform canvas={scale=0.6}]
+	% Consumidor B sin rotar
+		\draw[->] (0.5,0.5) node[align=center, below left] {\footnotesize $O_B$} -- (0.5,4.5) node[align=center, above] {\footnotesize $x_{2}^{B}$};
+		\draw[->] (0.5,0.5) -- (8.5,0.5) node[align=center, right] {\footnotesize $x_{1}^{B}$};
+	
+		\draw (2,0.5) node[below] {\footnotesize $x_{1}^{B}$};
+		\draw (0.5,2.5) node[left] {\footnotesize $x_{2}^{B}$};
+	
+		% Llaves
+			\draw [decorate,decoration={brace,amplitude=5pt},xshift=-4pt,yshift=0pt] (2,-0.05) -- (0.7,-0.05);
+			\node [right] at (0.9,-0.4) {$w_{1}^{B}$};
+			
+			\draw [decorate,decoration={brace,amplitude=5pt},xshift=-4pt,yshift=0pt] (-0.05,0.5) --(-0.05,2.5);
+			\node [left] at (-0.3,1.55) {$w_{2}^{B}$};
+	
+	% Flecha
+		\node[draw, single arrow,
+		minimum height=33mm, minimum width=8mm,
+		single arrow head extend=2mm,
+		anchor=west,] at (8,2) {Rotando 180$^{\circ}$};
+	
+	% Consumidor B con rotación
+		\draw[->] (18,4) node[align=center, above right] {\footnotesize $O_B$} -- (10,4) node[align=center, left] {\footnotesize $x_{1}^{B}$};
+		\draw[->] (18,4) -- (18,0) node[align=center, below] {\footnotesize $x_{2}^{B}$};
+		
+		\draw (16,4) node[above] {\footnotesize $x_{1}^{B}$};
+		\draw (18,2) node[right] {\footnotesize $x_{2}^{B}$};
+		
+		% Llaves
+			\draw [decorate,decoration={brace,amplitude=5pt},xshift=-4pt,yshift=0pt] (16.2,4.6) --(18.2,4.6);
+			\node [right] at (16.78,5.1) {$w_{1}^{B}$};
+			
+			\draw [decorate,decoration={brace,amplitude=5pt},xshift=-4pt,yshift=0pt] (18.8,4) --(18.8,2);
+			\node [right] at (18.8,3.05) {$w_{2}^{B}$};
+\end{tikzpicture}

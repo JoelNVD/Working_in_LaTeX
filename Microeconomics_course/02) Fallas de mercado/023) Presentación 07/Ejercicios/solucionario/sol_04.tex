@@ -1,0 +1,72 @@
+\begin{enumerate}[a)]
+	\item Dado que las funciones son tipo \emph{Cobb-Douglas}, se igualan \emph{TMS}
+			$$\frac{2\frac{3}{4}x_{1}^{-1/4}y_{1}^{1/4}}{2\frac{1}{4}x_{1}^{3/4}y_{1}^{-3/4}} = \frac{\frac{3}{4}x_{2}^{-1/4}y_{2}^{1/4}}{\frac{1}{4}x_{1}^{3/4}y_{2}^{-3/4}} \rightarrow \frac{y_1}{x_1} = \frac{y_2}{x_2} \rightarrow \frac{y_1}{x_1} = \frac{100- y_1}{100-x_1} \rightarrow y_1 = x_1 \text{ y } y_2 = x_2$$
+		  Reemplazando en las F.U.
+			$$
+			\begin{array}{c|c}
+				U_1 = 2x_{1}^{3/4}\left( x_1\right)^{1/4} & U_2 = x_{2}^{3/4}\left( x_{2}\right)^{1/4}\\[0.3cm]
+				x_1=\frac{U_1}{2} & x_2 = U_2
+			\end{array}
+			$$
+		  Reemplazando en la dotación de $x$ (o de $y$)
+			$$x_1 + x_2 = 100 \longrightarrow \frac{U_1}{2} + U_2 = 100 \longrightarrow \therefore U_2 = 100 - \frac{U_1}{2}$$
+		  Gráficamente
+			\begin{center}
+				\begin{tikzpicture}[samples = 100, scale=0.8]
+					\draw[purple, domain = 0:10] plot({\x},{10-\x/2});
+					\draw[<->] (0,10.5) node [above] {$U_2$} -- (0,5) -- (10.5,5) node [right] {$U_1$};
+					\draw (4,9) node[right, purple] {$U_2 = 100 - \frac{U_1}{2}$};
+				\end{tikzpicture}
+			\end{center}
+	\item Utilizando la siguiente expresión que se desprende de una \emph{Cobb-Douglas}\\
+			$$U(x,y) = x^\alpha y^\beta$$
+			$$
+				\begin{array}{c|c}
+					\highlight{x^M=\frac{\alpha I}{(\alpha + \beta)p_x}} & \highlight{y^M=\frac{\beta I}{(\alpha + \beta)p_y}}
+				\end{array}
+			$$
+		  Entonces
+		  	$$
+		  		\begin{array}{c|c}
+					x_{1}^{M} = \frac{\frac{3}{4}(20p_x+40p_y)}{\left( \frac{3}{4} + \frac{1}{4}\right)p_x} & x_{2}^{M} = \frac{\frac{3}{4}(80p_x+60p_y)}{\left( \frac{3}{4} + \frac{1}{4}\right)p_x}\\[0.3cm]
+					\frac{15p_x+30p_y}{p_x} & \frac{60p_x+45p_y}{p_x}
+		  		\end{array}
+		  	$$
+		  Reemplazando en la dotación de $x$ (o de $y$)
+		  	$$x_A + x_B = 100 \longrightarrow \frac{15p_x+30p_y}{p_x} + \frac{60p_x+45p_y}{p_x} = 100 \longrightarrow \frac{p_y}{p_x} = \frac{1}{3}$$
+		  Con el mismo procedimiento para $y$, se obtendrán los siguientes resultados:
+		  	$$
+		  		\begin{array}{c|c}
+		  			x_{1}^* = 25 & y_{1}^*=25\\[0.3cm]
+		  			x_{1}^* + x_2 = 100 & y_{1}^* + y_2 = 100\\[0.3cm]
+		  			x_{2}^* = 75 & y_{2}^*=75
+		  		\end{array}
+		  	$$
+		  Finalmente, reemplazando las dotaciones en las F.U.
+		  		\begin{center}
+		  			\begingroup
+			  			\setlength{\tabcolsep}{10pt} % Default value: 6pt
+			  			\renewcommand{\arraystretch}{1.5} % Default value: 1
+				  			\begin{tabular}{ccc}
+				  					\hline
+				  				{} & $U_1$ & $U_2$ \\
+					  				\hline
+				  				Dotación inicial & $U_1 = 2(20)^{3/4}(40)^{1/4} \approx 47.57$ & $U_2 = (80)^{3/4}(60)^{1/4} \approx 74.45$\\
+				  				Pareto & $U_1 = 2(25)^{3/4}(25)^{1/4} = 50$ & $U_2 = (75)^{3/4}(75)^{1/4} = 75$\\
+					  				\hline
+				  			\end{tabular}
+		  			\endgroup
+		  		\end{center}
+	  	Podemos identificar 2 puntos, $A = (47.57, 74.45)$ y $B = (50,75)$. Gráficamente, ubicamos estos puntos en la \emph{FPU}.
+	  		\begin{center}
+	  			\begin{tikzpicture}[samples = 100, scale=0.8]
+	  				\draw[purple, domain = 0:10] plot({\x},{10-\x/2});
+	  				\draw[<->] (0,10.5) node [above] {$U_2$} -- (0,5) -- (10.5,5) node [right] {$U_1$};
+	  				\draw (4,9) node[right, purple] {$U_2 = 100 - \frac{U_1}{2}$};
+	  				\draw[dashed] (0,6.9) node [left] {74.45}-- (4.1,6.9) -- (4.1,5) node [below] {47.57};
+	  				\draw[dashed] (0,7.5) node [left] {75}-- (5,7.5) -- (5,5) node [below] {50};
+	  				\draw[black, fill=black] (4.1,6.9) circle[radius=0.05] node [above right] {$A$};
+	  				\draw[black, fill=black] (5,7.5) circle[radius=0.05] node [above right] {$B$};
+	  			\end{tikzpicture}
+	  		\end{center}
+\end{enumerate}

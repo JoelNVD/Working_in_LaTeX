@@ -1,0 +1,39 @@
+Para calcular $p_1$ planteamos el problema qe busca maximizar la utilidad de $A$ sujeto a la restricción de no perjudicar a $B$.
+		\vspace{-0.6cm}
+	\setlength{\columnsep}{-5cm}
+	\begin{multicols}{2}
+		\begin{align*}
+			& \text{Max } \quad u^{A}\left(x_{1}^{A},x_{2}^{A}\right) \\[0.1cm]
+			& \begin{array}{ll}
+				\text{s.a: } & u^{B}\left(x_{1}^{B},x_{2}^{B} \right) = \overline{u}^{B} \\[0.2cm]
+				& x_{1}^{A}+x_{1}^{B} = \overline{w}_1 \\[0.2cm]
+				& x_{2}^{A}+x_{2}^{B} = \overline{w}_2  
+			\end{array}
+		\end{align*}
+	
+		\begin{align*}
+			& \text{Max } \quad x_{1}^{A} \cdot x_{2}^{A} \\[0.2cm]
+			& \begin{array}{ll}
+				\text{s.a: } & x_{1}^{B} \cdot x_{2}^{B}  = 27\\ [0.2cm]
+				& x_{1}^{A}+x_{1}^{B} = 15  \\ [0.2cm]
+				& x_{2}^{A}+x_{2}^{B} = 12  
+			\end{array}
+		\end{align*}
+	\end{multicols}
+
+Simplificando el problema a maximizar
+	\begin{align*}
+		& \text{Max } \quad x_{1}^{A} \cdot x_{2}^{A} \\[0.2cm]
+		& \begin{array}{ll}
+			\text{s.a: } & \left(15 - x_{1}^{A} \right)  \cdot \left( 12-  x_{2}^{A}\right)  = 27 
+		\end{array}
+	\end{align*}
+
+Se forma el lagrange y se aplican las condiciones de primer orden:
+	$$ \mathscr{L} =  x_{1}^{A} \cdot x_{2}^{A} - \lambda\left[\left(15 - x_{1}^{A} \right)  \cdot \left( 12-  x_{2}^{A}\right)  - 27 \right]$$
+	\begin{align*}
+		& \frac{\partial \mathscr{L}}{\partial x_{1}^{A}} = x_{2}^{A} \lambda \left(12 - x_{2}^{A} \right) = 0\\[0.3cm]
+		& \frac{\partial \mathscr{L}}{\partial x_{2}^{A}} = x_{2}^{A} \lambda \left(12 - x_{2}^{A} \right) =0\\[0.3cm]
+		& \frac{\partial \mathscr{L}}{\partial \lambda} = - \left(15 - x_{1}^{A} \right)  \cdot \left( 12-  x_{2}^{A}\right)  + 27 =0
+	\end{align*}
+Resolviendo el sistema, se demuestra que: $\left( x_{1}^{A},\enskip x_{2}^{A}\right) = \left(9.19, \enskip7.35 \right)$ y $\left( x_{1}^{B},\enskip x_{2}^{B}\right) = \left(5.51,\enskip 4.65 \right)$

@@ -1,0 +1,31 @@
+Factores de producción en función de la producción
+	$$x = \frac{L_x}{2} \rightarrow L_x = 2x \quad , \quad y = L_{y}^{0.5} \rightarrow L_y = y^2$$
+En la restricción de factibilidad:
+	$$L_x + L_y = 100 \rightarrow 2x + y^2 = 100$$
+si
+	\begin{gather*}
+		y = 0 \rightarrow x^{max} = 50\\
+		x = 0 \rightarrow y^{max} = 10
+	\end{gather*}
+Gráficamente
+	\begin{center}
+		\begin{tikzpicture}
+			% FPP
+				% Ejes
+					\draw[->] (10,0)-- (10,5) node[align=center, above] {\footnotesize $y$};
+					\draw[->] (10,0) -- (15,0) node[align=center, right] {\footnotesize $x$};
+				% Curva
+					\draw [orange] (10,4.5) node [black, left] {10}..controls (13,3.5) and (14,2.5) .. (14.5,0)node [black, below] {50};
+		\end{tikzpicture}
+	\end{center}
+Pendiente de la $FPP$
+	\begin{gather*}
+		RMT = \frac{dy}{dx} \rightarrow \frac{\partial T}{\partial x}dx + \frac{\partial T}{\partial y}dy=0\\[0.2cm]
+		RMT = -\left( \frac{\frac{\partial T}{\partial x}}{\frac{\partial T}{\partial y}}\right) 
+	\end{gather*}
+por lo tanto, la pendiente está dado por
+	\begin{gather*}
+		T(x,y)=0 \rightarrow 2x+y^2-100=0\\[0.2cm]
+		\therefore	RMT = \frac{\partial T/\partial x}{\partial T/\partial y} = -\frac{1}{y}
+	\end{gather*}
+	

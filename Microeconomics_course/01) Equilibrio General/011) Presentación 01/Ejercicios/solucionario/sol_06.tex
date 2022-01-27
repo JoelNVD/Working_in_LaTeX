@@ -1,0 +1,22 @@
+De $A$ tenemos:
+
+Resolviendo el sistema y despejando $x_{1}^{A}$ y $x_{2}^{A}$
+	$$\left.
+		\begin{array}{c}
+			\frac{x_{2}^{A}}{2x_{1}^{A}} = \frac{p_1}{p_2} \\[.5cm]
+			p_{1}x_{1}^{A}+p_{2}x_{2}^{A} = p_{1}16 + p_{2}4
+		\end{array}
+	  \right\} \Longrightarrow 
+		\begin{array}{c}
+			x_{2}^{A} = 2x_{1}^{A}\frac{p_1}{p_2} \Longrightarrow p_{1}x_{1}^{A}+p_{2}2x_{1}^{A}\frac{p_1}{p_2} = p_{1}16 + p_{2}4\\[.5cm]
+			x_{1}^{A} =  x_{2}^{A}\frac{p_2}{2p_1} \Longrightarrow p_{1}x_{2}^{A}\frac{p_2}{2p_1}+p_{2}x_{2}^{A} = p_{1}16 + p_{2}4
+		\end{array}$$
+Obtenemos que para el agente $A$:
+	$$x_{1}^{*A}\left(p_1, p_2, 16, 4 \right) = \frac{p_{1}16 + p_{2}4}{3p_1} \qquad x_{2}^{*A}\left(p_1, p_2, 16, 4 \right) = \frac{2\left( p_{1}16 + p_{2}4\right) }{3p_2}$$
+Para el agente $B$:
+	$$x_{1}^{*B}\left(p_1, p_2, 4, 10 \right) = \frac{2\left(p_{1}4 + p_{2}10\right)}{3p_1} \qquad x_{2}^{*B}\left(p_1, p_2, 4, 10 \right) = \frac{ p_{1}4 + p_{2}10 }{3p_2}$$
+Calculadas ñas demandas, ya podemos escribir las ecuaciones de equilibrio en los mercado.
+	$$\left. \begin{array}{ccc}
+		x_{1}^{A} + x_{2}^{A} = w_{1}^{A} + w_{2}^{A} & \Longrightarrow &\frac{p_{1}16 + p_{2}4}{3p_1} + \frac{2\left( p_{1}16 + p_{2}4\right) }{3p_2} = 16 + 4 \\[.5cm]
+		x_{1}^{B} + x_{2}^{B} = w_{1}^{B} + w_{2}^{B} & \Longrightarrow & \frac{2\left(p_{1}4 + p_{2}10\right)}{3p_1} + \frac{ p_{1}4 + p_{2}10 }{3p_2} = 4 + 10
+	  \end{array}\right\} \Longrightarrow \therefore 32p_1 = 24p_2 \text{ infinitas soluciones}$$

@@ -1,0 +1,182 @@
+%====================================================================================
+% Preamble
+%------------------------------------------------------------------------------------
+\documentclass[10pt,a4paper]{article}
+
+% Apartado de texto
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+
+% Apartado matemático
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage[libertine]{newtxmath}
+
+% Apartadode no sangría
+\usepackage{parskip}
+
+% Aparatod posición del texto
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{fancyhdr}
+
+\usepackage{graphicx}
+\usepackage{xcolor}
+\definecolor{cardinal}{rgb}{0.77, 0.12, 0.23}
+
+% Apartado de columnas y filas: juntarlas o separarlas
+\usepackage{multicol, multirow}
+
+% Apartado differents label en listado
+\usepackage[shortlabels]{enumitem}
+
+% Apartado hyperres
+\usepackage[hidelinks]{hyperref}
+
+\usepackage{tcolorbox}
+\newtcolorbox{nota}[1]{
+	colback=cardinal!5!white,
+	colframe=cardinal!75!black,
+	fonttitle=\bfseries,
+	title=#1
+}
+
+% Apartado dibujos
+\usepackage{tikz, pgfplots}
+\usetikzlibrary{positioning,calc,arrows}
+\usetikzlibrary{shapes.arrows}
+\usetikzlibrary{patterns}
+\usetikzlibrary{babel} % Para que recono > y <, en inglés no se pone, pero en spañol sí
+\usetikzlibrary{shadings,shadows}
+\usetikzlibrary{matrix}
+
+% Apartado cambio como por punto
+\decimalpoint
+
+% Definir oprerador
+\DeclareMathOperator*{\M}{Max}
+
+%====================================================================================
+
+%====================================================================================
+% Body
+%====================================================================================
+% Title Page
+%-----------
+\textwidth=450pt \textheight=620pt \oddsidemargin=0in
+\topmargin=-10pt
+\pagestyle{fancy} \rhead{\scriptsize{\textbf{Código del Curso:} xxXXXXX} \\
+	\textbf{Fecha:} XX/XX/2021 \& 2021-I \hspace{0.04cm}}
+\lhead{\scriptsize{\textbf{Profesor:} José A. Valderrama}  \\
+	\textbf{Curso:} Teoría Microeconómica II}
+\newcommand{\re}[1]{\smallskip\textsf{\textbf{Respuesta}} \begin{sf}\\ #1 \end{sf} \bigskip}
+\newcommand{\ay}[1]{ \scriptsize{\textsl{Hint: #1}}\normalsize{}}
+\newcommand{\pr}[2]{\frac{\partial #1}{\partial #2}}
+
+%------------------------------------------------------------------------------------
+% Title
+%---------
+\begin{document}
+	\begin{center}
+		{\Large {\textbf{Práctica Dirigida N$^{\circ}$1}}}
+
+		\textsc{Equilibrio General}
+		
+	\end{center}
+	
+% EJERCICIOS---------------------------------------------------------------------------------
+\begin{enumerate}
+	\item Una economía esta formado por 2 unidades $A$ y $B$, cuyas dotaciones iniciales son
+			$$\left(w_{1}^{A}+w_{2}^{A}\right) = \left( 6,8\right) \qquad \left(w_{1}^{B}+w_{2}^{B}\right) = \left(12,4\right)$$
+	 	  ¿Cómo podemos representar los distintos posible de consumo final para $A$ y $B$?\\[0.5cm]
+			\textbf{\LARGE Solución}\\
+				\input{solucionario/sol_01}
+	\item Los consumidores tienen las siguientes dotaciones iniciales 
+		  $\left(w_{1}^{A}+w_{2}^{A}\right) = \left( 12,3\right)$ y 
+		  $\left(w_{1}^{B}+w_{2}^{B}\right) = \left( 3,4\right)$ y sus funciones de utilidad son:
+			\begin{gather*}
+				U^{A}\left(x_{1}^{A},x_{2}^{A}\right)  = x_{1}^{A}x_{2}^{A}\\
+				U^{B}\left(x_{1}^{B},x_{2}^{B}\right)  = x_{1}^{B}x_{2}^{B}\\
+			\end{gather*}
+		 ¿Pertenecen los puntos $\left(9,5 \right)$ y $\left(8,9 \right)$ al área de intercambio voluntario?\\[0.5cm]
+			\textbf{\LARGE Solución}\\
+				\input{solucionario/sol_02}
+	\item ¿Cómo calcular los puntos $p_1$ y $p_2$ para el caso en el que venimos  	   trabajando?\\[0.5cm]
+			\textbf{\LARGE Solución}\\
+				\input{solucionario/sol_03}
+	\item ¿Cuál es la curva de contrato en el ejercicio anterior?\\[0.5cm]
+			\textbf{\LARGE Solución}\\
+				\input{solucionario/sol_04}
+	\item Las preferencias del consumidor $A$ vienen dados por la función de utilidad. \label{Ejercicio_5}
+	 	  		\vspace{-0.8cm}
+			\begin{multicols}{2}
+				\begin{eqnarray*}
+					U_{A} \left(x_{1}^{A},\enskip x_{2}^{A} \right) & = & x_{1}^{A}\cdot \left(x_{2}^{A} \right)^{2}\\
+					\left( w_{1}^{A},\enskip w_{2}^{A} \right) & = & \left(16,\enskip 4 \right) \\
+					\left(p_1,\enskip p_2 \right) & = &\left(1,\enskip 1 \right)
+				\end{eqnarray*}
+			
+				\begin{eqnarray*}
+					U_{B} \left(x_{1}^{B},\enskip x_{2}^{B} \right) & = &  \left(x_{1}^{B} \right)^{2}\cdot x_{2}^{B}\\
+					\left( w_{1}^{B},\enskip w_{2}^{B} \right) & = & \left(4,\enskip 10 \right) \\
+					\left(p_1,\enskip p_2 \right) & = &\left(1,\enskip 1 \right)
+				\end{eqnarray*}
+			\end{multicols}
+		  ¿Cuál será la decisión óptima de $A$ en esta situación?\\[0.5cm]
+			\textbf{\LARGE Solución}\\
+				\input{solucionario/sol_05}
+	\item Precio de equilibrio. Con los datos del ejercicio (\ref{Ejercicio_5}), sin considerar los precios, hallar los precios de equilibrio.\\[0.5cm]
+		\textbf{\LARGE Solución}\\
+			\input{solucionario/sol_06}
+	\item Sean dos consumidores $A$ y $B$ que tienen preferencias por los bienes $x$ e $y$ representadas por las funciones de utilidad $U_{A} = 2x_{A}y_{A}$, $U_{B} = 4x_{B}^{2}y_{B}$. Si las dotaciones existentes en la economía son $\overline{x} = 30,\enskip \overline{y} = 30$, que están repartidas inicialmente entre los consumidores como $w_{A} = (10, 10)$, $w_{B}=(20,20)$
+		\begin{enumerate}[a)]
+			\item Obtener las expresiones de la curva de contrato.
+			\item ¿Es la dotación inicial eficiente en el sentido de Pâreto?
+			\item Determinar los precios de equilibrio competitivo $p_{x}, p_{y}$, de esta economía de intercambio puro.
+			\item Compruebe que la asignación de equilibrio verifica la \emph{Ley de Walras}.
+		\end{enumerate}
+				\vspace{0.5cm}
+					\textbf{\LARGE Solución}\\
+						\input{solucionario/sol_07}
+	\item considere una economía de intercambio puro con dos bienes $(x, y)$ y dos agente $(A, B)$, cuyas funciones de utilidad son:
+			\begin{gather*}
+				u^{A} = \ln(x_A) + 2y_A\\
+				u^{B} = \ln(x_B) + 2y_B
+			\end{gather*}
+		  Además, se sabe que las dotaciones iniciales  $A$ y $B$ son, respectivamente $(1, 4)$ y $(6, 3)$. Determine la relación de precios walrasianos, la asignación de equilibrio e identifique el sentido del intercambio; es decir, las cantidades demandadas y ofertadas de cada bien por caga agente.\\[0.5cm]
+		  	\textbf{\LARGE Solución}\\
+		  		\input{solucionario/sol_08}
+	\item En una economía de intercambio puro, en donde existe dos bienes $(x, y)$ y dos consumidores $A$ y $B$, las funciones de utilidad son:
+				\begin{gather*}
+					U_A (x,y) = \alpha \ln(x_A) + (1-\alpha)\ln(x_A)\\
+					U_B (x,y) = \text{Min} \left\lbrace x_B, y_B\right\rbrace 
+				\end{gather*}
+			El consumidor $A$ posee una dotación inicial de una unidad de $y$ y el consumidor $B$, de una unidad de $x$.
+				\begin{enumerate}[a)]
+					\item Halle los precios relativos y las demandas de equilibrio
+					\item ¿Entre qué valores puede encontrarse la constante $a$?
+				\end{enumerate}
+						\vspace{0.5cm}
+					\textbf{\LARGE Solución}\\
+						\input{solucionario/sol_09}
+	\item Una economía de intercambio puro de dos agentes $A$ e $B$ y dos bienes $x$ e $y$ presentan las siguientes características:
+				\begin{align*}
+					& U_A = \left\lbrace 
+								\begin{array}{ccccccc}
+									\text{Min}\{x,y\} & , & 0 & \leq & \text{Min}\{x,y\} & \leq & 1 \\
+											1         & , & 1 &  <   & \text{Min}\{x,y\} &   <  & 2 \\
+									\text{Min}\{x,y\} & , & 1 &  <   & \text{Min}\{x,y\} &   {} & {}\\
+								\end{array}
+							\right. ; \text{Dotaciones: } x = 1 , y = 2\\[0.3cm]
+					& U_B = x + y ;\text{Dotaciones: } x = 2 , y = 1 
+				\end{align*}
+			Grafique la situación inicial de los agentes en la caja de Edgeworth (las dimensiones de la caja, la forma de la curva de indifenrecia y la posción del nivel de dotaciones iniciales). Indique la curva de contrato.\\[0.5cm]
+				\textbf{\LARGE Solución}\\
+					\input{solucionario/sol_10}
+\end{enumerate}
+
+%------------------------------------------------------------------------------------
+\end{document}		
+%====================================================================================

@@ -1,0 +1,6 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{Introducción}{3}{0}{1}
+\beamer@sectionintoc {2}{El mercado de autos usados (artículo de Akerlof}{5}{0}{2}
+\beamer@sectionintoc {3}{Ejemplos numéricos}{19}{0}{3}
+\beamer@sectionintoc {4}{Un modelo de selección adversa}{36}{0}{4}
+\beamer@sectionintoc {5}{Señalización}{60}{0}{5}

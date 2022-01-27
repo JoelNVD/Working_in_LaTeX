@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+	% Ejes
+		\draw[<->] (0,5) node [above, scale=0.7] {$p$}-- (0,0) -- (5,0) node [right, scale=0.7] {$s$};
+	
+	% Line P
+		\draw (0,2.5) node [left, scale=0.7] {$\overline{p}$}-- (5,2.5);
+	
+	% Flecha
+		\draw[->] (3.5, -0.5) -- (2, -0.5);
+	
+	% Líneas punteadas
+		\draw[dashed] (2,2.5) -- (2,0) node [below, scale=0.7] {$s_{social}$};
+		\draw[dashed] (3.5,2.5) -- (3.5,0) node [below, scale=0.7] {$s_{privado}$};
+	
+	% Curvas
+		\draw  [red] (0.8,0.4) ..controls (2.1,2.5)  .. (2.57,4.52) node [above, scale=0.6, black] {$CMg +$ daño marginal};
+		\draw  [blue] (2.3,0.4) ..controls (3.6,2.5)  .. (4.07,4.52) node [above, scale=0.6, black] {$CMg$};
+\end{tikzpicture}
